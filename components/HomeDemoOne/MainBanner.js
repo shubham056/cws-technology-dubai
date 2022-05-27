@@ -260,8 +260,8 @@ const MainBanner = ({ bannerData }) => {
 	                    line-height: 27px;
                     }
                     .main-banner-area {
-                        padding-top: 20px !important;
-                        padding-bottom: 20px;
+                        padding-top: 55px !important;
+                        padding-bottom: 55px;
                         position: relative;
                         z-index: 1;
                         overflow: hidden;

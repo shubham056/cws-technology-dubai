@@ -13,7 +13,7 @@ const AboutUsContent = ({aboutYourself, isReadmore}) => {
                                     <div className="">
                                         
                                         
-                                        <h3> <img style={{marginBottom:12}} src="/images/favicon.ico" alt="image" /> {aboutYourself.data.attributes.heading}</h3>
+                                        <h3> <img style={{marginBottom:10}} src="/images/favicon.ico" alt="image" /> {aboutYourself.data.attributes.heading}</h3>
                                         
                                         
                                     </div>
@@ -203,7 +203,7 @@ const AboutUsContent = ({aboutYourself, isReadmore}) => {
                         background-color: #F4F8FC;
                     }
                     .experiences-item {
-                        padding-top: 50px;
+                        padding-top: 0px;
                         padding-bottom: 50px;
                         padding-right: 0;
                     }
