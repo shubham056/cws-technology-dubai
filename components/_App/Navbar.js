@@ -610,7 +610,8 @@ const Navbar = () => {
                 // Navbar Area CSS
                 .main-navbar {
                     padding: 10px 0;
-                    background-color: #093653;;
+                    //background-color: #093653;
+                    background: linear-gradient(90deg, rgb(3, 24, 103) 31%, rgb(4, 17, 51) 100%, rgb(175, 228, 239) 100%);
                 }
                 .main-navbar .navbar {
                     -webkit-transition: var(--transition);

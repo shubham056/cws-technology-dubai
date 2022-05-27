@@ -10,7 +10,7 @@ const MainBanner = ({ bannerData }) => {
                 backgroundImage: `url("${bannerData.data.attributes.banner.data.attributes.url}")`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                height: 600
+                height: 650
             }}>
                 <div className="container">
                     <div className="row">
