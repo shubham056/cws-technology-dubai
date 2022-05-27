@@ -110,7 +110,7 @@ export async function getAboutYourself() {
 }
 
 export async function getBannerData() {
-  const BannerDataRes = await fetch(API_BASE_URL + 'home-banner?populate=*');
+  const BannerDataRes = await fetch(API_BASE_URL + 'dubai-home-banner?populate=*');
   const bannerData = await BannerDataRes.json();
   return bannerData;
 }
