@@ -30,7 +30,7 @@ const MainBanner = ({ bannerData }) => {
                                     {bannerData.data.attributes.hashtag}
                                 </div> */}
 
-                                <p style={{ color: '#fff', fontSize: 30 }}>{bannerData.data.has_tag}</p>
+                                <p style={{ color: '#fff', fontSize: 30 }}>{bannerData.data.hashtag}</p>
 
                                 <h1 style={{ color: '#fff' }}>{bannerData.data.heading}</h1>
 
