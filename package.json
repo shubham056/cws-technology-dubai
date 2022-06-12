@@ -22,7 +22,7 @@
         "nodemailer-sendgrid-transport": "^0.2.0",
         "qs": "^6.10.3",
         "react": "^18.0.0",
-        "react-accessible-accordion": "^3.3.5",
+        "react-accessible-accordion": "^5.0.0",
         "react-dom": "^18.0.0",
         "react-image-lightbox": "^5.1.4",
         "react-modal-video": "^1.2.8",

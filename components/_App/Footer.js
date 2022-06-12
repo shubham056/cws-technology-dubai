@@ -76,22 +76,22 @@ const Footer = ({ contactUsInfo }) => {
                                         </a>
                                     </Link>
                                 </div>
-                                <p className='white-color-text'>{contactUsInfo.data.attributes.info}</p>
+                                <p className='white-color-text'>{contactUsInfo.data.info}</p>
 
                                 <ul className="widget-info white-color-text">
                                     {/* <li>
                                         <i className="ri-customer-service-line"></i>
-                                        <a style={{color: '#ffff'}} href={`tel:${contactUsInfo.data.attributes.phone_number}`}>{contactUsInfo.data.attributes.phone_number}</a>
+                                        <a style={{color: '#ffff'}} href={`tel:${contactUsInfo.data.phone_number}`}>{contactUsInfo.data.phone_number}</a>
                                     </li> */}
 
                                     <li>
                                         <i className="ri-global-line"></i>
-                                        <a style={{ color: '#ffff' }} href={`mailto:${contactUsInfo.data.attributes.email}`}>{contactUsInfo.data.attributes.email}</a>
+                                        <a style={{ color: '#ffff' }} href={`mailto:${contactUsInfo.data.email}`}>{contactUsInfo.data.email}</a>
                                     </li>
 
                                     {/* <li>
                                         <i className="ri-map-pin-line"></i>
-                                        {contactUsInfo.data.attributes.address}
+                                        {contactUsInfo.data.address}
                                     </li> */}
                                 </ul>
                             </div>
@@ -198,27 +198,27 @@ const Footer = ({ contactUsInfo }) => {
 
                                 <ul className="widget-social">
                                     <li>
-                                        <a href={contactUsInfo.data.attributes.facebook_url} target="_blank">
+                                        <a href={contactUsInfo.data.facebook_url} target="_blank">
                                             <i className="ri-facebook-fill"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href={contactUsInfo.data.attributes.twitter_url} target="_blank">
+                                        <a href={contactUsInfo.data.twitter_url} target="_blank">
                                             <i className="ri-twitter-fill"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href={contactUsInfo.data.attributes.linkedin_url} target="_blank">
+                                        <a href={contactUsInfo.data.linkedin_url} target="_blank">
                                             <i className="ri-linkedin-fill"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href={contactUsInfo.data.attributes.youtube_url} target="_blank">
+                                        <a href={contactUsInfo.data.youtube_url} target="_blank">
                                             <i className="ri-youtube-fill"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href={contactUsInfo.data.attributes.google_plush_url} target="_blank">
+                                        <a href={contactUsInfo.data.google_plush_url} target="_blank">
                                             <i className="ri-google-fill"></i>
                                         </a>
                                     </li>

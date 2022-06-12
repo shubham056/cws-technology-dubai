@@ -36,12 +36,12 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
         <>
             <Navbar />
 
-           {banner && <MainBanner bannerData={banner}/>}
+            {banner && <MainBanner bannerData={banner} />}
 
             {aboutYourself && <AboutUsContent aboutYourself={aboutYourself} isReadmore={true} />}
 
             {services && <Services services={services} />}
-            
+
             <div className="pt-100">
                 {privileges && <FunFactStyleTwo ourPrivileges={privileges} />}
             </div>
@@ -64,9 +64,8 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
 
             {/* {ourClients && <PartnerStyleOne ourClients={ourClients} />} */}
 
-            
-
             {contactUsInfo && <Footer contactUsInfo={contactUsInfo} />}
+
         </>
     )
 }

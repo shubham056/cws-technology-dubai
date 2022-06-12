@@ -2,8 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import Moment from "moment-timezone";
 import Image from 'next/image';
+import assetsURL from '../../utils/assetsURL';
 
 const Blogs = ({ blog, categories }) => {
+
+    console.log("categories data",categories)
 
     return (
         <>
@@ -14,9 +17,9 @@ const Blogs = ({ blog, categories }) => {
                         <Link href={`/blog/${blog.slug}`}>
                             <a>
                                 <Image
-                                    src={(blog.image.data != null) ? blog.image.data.attributes.url : "/images/blog/blog-large-1.jpg"}
+                                    src={(blog.image != null) ? `${assetsURL}${blog.image}` : "/images/blog/blog-large-1.jpg"}
                                     style={{ height: 333 }}
-                                    alt={(blog.image.data != null) ? blog.image.data.attributes.name : "blog-image"}
+                                    alt={(blog.title != null) ? blog.title : "blog-image"}
                                     width={500}
                                     height={333}
                                 />
@@ -32,7 +35,7 @@ const Blogs = ({ blog, categories }) => {
                                         ?
                                         <Link href={`/blog/${blog.slug}`}>
                                             <a className="tag">
-                                                {(categories.length > 0) ? categories.map((item) => item.attributes.name).join(", ") : null}
+                                                {(categories.length > 0) ? categories.map((item) => item.blog_categories_id.name).join(", ") : null}
                                             </a>
                                         </Link>
                                         :

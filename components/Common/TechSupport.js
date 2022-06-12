@@ -1,6 +1,8 @@
 import React from 'react';
+import assetsURL from '../../utils/assetsURL';
 
 const TechSupport = ({ parallaxInfo }) => {
+
 
     return (
         <>
@@ -8,11 +10,11 @@ const TechSupport = ({ parallaxInfo }) => {
                 <div className="container">
                     <div className="support-content">
                         <div className="">
-                            <h3> <img style={{marginBottom:7}} src="/images/favicon.png" alt="image" /> {parallaxInfo.data.attributes.heading}</h3>
+                            <h3> <img style={{marginBottom:7}} src="/images/favicon.png" alt="image" /> {parallaxInfo.data.heading}</h3>
                         </div>
 
                         
-                        <div dangerouslySetInnerHTML={{__html: parallaxInfo.data.attributes.content}}></div>
+                        <div dangerouslySetInnerHTML={{__html: parallaxInfo.data.content}}></div>
                     </div>
                 </div>
 
@@ -40,7 +42,7 @@ const TechSupport = ({ parallaxInfo }) => {
             {/* Tech Support Style */}
             <style jsx>{`
                 .support-area {
-                    background-image: url(/images/support/support-bg-1.jpg);
+                    background-image: url("${assetsURL}${parallaxInfo.data.image}");
                     background-position: top center;
                     background-size: cover;
                     background-repeat: no-repeat;

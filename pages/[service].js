@@ -10,7 +10,7 @@ import ErrorPage from 'next/error';
 import { getContactUsInfo, getService } from '../utils/strapi';
 
 const ServicesDetails = ({ service, contactUsInfo }) => {
-    console.log("service-----------", service.data[0].attributes.heading)
+    console.log("service-----------", service.data[0].heading)
     if (!service.data) {
         return <ErrorPage statusCode={404} />
     }
@@ -25,13 +25,13 @@ const ServicesDetails = ({ service, contactUsInfo }) => {
                         <Navbar />
 
                         <PageBanner
-                            pageTitle={service.data[0].attributes.heading}
+                            pageTitle={service.data[0].heading}
                             homePageUrl="/"
                             homePageText="Home"
-                            activePageText={service.data[0].attributes.heading}
+                            activePageText={service.data[0].heading}
                         />
 
-                        <ServicesDetailsContent service={service.data[0].attributes} />
+                        <ServicesDetailsContent service={service.data[0]} />
 
                         <WorkProcess />
 
@@ -54,7 +54,7 @@ export async function getServerSideProps({ params, res }) {
     try {
         const contactUsInfo = await getContactUsInfo();
         const service = await getService(params.service);
-        return {
+        return { 
             props: {
                 contactUsInfo: contactUsInfo,
                 service: service

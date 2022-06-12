@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import assetsURL from '../../utils/assetsURL';
 
 const SingleIndustry = ({ industry }) => {
     return (
@@ -8,7 +9,7 @@ const SingleIndustry = ({ industry }) => {
             <div className="col-lg-2 col-md-6 col-sm-6">
                 <div className="single-services-item">
                     <div>
-                        <Image src={ (industry.image.data.attributes.url != null) ? industry.image.data.attributes.url  :"/images/industries/retail.jpg"} height={50} width={50} alt={industry.image.data.attributes.name} />
+                        <Image src={ (industry.image != null) ? `${assetsURL}${industry.image}`  :"/images/industries/retail.jpg"} height={50} width={50} alt={industry.heading} />
                     </div>
                     <p style={{ fontWeight: 450 }}>
                         <Link href="#">

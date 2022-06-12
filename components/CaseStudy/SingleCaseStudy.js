@@ -1,8 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import assetsURL from '../../utils/assetsURL';
 
 const SingleCaseStudy = ({ portfolio, categories }) => {
+
+    // console.log(portfolio.image)
+    // return false
 
     return (
         <>
@@ -11,22 +15,22 @@ const SingleCaseStudy = ({ portfolio, categories }) => {
                     <Link href="/">
                         <a>
                             <img 
-                                src={(portfolio.image.data.attributes.url != undefined) ? portfolio.image.data.attributes.url : "https://ozen-react.envytheme.com/images/blog/blog-large-1.jpg"} 
-                                alt={(portfolio.image.data.attributes.name) ? portfolio.image.data.attributes.name : "portfolio-image"} 
+                                src={(portfolio.image != undefined) ? `${assetsURL}${portfolio.image}` : "https://ozen-react.envytheme.com/images/blog/blog-large-1.jpg"} 
+                                alt={portfolio.title} 
                             />
                         </a>
                     </Link>
                 </div>
 
                 <div className="cases-content">
-                    <div className="tags">
+                    {/* <div className="tags">
                         <Link href="/">
                             <a>
                                 {(categories.length > 0) ? categories.map((item) => item.attributes.name).join(", ") : null}
                             </a>
                         </Link>
                        
-                    </div>
+                    </div> */}
 
                     <h3>
                         <Link href="/">

@@ -5,7 +5,7 @@ import SingleTechnology from '../Common/SingleTechnology';
 const Technologies = ({ technologies }) => {
 
     const jsxTechnology = technologies.data.map((technology) => {
-        return <SingleTechnology technology={technology.attributes} />
+        return <SingleTechnology technology={technology} />
     });
 
     return (

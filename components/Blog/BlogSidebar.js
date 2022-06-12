@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import Moment from "moment-timezone";
 import Image from 'next/image';
+import assetsURL from '../../utils/assetsURL';
+
 
 const BlogSidebar = ({ popularPosts, blogCategories }) => {
 
@@ -64,27 +66,26 @@ const BlogSidebar = ({ popularPosts, blogCategories }) => {
                                 popularPosts.data.map(post => {
                                     return (
                                         <article className="item">
-                                            <Link href={`/blog/${post.attributes.slug}`}>
+                                            <Link href={`/blog/${post.slug}`}>
                                                 <a className="thumb">
                                                     {/* <span className="fullimage cover bg1" role="img"></span> */}
                                                     <Image
-                                                        src={(post.attributes.image.data != null) ? post.attributes.image.data.attributes.url : "/images/blog/blog-large-1.jpg"}
+                                                        src={(post.image != null) ? `${assetsURL}${post.image}` : "/images/blog/blog-large-1.jpg"}
                                                         style={{ height: 333 }}
-                                                        alt={(post.attributes.image.data != null) ? post.attributes.image.data.attributes.name : "blog-image"}
-                                                        width={560}
-                                                        height={460}
+                                                        alt={(post.title != null) ? post.title : "blog-image"}
+                                                        width="100%" height="100%" layout="fill" objectFit="contain"
                                                     />
                                                 </a>
                                             </Link>
 
                                             <div className="info">
                                                 <h4 className="title usmall">
-                                                    <Link href={`/blog/${post.attributes.slug}`}>
-                                                        <a>{post.attributes.title}</a>
+                                                    <Link href={`/blog/${post.slug}`}>
+                                                        <a>{post.title}</a>
                                                     </Link>
                                                 </h4>
 
-                                                <span><i className="ri-time-line"></i>{Moment(post.attributes.createdAt).format('LL')}</span>
+                                                <span><i className="ri-time-line"></i>{Moment(post.createdAt).format('LL')}</span>
                                             </div>
                                         </article>
                                     )
@@ -107,8 +108,8 @@ const BlogSidebar = ({ popularPosts, blogCategories }) => {
                                 {
                                     blogCategories.data.map(category =>{
                                         return(
-                                            <Link href={`/blog/category/${category.attributes.slug}`}>
-                                            <a>{category.attributes.name}</a>
+                                            <Link href={`/blog/category/${category.slug}`}>
+                                            <a>{category.name}</a>
                                         </Link>
                                         )
                                     })

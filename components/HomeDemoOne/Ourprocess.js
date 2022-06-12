@@ -1,7 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import assetsURL from '../../utils/assetsURL';
+
+
 
 const OurprocessView = ({ourProcess}) => {
+    // console.log(ourProcess)
+    // return false
     return (
         <>
             <div className="experiences-areas">
@@ -11,15 +16,15 @@ const OurprocessView = ({ourProcess}) => {
                             <div className="experiences-item">
                                 <div className="experiences-content">
                                     <h3>Our Process</h3>
-                                    <div dangerouslySetInnerHTML={{__html: ourProcess.data.attributes.content}}></div>
+                                    <div dangerouslySetInnerHTML={{__html: ourProcess.data.content}}></div>
                                     
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-12">
-                            <h3>Our Process</h3>
+                            <h3>Methodology Diagram</h3>
                             <div className="experiences-image">
-                                <img src={ourProcess.data.attributes.image.data.attributes.url} alt={ourProcess.data.attributes.image.data.attributes.name} />
+                                <img src={`${assetsURL}${ourProcess.data.image}`} alt={"our-process-img"} />
                             </div>
                         </div>
                     </div>

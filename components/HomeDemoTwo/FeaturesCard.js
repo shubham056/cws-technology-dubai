@@ -2,10 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import AboutService from '../Common/AboutService';
 
+
 const FeaturesCard = ({ features }) => {
 
     const jsxFeatures = features.data.map((feature) => {
-        return <AboutService feature={feature.attributes} key={feature.id} />
+        return <AboutService feature={feature} key={feature.id} />
     });
 
     return (

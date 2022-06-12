@@ -138,29 +138,29 @@ const Careers = ({ contactUsInfo, careers, vacancy }) => {
                                             return (
                                                 <blockquote className="blockquote" key={item.id}>
 
-                                                    <h5>{item.attributes.applying_for}</h5>
+                                                    <h5>{item.applying_for}</h5>
 
-                                                    <p>{item.attributes.experience}</p>
+                                                    <p>{item.experience}</p>
                                                     <br />
 
                                                     <h5>Description:</h5>
 
-                                                    <p>{item.attributes.description}</p>
+                                                    <p>{item.description}</p>
 
                                                     <h5>Role & Responsibilities:</h5>
 
-                                                    <p dangerouslySetInnerHTML={{ __html: item.attributes.role_and_responsibilities }}></p>
+                                                    <p dangerouslySetInnerHTML={{ __html: item.role_and_responsibilities }}></p>
 
                                                     <h5>Skills & Expertise:</h5>
 
-                                                    <p dangerouslySetInnerHTML={{ __html: item.attributes.skills_and_expertise }}></p>
+                                                    <p dangerouslySetInnerHTML={{ __html: item.skills_and_expertise }}></p>
                                                     {
-                                                        (item.attributes.qualifications != null)
+                                                        (item.qualifications != null)
                                                             ?
                                                             <>
                                                                 <h5>Preferred Skills & Qualifications:</h5>
 
-                                                                <p dangerouslySetInnerHTML={{ __html: item.attributes.qualifications }}></p>
+                                                                <p dangerouslySetInnerHTML={{ __html: item.qualifications }}></p>
                                                             </>
                                                             :
                                                             null
@@ -221,9 +221,9 @@ const Careers = ({ contactUsInfo, careers, vacancy }) => {
                                                                 vacancy.data.map(item => {
                                                                     return (
                                                                         <option
-                                                                            value={item.attributes.applying_for}
+                                                                            value={item.applying_for}
                                                                         >
-                                                                            {item.attributes.applying_for}
+                                                                            {item.applying_for}
                                                                         </option>
                                                                     )
                                                                 })

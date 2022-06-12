@@ -3,72 +3,70 @@ import API_BASE_URL from './apiUrl';
 //const API_BASE_URL = 'http://localhost:1337/api/';
 
 export async function getPosts(page) {
-  const query = qs.stringify({
-    pagination: {
-      page: page,
-      pageSize: 9,
-    },
-  }, {
-    encodeValuesOnly: true,
-  });
-  const postsRes = await fetch(API_BASE_URL + `blogs?${query}&populate=*`);
+  // const query = qs.stringify({
+  //     page: page,
+  //     limit: 9,
+  //   }, {
+  //   encodeValuesOnly: true,
+  // });
+  const postsRes = await fetch(API_BASE_URL + `blogs?page=${page}&fields=id,title,image,content,slug,blog_categories.*.*.*,author.*.*.*&limit=9&meta=*`);
   const posts = await postsRes.json();
   return posts;
 }
 
 export async function getService(slug) {
-  const serviceRes = await fetch(API_BASE_URL + `services?filters[slug]=${slug}&populate=*`);
+  const serviceRes = await fetch(API_BASE_URL + `services?filter[slug][_eq]=${slug}`);
   const service = await serviceRes.json();
   return service;
 }
 
 export async function getPostss(slug) {
-let url = API_BASE_URL + `blogs?populate=*&filters[slug]=${slug}`
-  const postsRes = await fetch(API_BASE_URL + `blogs?populate=*&filters[slug]=${slug}`);
+let url = API_BASE_URL + `blogs?filter[slug][_eq]=${slug}`
+  const postsRes = await fetch(API_BASE_URL + `blogs?filter[slug][_eq]=${slug}`);
   const posts = await postsRes.json();
   return posts;
   
 }
 
 export async function getPopularBlogPost(pageLimit) {
-  const postsRes = await fetch(API_BASE_URL + `blogs?pagination[page]=1&pagination[pageSize]=${pageLimit}&populate=*`);
+  const postsRes = await fetch(API_BASE_URL + `blogs?fields=id,title,image,content,slug,blog_categories.*.*.*,author.*.*.*&page=1&limit=${pageLimit}&meta=*`);
   const posts = await postsRes.json();
   return posts;
 }
 
 export async function getIntroVideo() {
-  const IntroVideoRes = await fetch(API_BASE_URL + 'intro-video?populate=*');
+  const IntroVideoRes = await fetch(API_BASE_URL + 'intro_video');
   const introVideo = await IntroVideoRes.json();
   return introVideo;
 }
 
 export async function getContactUsInfo() {
-  const ContactUsInfoRes = await fetch(API_BASE_URL + 'contact-us-info');
+  const ContactUsInfoRes = await fetch(API_BASE_URL + 'contact_us_info');
   const contactUsInfo = await ContactUsInfoRes.json();
   return contactUsInfo;
 }
 
 export async function getParallaxSectionInfo() {
-  const ParallaxSectionRes = await fetch(API_BASE_URL + 'parallax-section?populate=*');
+  const ParallaxSectionRes = await fetch(API_BASE_URL + 'parallax_section');
   const parallaxSection = await ParallaxSectionRes.json();
   return parallaxSection;
 }
 
 export async function getTeamMembers(getAlll) {
-  const apiEndPoint = (getAlll) ? 'team-members?pagination[page]=1&pagination[pageSize]=4&populate=*' : 'team-members?populate=*'
+  const apiEndPoint = (getAlll) ? 'team_members?limit=4' : 'team_members'
   const TeamMembersRes = await fetch(API_BASE_URL + apiEndPoint);
   const temaMembers = await TeamMembersRes.json();
   return temaMembers;
 }
 
 export async function getfeatures() {
-  const featuresRes = await fetch(API_BASE_URL + 'features?populate=*');
+  const featuresRes = await fetch(API_BASE_URL + 'features');
   const features = await featuresRes.json();
   return features;
 }
 
 export async function getOurPrivileges() {
-  const OurPrivilegesRes = await fetch(API_BASE_URL + 'our-privileges');
+  const OurPrivilegesRes = await fetch(API_BASE_URL + 'our_privileges');
   const privileges = await OurPrivilegesRes.json();
   return privileges;
 }
@@ -80,43 +78,43 @@ export async function getTestimonial() {
 }
 
 export async function getPortfolio() {
-  const PortfoliosRes = await fetch(API_BASE_URL + 'portfolios?pagination[page]=1&pagination[pageSize]=4&populate=*');
+  const PortfoliosRes = await fetch(API_BASE_URL + 'portfolios');
   const portfolios = await PortfoliosRes.json();
   return portfolios;
 }
 
 export async function getOurProcess() {
-  const OurProcessRes = await fetch(API_BASE_URL + 'our-process?populate=*');
+  const OurProcessRes = await fetch(API_BASE_URL + 'our_process');
   const ourProcess = await OurProcessRes.json();
   return ourProcess;
 }
 
 export async function getOurCareers() {
-  const OurCareersRe = await fetch(API_BASE_URL + 'careers?populate=*');
+  const OurCareersRe = await fetch(API_BASE_URL + 'careers');
   const ourCareers = await OurCareersRe.json();
   return ourCareers;
 }
 
 export async function getApplyingFor() {
-  const ApplyingForRes = await fetch(API_BASE_URL + 'careers?fields[0]=applying_for');
+  const ApplyingForRes = await fetch(API_BASE_URL + 'careers?fields[]=applying_for');
   const applyingFor = await ApplyingForRes.json();
   return applyingFor;
 }
 
 export async function getAboutYourself() {
-  const AboutYourselfRes = await fetch(API_BASE_URL + 'about-yourself');
+  const AboutYourselfRes = await fetch(API_BASE_URL + 'about_yourself');
   const aboutYourself = await AboutYourselfRes.json();
   return aboutYourself;
 }
 
 export async function getBannerData() {
-  const BannerDataRes = await fetch(API_BASE_URL + 'dubai-home-banner?populate=*');
+  const BannerDataRes = await fetch(API_BASE_URL + 'home_banner_dubai');
   const bannerData = await BannerDataRes.json();
   return bannerData;
 }
 
 export async function getOurClients() {
-  const OurClientsRes = await fetch(API_BASE_URL + 'our-clients?populate=*');
+  const OurClientsRes = await fetch(API_BASE_URL + 'our_clients');
   const ourClients = await OurClientsRes.json();
   return ourClients;
 }
@@ -140,21 +138,22 @@ export async function getServices() {
 }
 
 export async function getBlogCategories() {
-  const BlogCategoriesRes = await fetch(API_BASE_URL + `blog-categories?&sort[1]=slug`);
+  const BlogCategoriesRes = await fetch(API_BASE_URL + `blog_categories?fields=id,name,slug,status&sort=slug`);
   const blogCategories = await BlogCategoriesRes.json();
   return blogCategories;
 }
 
 export async function getBlogCategoriesBySlug(page,slug) {
-  const query = qs.stringify({
-    pagination: {
-      page: page,
-      pageSize: 9,
-    },
-  }, {
-    encodeValuesOnly: true,
-  });
-  const BlogCategoriesBySlugRes = await fetch(API_BASE_URL + `blogs?${query}&filters[blog_categories][slug]=${slug}&populate=*`);
+  // const query = qs.stringify({
+  //   pagination: {
+  //     page: page,
+  //     pageSize: 9,
+  //   },
+  // }, {
+  //   encodeValuesOnly: true,
+  // });
+  
+  const BlogCategoriesBySlugRes = await fetch(API_BASE_URL + `blogs?page=${page}&limit=9&fields=id,title,image,content,slug,blog_categories.*.*.*,author.*.*.*&filter[blog_categories][blog_categories_id][slug][_eq]=${slug}&meta=*`);
   const blogCategoriesBySlug = await BlogCategoriesBySlugRes.json();
   return blogCategoriesBySlug;
 }
@@ -182,7 +181,8 @@ export async function getAllCommonServices(page) {
   }, {
     encodeValuesOnly: true,
   });
-  const ServicesRes = await fetch(API_BASE_URL + `common-services?${query}&populate=*`);
+  //const ServicesRes = await fetch(API_BASE_URL + `common_services?${query}`);
+  const ServicesRes = await fetch(API_BASE_URL + `common_services`);
   const services = await ServicesRes.json();
   return services;
 }

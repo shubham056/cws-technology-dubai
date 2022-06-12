@@ -7,6 +7,7 @@ module.exports = {
     trailingSlash: true,
     reactStrictMode: true,
     images: {
-        domains: ['137.184.38.109',"cws-technology-spaces.nyc3.digitaloceanspaces.com"],
+
+        domains: ["localhost","cwsadmin.in"],
       }
 }

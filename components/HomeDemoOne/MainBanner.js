@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react"
 import Link from 'next/link';
 import Typed from 'react-typed';
+import assetsURL from '../../utils/assetsURL';
 
 const MainBanner = ({ bannerData }) => {
+
 
     return (
         <>
             <div className="main-banner-area" style={{
-                backgroundImage: `url("${bannerData.data.attributes.banner.data.attributes.url}")`,
+                backgroundImage: `url("${assetsURL}${bannerData.data.banner}")`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                height: 650
+                height: 600
             }}>
                 <div className="container">
                     <div className="row">
@@ -28,14 +30,14 @@ const MainBanner = ({ bannerData }) => {
                                     {bannerData.data.attributes.hashtag}
                                 </div> */}
 
-                                <p style={{ color: '#fff', fontSize: 30 }}>{bannerData.data.attributes.hashtag}</p>
+                                <p style={{ color: '#fff', fontSize: 30 }}>{bannerData.data.has_tag}</p>
 
-                                <h1 style={{ color: '#fff' }}>{bannerData.data.attributes.heading}</h1>
+                                <h1 style={{ color: '#fff' }}>{bannerData.data.heading}</h1>
 
-                                 <Typed strings={[ `${bannerData.data.attributes.description}`]} typeSpeed={145}  className="type"/>
+                                 <Typed strings={[ `${bannerData.data.description}`]} typeSpeed={145}  className="type"/>
 
                                 {/* <ScrollAnimation animateIn="fadeInLeft" delay={150} animateOnce={true}>
-                                    <p style={{ color: '#fff' }}>{bannerData.data.attributes.description}</p>
+                                    <p style={{ color: '#fff' }}>{bannerData.data.description}</p>
                                 </ScrollAnimation> */}
 
                                 {/* <div className="banner-btn">

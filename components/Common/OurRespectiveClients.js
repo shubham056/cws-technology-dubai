@@ -41,7 +41,7 @@ const OurRespectiveClients = ({testimonials}) => {
 
     const jsxTestimonial = testimonials.data.map((testimonial) => {
 
-        return <OurRespectiveClientsSingle testimonial={testimonial.attributes} key={testimonial.id} path={router.pathname} />
+        return <OurRespectiveClientsSingle testimonial={testimonial} key={testimonial.id} path={router.pathname} />
         
     });
 

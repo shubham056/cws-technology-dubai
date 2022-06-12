@@ -315,11 +315,11 @@ export async function getStaticProps({ params }) {
         props: {
             services,
             parallaxInfo,
-            contactUsInfo,
-            totalCount: services.meta.pagination.total,
-            pageCount: services.meta.pagination.pageCount,
-            currentPage: services.meta.pagination.page,
-            perPage: 3,
+            // contactUsInfo,
+            // totalCount: services.meta.pagination.total,
+            // pageCount: services.meta.pagination.pageCount,
+            // currentPage: services.meta.pagination.page,
+            // perPage: 3,
         },
         revalidate: 10, // In seconds
     };

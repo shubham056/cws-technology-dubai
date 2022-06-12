@@ -16,9 +16,9 @@ const FunFactStyleTwo = ({ ourPrivileges }) => {
                                     <i className="ri-briefcase-line"></i>
                                 </div>
                                 <h3>
-                                    {ourPrivileges.data[0].attributes.count} <span className="sign-icon">+</span>
+                                    {ourPrivileges.data[0].count} 
                                 </h3>
-                                <p>{ourPrivileges.data[0].attributes.title}</p>
+                                <p>{ourPrivileges.data[0].title}</p>
                             </div>
                         </div>
 
@@ -28,9 +28,9 @@ const FunFactStyleTwo = ({ ourPrivileges }) => {
                                     <i className="ri-earth-line"></i>
                                 </div>
                                 <h3>
-                                    {ourPrivileges.data[1].attributes.count} <span className="sign-icon"></span>
+                                    {ourPrivileges.data[1].count} <span className="sign-icon"></span>
                                 </h3>
-                                <p>{ourPrivileges.data[1].attributes.title}</p>
+                                <p>{ourPrivileges.data[1].title}</p>
                             </div>
                         </div>
 
@@ -40,9 +40,9 @@ const FunFactStyleTwo = ({ ourPrivileges }) => {
                                     <i className="ri-trophy-line"></i>
                                 </div>
                                 <h3>
-                                    {ourPrivileges.data[2].attributes.count} <span className="sign-icon">+</span>
+                                    {ourPrivileges.data[2].count} 
                                 </h3>
-                                <p>{ourPrivileges.data[2].attributes.title}</p>
+                                <p>{ourPrivileges.data[2].title}</p>
                             </div>
                         </div>
 
@@ -52,9 +52,9 @@ const FunFactStyleTwo = ({ ourPrivileges }) => {
                                     <i className="ri-lightbulb-line"></i>
                                 </div>
                                 <h3>
-                                    {ourPrivileges.data[3].attributes.count} <span className="sign-icon"></span>
+                                    {ourPrivileges.data[3].count} <span className="sign-icon"></span>
                                 </h3>
-                                <p>{ourPrivileges.data[3].attributes.title}</p>
+                                <p>{ourPrivileges.data[3].title}</p>
                             </div>
                         </div>
                     </div>

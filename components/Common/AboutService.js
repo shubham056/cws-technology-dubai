@@ -1,8 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import assetsURL from '../../utils/assetsURL';
 
 
 const AboutService = ({ feature }) => {
+
+    // console.log(feature)
+    // return false
 
     return (
         <>
@@ -10,7 +14,7 @@ const AboutService = ({ feature }) => {
                 <div className="single-features-box">
                     <Link href="/services-details">
                         <a>
-                            <img src={feature.image.data.attributes.url} alt={feature.name} />
+                            <img src={`${assetsURL}${feature.image}`} alt={feature.heading} />
                         </a>
                     </Link>
 

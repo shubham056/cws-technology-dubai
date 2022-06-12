@@ -1,14 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
+import assetsURL from '../../utils/assetsURL';
 
 const SingleTeamMember = ({ teamMembers }) => {
+
     
     return (
         <>
             <div className="col-lg-3 col-md-6">
                 <div className="single-team-box">
                     <div className="image">
-                        <img src={teamMembers.image.data.attributes.url} alt={teamMembers.image.data.attributes.name} />
+                        <img src={`${assetsURL}${teamMembers.image}`} alt={teamMembers.name} />
 
                         <ul className="social">
                             <li>

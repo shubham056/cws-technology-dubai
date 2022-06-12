@@ -1,3 +1,3 @@
-const apiUrl = process.env.NODE_ENV === "production" ? 'https://cws-admin-app-teal3.ondigitalocean.app/api/' : 'https://cws-admin-app-teal3.ondigitalocean.app/api/';
+const apiUrl = process.env.NODE_ENV === "production" ? 'https://cwsadmin.in/items/' : 'https://cwsadmin.in/items/';
 
 export default apiUrl;

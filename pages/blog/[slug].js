@@ -15,8 +15,12 @@ import moment from 'moment-timezone';
 import ErrorPage from 'next/error';
 import Moment from "moment-timezone";
 import Image from 'next/image';
+import assetsURL from '../../utils/assetsURL';
+
 
 const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
+    // console.log(popularPosts)
+    // return false
 
     if (!post) {
         return <ErrorPage statusCode={404} />
@@ -26,10 +30,10 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
             <Navbar />
 
             {post && <PageBanner
-                pageTitle={post.data[0].attributes.title}
+                pageTitle={post.data[0].title}
                 homePageUrl="/"
                 homePageText="Home"
-                activePageText={post.data[0].attributes.title}
+                activePageText={post.data[0].title}
             />}
 
             <div className="blog-area pt-100 pb-100">
@@ -39,8 +43,9 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
                             <div className='blog-details-desc'>
                                 <div className="article-image">
                                     <img
-                                        src={(post.data[0].attributes.image.data != null) ? post.data[0].attributes.image.data.attributes.url : "/images/blog/blog-large-1.jpg"}
-                                        alt={(post.data[0].attributes.image.data != null) ? post.data[0].attributes.image.data.attributes.name : "blog-image"}
+                                        src={(post.data[0].image != null) ? `${assetsURL}${post.data[0].image}` : "/images/blog/blog-large-1.jpg"}
+                                        alt={(post.data[0].title != null) ? post.data[0].title : "blog-image"}
+                                        width="100%"  objectFit="fill"
                                     />
 
                                 </div>
@@ -52,14 +57,14 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
                                         </li>
                                         <li>
                                             <i className="ri-time-line"></i>
-                                            {Moment(post.data[0].attributes.createdAt).format('LL')}
+                                            {Moment(post.data[0].createdAt).format('LL')}
                                         </li>
                                         {/* <li>
                                             <i className="ri-message-2-line"></i>
                                             (0) Comment
                                         </li> */}
                                     </ul>
-                                    <div dangerouslySetInnerHTML={{ __html: post.data[0].attributes.content }}>
+                                    <div dangerouslySetInnerHTML={{ __html: post.data[0].content }}>
                                     </div>
 
 
@@ -546,7 +551,7 @@ export async function getServerSideProps({ params, res }) {
 
         const post = await getPost(params.slug);
         const contactUsInfo = await getContactUsInfo();
-        const popularPosts = await getPopularBlogPost(4); // Get Popular Blog Post
+        const popularPosts = await getPopularBlogPost(5); // Get Popular Blog Post
         const blogCategories = await getBlogCategories(); // Get all blog categories
 
         return {

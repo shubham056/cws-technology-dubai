@@ -1,5 +1,6 @@
 import React from 'react';
-import BASE_URL from '../../utils/assetsURL';
+import assetsURL from '../../utils/assetsURL';
+import Image from 'next/image';
 
 const SingleOurPartner = ({ ourClient }) => {
 
@@ -7,20 +8,9 @@ const SingleOurPartner = ({ ourClient }) => {
         <>
             <div className="single-partner">
                 <img
-                    src={
-                        (ourClient.logo.data.attributes.formats != null)
-                            ?
-                            ourClient.logo.data.attributes.formats.thumbnail.url
-                            :
-                            ourClient.logo.data.attributes.url
-                    }
-                    alt={
-                        (ourClient.logo.data.attributes.formats != null)
-                            ?
-                            ourClient.logo.data.attributes.formats.thumbnail.name
-                            :
-                            ourClient.logo.data.attributes.name
-                    } />
+               
+                    src={`${assetsURL}${ourClient.logo}`}
+                    alt={"clients-logo"} />
             </div>
 
 

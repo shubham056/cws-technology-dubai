@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import assetsURL from '../../utils/assetsURL';
 
 const SingleTechnology = ({ technology }) => {
     return (
@@ -8,7 +9,7 @@ const SingleTechnology = ({ technology }) => {
             <div className="col-lg-2 col-md-6 col-sm-6">
                 <div className="single-services-item">
                     <div>
-                        <Image src={(technology.image.data.attributes.url != null) ? technology.image.data.attributes.url : "/images/industries/retail.jpg"} width={75} height={75} alt={technology.image.data.attributes.name} />
+                        <Image src={(technology.image != null) ? `${assetsURL}${technology.image}` : "/images/industries/retail.jpg"} width={75} height={75} alt="technology-icon" />
                     </div>
                 </div>
             </div>

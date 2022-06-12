@@ -20,7 +20,7 @@ const Testimonials = ({ testimonials, contactUsInfo }) => {
     }
 
     const jsxTestimonial = testimonials.data.map((testimonial) => {
-        return <Testimonial testimonials={testimonial.attributes} key={testimonial.id} />
+        return <Testimonial testimonials={testimonial} key={testimonial.id} />
     });
 
 
@@ -45,6 +45,7 @@ const Testimonials = ({ testimonials, contactUsInfo }) => {
 
 
                                 <h2>Testimonials</h2>
+                                <hr style={{width:35,height:15}} />
                                 <br/>
                                   {jsxTestimonial}
 

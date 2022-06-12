@@ -4,6 +4,7 @@ import SingleService from '../Common/SingleService';
 import ReactPaginate from 'react-paginate';
 
 const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
+    
 
     const randColor = () => {
         var color = "bg-"; // hexadecimal starting symbol
@@ -14,7 +15,7 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
 
    
     const jsxServices = services.data.map((service) => {
-        return <SingleService service={service.attributes} randColor={randColor()}/>
+        return <SingleService service={service} randColor={randColor()}/>
     });
 
     return (

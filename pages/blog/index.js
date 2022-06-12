@@ -8,14 +8,22 @@ import Router, { withRouter,useRouter  } from 'next/router'
 import ReactPaginate from 'react-paginate';
 import { getPosts, getContactUsInfo } from '../../utils/strapi';
 
+
 const BlogPost = ({ posts,totalCount, pageCount, currentPage, perPage, contactUsInfo }) => {
     const router = useRouter();
 
-  
+    // console.log(posts)
+    // return false;
+
+ 
 
     const jsxPosts = posts.data.map((post) => {
-        const categories = post.attributes.blog_categories;
-        return <Blogs blog={post.attributes} categories={categories.data}  key={post.id} />
+        const categories = post.blog_categories;
+        return <Blogs 
+                 blog={post}
+                 categories={categories}
+                 key={post.id}
+                />
     });
 
     const pagginationHandler = (page) => {
@@ -148,11 +156,12 @@ export async function getServerSideProps({ query: {page = 1 }  }) {
    
     return {
         props: {
-            posts: posts,
-            totalCount: posts.meta.pagination.total,
-            pageCount: posts.meta.pagination.pageCount,
-            currentPage: posts.meta.pagination.page,
-            perPage: 3,
+            posts,
+            totalCount: posts.meta.total_count,
+            pageCount: Math.round(posts.meta.total_count/9),
+            //currentPage: posts.meta.pagination.page,
+            currentPage: 1,
+            // perPage: 3,
             contactUsInfo
 
             

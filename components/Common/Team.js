@@ -5,7 +5,7 @@ import SingleTeamMember from './SingleTeamMember';
 const Team = ({ teamMembers, allTeamMembers }) => {
 
     const jsxTeamMembers = teamMembers.data.map((team) => {
-        return <SingleTeamMember teamMembers={team.attributes} />
+        return <SingleTeamMember teamMembers={team} />
     });
 
     return (

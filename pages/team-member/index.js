@@ -7,6 +7,7 @@ import Team from '../../components/Common/Team';
 import { getTeamMembers, getContactUsInfo } from '../../utils/strapi';
 
 const TeamMember = ({teamMembers, contactUsInfo}) => {
+    
     return (
         <>
 			<Navbar />

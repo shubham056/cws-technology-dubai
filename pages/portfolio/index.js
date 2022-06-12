@@ -12,8 +12,10 @@ import { getPortfolio, getContactUsInfo } from '../../utils/strapi';
 const Portfolio = ({ portfolios, contactUsInfo }) => {
 
     const jsxPortfolios = portfolios.data.map((portfolio) => {
-        const categories = portfolio.attributes.blog_categories;
-        return <SingleCaseStudy portfolio={portfolio.attributes} categories={categories.data} key={portfolio.id} />
+        //const categories = portfolio.attributes.blog_categories;
+        return <SingleCaseStudy portfolio={portfolio} 
+        //categories={categories.data} 
+        key={portfolio.id} />
     });
     return (
         <>

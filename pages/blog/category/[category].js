@@ -10,6 +10,7 @@ import { getBlogCategoriesBySlug, getContactUsInfo } from '../../../utils/strapi
 import ErrorPage from 'next/error';
 
 const CategoryBlogs = ({ posts, totalCount, pageCount, currentPage, perPage, contactUsInfo }) => {
+
     if (!posts) {
         return <ErrorPage statusCode={404} />
     }
@@ -20,8 +21,8 @@ const CategoryBlogs = ({ posts, totalCount, pageCount, currentPage, perPage, con
     const router = useRouter();
 
     const jsxPosts = posts.data.map((post) => {
-        const categories = post.attributes.blog_categories;
-        return <Blogs blog={post.attributes} categories={categories.data} key={post.id} />
+        const categories = post.blog_categories;
+        return <Blogs blog={post} categories={categories} key={post.id} />
     });
 
     const pagginationHandler = (page) => {
@@ -149,17 +150,19 @@ export default CategoryBlogs;
 export async function getServerSideProps({ query: { page = 1, category }, res }) {
     
     try {
-        console.log("params--===============***",category)
+        console.log("category--===============***",category)
+        console.log("page--===============***",page)
         const posts = await getBlogCategoriesBySlug(page,category);
         const contactUsInfo = await getContactUsInfo();
 
         return {
             props: {
                 posts: posts,
-                totalCount: posts.meta.pagination.total,
-                pageCount: posts.meta.pagination.pageCount,
-                currentPage: posts.meta.pagination.page,
-                perPage: 3,
+                totalCount: posts.meta.total_count,
+                pageCount: Math.round(posts.meta.filter_count/9),
+                //currentPage: posts.meta.pagination.page,
+                currentPage: 1,
+                // perPage: 3,
                 contactUsInfo
             }
         };

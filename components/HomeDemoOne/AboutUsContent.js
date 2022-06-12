@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import assetsURL from '../../utils/assetsURL';
 
 const AboutUsContent = ({aboutYourself, isReadmore}) => {
     return (
@@ -11,14 +12,10 @@ const AboutUsContent = ({aboutYourself, isReadmore}) => {
                             <div className="experiences-item">
                                 <div className="experiences-content">
                                     <div className="">
-                                        
-                                        
-                                        <h3> <img style={{marginBottom:10}} src="/images/favicon.ico" alt="image" /> {aboutYourself.data.attributes.heading}</h3>
-                                        
-                                        
+                                        <h3> <img style={{marginBottom:10}} src="/images/favicon.ico" alt="image" /> {aboutYourself.data.heading}</h3>
                                     </div>
                                     
-                                    <div dangerouslySetInnerHTML={{__html: aboutYourself.data.attributes.content}}></div>
+                                    <div dangerouslySetInnerHTML={{__html: aboutYourself.data.content}}></div>
                                 </div>
 
                                 {
@@ -42,7 +39,7 @@ const AboutUsContent = ({aboutYourself, isReadmore}) => {
 
                         <div className="col-lg-6">
                             <div className="experiences-image">
-                                <img src="/images/experiences/experiences-1.png" alt="image" />
+                                <img src={`${assetsURL}${aboutYourself.data.image}`} alt="image" />
                             </div>
                         </div>
                     </div>

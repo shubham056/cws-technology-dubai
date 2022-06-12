@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 const ModalVideo = dynamic(() => import('react-modal-video'), {
     ssr: false
 });
+import assetsURL from '../../utils/assetsURL';
 
 const IntroVideo = ({video}) => {
     // Popup Video
@@ -17,7 +18,7 @@ const IntroVideo = ({video}) => {
                 <div className="container">
                     <div className="video-view-content">
                         <div className="video-image">
-                            <img src={video.data.attributes.poster_image.data.attributes.url} alt="image" />
+                            <img src={`${assetsURL}${video.data.poster_image}`} alt="image" />
                         </div>
 
                         <div
@@ -42,7 +43,7 @@ const IntroVideo = ({video}) => {
             <ModalVideo 
                 channel='youtube' 
                 isOpen={!isOpen} 
-                videoId={video.data.attributes.video_id} 
+                videoId={video.data.youtube_video_id} 
                 onClose={() => setIsOpen(!isOpen)} 
             />
 

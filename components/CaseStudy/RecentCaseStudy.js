@@ -2,11 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import SingleCaseStudy from '../CaseStudy/SingleCaseStudy';
 
+
 const RecentCaseStudy = ({portfolios}) => {
 
     const jsxPortfolios = portfolios.data.map((portfolio) => {
-        const categories = portfolio.attributes.blog_categories;
-        return <SingleCaseStudy portfolio={portfolio.attributes} categories={categories.data}  key={portfolio.id} />
+        //const categories = portfolio.attributes.blog_categories;
+        return <SingleCaseStudy 
+        portfolio={portfolio} 
+        //categories={categories.data}  
+        key={portfolio.id} />
     });    
 
     return (

@@ -1,12 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import Blogs from '../../components/Blog/Blogs';
+import assetsURL from '../../utils/assetsURL';
+
 
 const PopularBlogPost = ({blog}) => {
     
     const jsxPosts = blog.data.map((post) => {
-        const categories = post.attributes.blog_categories;
-        return <Blogs blog={post.attributes} categories={categories.data}  key={post.id} />
+        const categories = post.blog_categories;
+        return <Blogs blog={post} categories={categories}  key={post.id} />
     });
 
     return (

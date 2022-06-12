@@ -37,7 +37,7 @@ const options = {
 const PartnerStyleOne = ({ourClients}) => {
 
     const jsxOurClients = ourClients.data.map((ourClient) => {
-        return <SingleOurPartner ourClient={ourClient.attributes} key={ourClient.id} />
+        return <SingleOurPartner ourClient={ourClient} key={ourClient.id} />
     });
 
     const [display, setDisplay] = React.useState(false);
