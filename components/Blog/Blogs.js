@@ -45,7 +45,7 @@ const Blogs = ({ blog, categories }) => {
                             </li>
                             <li>
                                 <i className="ri-time-line"></i>
-                                {Moment(blog.date_created).format('LL')}
+                                {Moment(blog.date_created).format('LL')} 
                             </li>
                             {/* <li>
                                     <i className="ri-message-2-line"></i>
