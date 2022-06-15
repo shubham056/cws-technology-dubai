@@ -9,7 +9,7 @@ export async function getPosts(page) {
   //   }, {
   //   encodeValuesOnly: true,
   // });
-  const postsRes = await fetch(API_BASE_URL + `blogs?page=${page}&fields=id,title,image,content,slug,blog_categories.*.*.*,author.*.*.*&limit=9&meta=*`);
+  const postsRes = await fetch(API_BASE_URL + `blogs?page=${page}&fields=id,title,image,content,date_created,slug,blog_categories.*.*.*,author.*.*.*&limit=9&meta=*`);
   const posts = await postsRes.json();
   return posts;
 }
@@ -29,7 +29,7 @@ let url = API_BASE_URL + `blogs?filter[slug][_eq]=${slug}`
 }
 
 export async function getPopularBlogPost(pageLimit) {
-  const postsRes = await fetch(API_BASE_URL + `blogs?fields=id,title,image,content,slug,blog_categories.*.*.*,author.*.*.*&page=1&limit=${pageLimit}&meta=*`);
+  const postsRes = await fetch(API_BASE_URL + `blogs?fields=id,title,image,content,date_created,slug,blog_categories.*.*.*,author.*.*.*&page=1&limit=${pageLimit}&meta=*`);
   const posts = await postsRes.json();
   return posts;
 }
@@ -153,7 +153,7 @@ export async function getBlogCategoriesBySlug(page,slug) {
   //   encodeValuesOnly: true,
   // });
   
-  const BlogCategoriesBySlugRes = await fetch(API_BASE_URL + `blogs?page=${page}&limit=9&fields=id,title,image,content,slug,blog_categories.*.*.*,author.*.*.*&filter[blog_categories][blog_categories_id][slug][_eq]=${slug}&meta=*`);
+  const BlogCategoriesBySlugRes = await fetch(API_BASE_URL + `blogs?page=${page}&limit=9&fields=id,title,image,content,date_created,slug,blog_categories.*.*.*,author.*.*.*&filter[blog_categories][blog_categories_id][slug][_eq]=${slug}&meta=*`);
   const blogCategoriesBySlug = await BlogCategoriesBySlugRes.json();
   return blogCategoriesBySlug;
 }
