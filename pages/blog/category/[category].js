@@ -15,9 +15,6 @@ const CategoryBlogs = ({ posts, totalCount, pageCount, currentPage, perPage, con
         return <ErrorPage statusCode={404} />
     }
 
-    // console.log("blog data---------",posts)
-    // console.log('cat',category)
-
     const router = useRouter();
 
     const jsxPosts = posts.data.map((post) => {
@@ -26,11 +23,11 @@ const CategoryBlogs = ({ posts, totalCount, pageCount, currentPage, perPage, con
     });
 
     const pagginationHandler = (page) => {
-        console.log('page', page)
+       // console.log('page', page)
         const currentPath = router.pathname;
         const currentQuery = router.query;
         currentQuery.page = page.selected + 1;
-        console.log('currentQuery', currentQuery, currentPath)
+        //console.log('currentQuery', currentQuery, currentPath)
 
         router.push({
             pathname: currentPath,
@@ -150,8 +147,6 @@ export default CategoryBlogs;
 export async function getServerSideProps({ query: { page = 1, category }, res }) {
     
     try {
-        console.log("category--===============***",category)
-        console.log("page--===============***",page)
         const posts = await getBlogCategoriesBySlug(page,category);
         const contactUsInfo = await getContactUsInfo();
 

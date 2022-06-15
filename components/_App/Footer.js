@@ -27,7 +27,7 @@ const Footer = ({ contactUsInfo }) => {
         setnewsletter(value);
     }
 
-    console.log("after", newsletter)
+   // console.log("after", newsletter)
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -42,7 +42,7 @@ const Footer = ({ contactUsInfo }) => {
                 },
             })
                 .then(response => {
-                    console.log(response);
+                    //console.log(response);
                     if (response.status == 200) {
                         setnewsletter("")
                         alertContent();
@@ -56,7 +56,7 @@ const Footer = ({ contactUsInfo }) => {
              const url = `${baseUrl}/api/newsletters`;
              const payload = { newsletter };
              const response = await axios.post(url, payload);
-             console.log(response);
+            // console.log(response);
         } catch (error) {
             console.log(error)
         }

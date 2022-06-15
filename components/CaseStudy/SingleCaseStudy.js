@@ -5,9 +5,6 @@ import assetsURL from '../../utils/assetsURL';
 
 const SingleCaseStudy = ({ portfolio, categories }) => {
 
-    // console.log(portfolio.image)
-    // return false
-
     return (
         <>
             <div className="col-md-6 single-cases">

@@ -10,10 +10,13 @@ import ErrorPage from 'next/error';
 import { getContactUsInfo, getService } from '../utils/strapi';
 
 const ServicesDetails = ({ service, contactUsInfo }) => {
-    console.log("service-----------", service.data[0].heading)
+    
     if (!service.data) {
         return <ErrorPage statusCode={404} />
     }
+    // if (service.data.length == 0) {
+    //     return <ErrorPage statusCode={404} />
+    // }
     return (
         <>
             {

@@ -16,11 +16,11 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
     const router = useRouter();
     const pagginationHandler = (page) => {
-        console.log('page',page)
+        //console.log('page',page)
         const currentPath = router.pathname;
         const currentQuery = router.query;
         currentQuery.page = page.selected + 1;
-        console.log('currentQuery',currentQuery,currentPath)
+        //console.log('currentQuery',currentQuery,currentPath)
 
         router.push({
             pathname: currentPath,

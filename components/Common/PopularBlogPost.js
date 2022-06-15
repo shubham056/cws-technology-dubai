@@ -5,6 +5,7 @@ import assetsURL from '../../utils/assetsURL';
 
 
 const PopularBlogPost = ({blog}) => {
+
     
     const jsxPosts = blog.data.map((post) => {
         const categories = post.blog_categories;

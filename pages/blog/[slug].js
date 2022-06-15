@@ -564,7 +564,6 @@ export async function getServerSideProps({ params, res }) {
         };
 
     } catch (error) {
-        console.log("errr+++",error)
         res.statusCode = 404
         return {
             props: {

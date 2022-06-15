@@ -5,9 +5,6 @@ import assetsURL from '../../utils/assetsURL';
 
 const AboutService = ({ feature }) => {
 
-    // console.log(feature)
-    // return false
-
     return (
         <>
             <div className="col-lg-4 col-md-6" key={feature.id}>

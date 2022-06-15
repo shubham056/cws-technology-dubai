@@ -32,6 +32,8 @@ import Technologies from '../components/HomeDemoOne/Technologies';
 
 const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, services, aboutYourself, ourClients, industries, technologies, parallaxInfo, contactUsInfo }) => {
 
+    
+
     return (
         <>
             <Navbar />

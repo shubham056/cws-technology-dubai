@@ -5,8 +5,7 @@ import assetsURL from '../../utils/assetsURL';
 
 
 const OurprocessView = ({ourProcess}) => {
-    // console.log(ourProcess)
-    // return false
+
     return (
         <>
             <div className="experiences-areas">

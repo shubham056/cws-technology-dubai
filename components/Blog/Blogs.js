@@ -6,8 +6,6 @@ import assetsURL from '../../utils/assetsURL';
 
 const Blogs = ({ blog, categories }) => {
 
-    console.log("categories data",categories)
-
     return (
         <>
             <div className="col-lg-4 col-md-6" key={blog.id}>
@@ -35,7 +33,7 @@ const Blogs = ({ blog, categories }) => {
                                         ?
                                         <Link href={`/blog/${blog.slug}`}>
                                             <a className="tag">
-                                                {(categories.length > 0) ? categories.map((item) => item.blog_categories_id.name).join(", ") : null}
+                                                {(categories.length > 0) ? categories.map((item) => item.blog_categories_dubai_collection_id.name).join(", ") : null}
                                             </a>
                                         </Link>
                                         :
