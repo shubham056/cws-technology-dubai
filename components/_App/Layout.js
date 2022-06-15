@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="description" content="CWS Technology is the best and leading web development company in India. We are among the top web development agency who provide website development services."/>
-                <title>Best Web Development Company, Services in India | CWS Technolog</title>
+                <title>Best Web Development Company, Services in India | CWS Technology</title>
             </Head>
             <DefaultSeo {...SEO} />
 

@@ -2,6 +2,13 @@ const qs = require('qs');
 import API_BASE_URL from './apiUrl';
 //const API_BASE_URL = 'http://localhost:1337/api/';
 
+export async function getAllBlogPosts() {
+ 
+  const postsRes = await fetch(API_BASE_URL + `blogs_dubai_collection_?fields=id,title,slug`);
+  const posts = await postsRes.json();
+  return posts;
+}
+
 export async function getPosts(page) {
   // const query = qs.stringify({
   //     page: page,
@@ -137,6 +144,12 @@ export async function getServices() {
   return services;
 }
 
+export async function getAllServicesData() {
+  const ServicesRes = await fetch(API_BASE_URL + `services_dubai_collection?fields=slug`);
+  const services = await ServicesRes.json();
+  return services;
+}
+
 export async function getBlogCategories() {
   const BlogCategoriesRes = await fetch(API_BASE_URL + `blog_categories_dubai_collection?fields=id,name,slug,status&sort=slug`);
   const blogCategories = await BlogCategoriesRes.json();
@@ -144,16 +157,8 @@ export async function getBlogCategories() {
 }
 
 export async function getBlogCategoriesBySlug(page,slug) {
-  // const query = qs.stringify({
-  //   pagination: {
-  //     page: page,
-  //     pageSize: 9,
-  //   },
-  // }, {
-  //   encodeValuesOnly: true,
-  // });
-  
-  const BlogCategoriesBySlugRes = await fetch(API_BASE_URL + `blogs_dubai_collection_?page=${page}&limit=9&fields=id,title,image,content,date_created,slug,blog_categories.*.*.*,author.*.*.*&filter[blog_categories][blog_categories_id][slug][_eq]=${slug}&meta=*`);
+ 
+  const BlogCategoriesBySlugRes = await fetch(API_BASE_URL + `blogs_dubai_collection_?page=${page}&limit=9&fields=id,title,image,content,date_created,slug,blog_categories.*.*.*,author.*.*.*&filter[blog_categories][blog_categories_dubai_collection_id][slug][_eq]=${slug}&meta=*`);
   const blogCategoriesBySlug = await BlogCategoriesBySlugRes.json();
   return blogCategoriesBySlug;
 }

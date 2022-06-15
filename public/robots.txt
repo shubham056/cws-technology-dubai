@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /*
+Disallow: /api/*
+sitemap: http://www.cwstechnology.ae/sitemap.xml
