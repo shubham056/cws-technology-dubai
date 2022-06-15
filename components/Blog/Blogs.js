@@ -45,7 +45,7 @@ const Blogs = ({ blog, categories }) => {
                             </li>
                             <li>
                                 <i className="ri-time-line"></i>
-                                {Moment(blog.createdAt).format('LL')}
+                                {Moment(blog.date_created).format('LL')}
                             </li>
                             {/* <li>
                                     <i className="ri-message-2-line"></i>
@@ -54,7 +54,7 @@ const Blogs = ({ blog, categories }) => {
                         </ul>
                         <h3>
                             <Link href={`/blog/${blog.slug}`}>
-                                <a>{`${blog.title.substring(0, 50)}...`}</a>
+                                <a>{blog.title}</a>
                             </Link>
                         </h3>
 
