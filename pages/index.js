@@ -25,17 +25,51 @@ import {
     getAllCommonServices,
     getIndustries,
     getTechnologies,
-    getBannerData
+    getBannerData,
+    getHomePageMeta
 } from '../utils/strapi';
 import Technologies from '../components/HomeDemoOne/Technologies';
+import { NextSeo } from "next-seo";
+import assetsURL from '../utils/assetsURL';
 
 
-const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, services, aboutYourself, ourClients, industries, technologies, parallaxInfo, contactUsInfo }) => {
+const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, services, aboutYourself, ourClients, industries, technologies, parallaxInfo, contactUsInfo, homeMeta }) => {
 
-    
+    let facebook = homeMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
+    let twitter = homeMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = homeMeta.data;
+    const { opengraph_url, title, description, opengraph_type } = facebook;
+    const { twitter_handle, site, twitter_cardType } = twitter;
+
+    const SEO = {
+        title: metaTitle,
+        description: metaDescription,
+        canonical: canonicalURL,
+        openGraph: {
+            type: opengraph_type,
+            title: title,
+            description: description,
+            url: opengraph_url,
+            images: [
+                {
+                    url: `${assetsURL}${metaImage}`,
+                    width: 800,
+                    height: 600,
+                    alt: 'Og Image Alt',
+                }
+            ],
+        },
+        twitter: {
+            handle: twitter_handle,
+            site: site,
+            cardType: twitter_cardType,
+        },
+    }
 
     return (
         <>
+            {homeMeta && <NextSeo {...SEO} />}
+
             <Navbar />
 
             {banner && <MainBanner bannerData={banner} />}
@@ -87,6 +121,7 @@ export async function getStaticProps({ params }) {
     const technologies = await getTechnologies(); // Get Industries
     const parallaxInfo = await getParallaxSectionInfo(); // Get Our Clients
     const contactUsInfo = await getContactUsInfo();
+    const homeMeta = await getHomePageMeta();
 
     return {
         props: {
@@ -101,7 +136,8 @@ export async function getStaticProps({ params }) {
             industries,
             technologies,
             parallaxInfo,
-            contactUsInfo
+            contactUsInfo,
+            homeMeta
         },
         revalidate: 10, // In seconds
     };

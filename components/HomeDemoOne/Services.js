@@ -15,7 +15,7 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
 
    
     const jsxServices = services.data.map((service) => {
-        return <SingleService service={service} randColor={randColor()}/>
+        return <SingleService service={service} randColor={randColor()} key={service.id}/>
     });
 
     return (

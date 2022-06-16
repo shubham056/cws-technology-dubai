@@ -6,19 +6,54 @@ import CTA from '../../components/Common/CTA';
 import Footer from '../../components/_App/Footer';
 import SingleCaseStudy from '../../components/CaseStudy/SingleCaseStudy';
 
-import { getPortfolio, getContactUsInfo } from '../../utils/strapi';
+import { getPortfolio, getContactUsInfo, getPortfolioPageMeta } from '../../utils/strapi';
+import assetsURL from '../../utils/assetsURL';
+import { NextSeo } from 'next-seo';
 
 
-const Portfolio = ({ portfolios, contactUsInfo }) => {
+const Portfolio = ({ portfolios, contactUsInfo, portfolioMeta }) => {
+
+    let facebook = portfolioMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
+    let twitter = portfolioMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = portfolioMeta.data;
+    const { opengraph_url, title, description, opengraph_type } = facebook;
+    const { twitter_handle, site, twitter_cardType } = twitter;
+
+    const SEO = {
+        title: metaTitle,
+        description: metaDescription,
+        canonical: canonicalURL,
+        openGraph: {
+            type: opengraph_type,
+            title: title,
+            description: description,
+            url: opengraph_url,
+            images: [
+                {
+                    url: `${assetsURL}${metaImage}`,
+                    width: 800,
+                    height: 600,
+                    alt: 'Og Image Alt',
+                }
+            ],
+        },
+        twitter: {
+            handle: twitter_handle,
+            site: site,
+            cardType: twitter_cardType,
+        },
+    }
 
     const jsxPortfolios = portfolios.data.map((portfolio) => {
         //const categories = portfolio.attributes.blog_categories;
-        return <SingleCaseStudy portfolio={portfolio} 
-        //categories={categories.data} 
-        key={portfolio.id} />
+        return <SingleCaseStudy portfolio={portfolio}
+            //categories={categories.data} 
+            key={portfolio.id} />
     });
     return (
         <>
+            {portfolioMeta && <NextSeo {...SEO} />}
+
             <Navbar />
 
             <PageBanner
@@ -32,10 +67,10 @@ const Portfolio = ({ portfolios, contactUsInfo }) => {
                 <div className="cases-area ptb-100">
                     <div className="container">
                         <div className="row">
-                        <div className="section-title">
-                            <h2>Our Portfolio</h2>
-                        <p>In the last 10 years, we've created over 300 mobile and online applications. We'll let the work speak for itself by showing you a sample of our previous work.</p>
-                    </div>
+                            <div className="section-title">
+                                <h2>Our Portfolio</h2>
+                                <p>In the last 10 years, we've created over 300 mobile and online applications. We'll let the work speak for itself by showing you a sample of our previous work.</p>
+                            </div>
                             {portfolios && jsxPortfolios}
 
                             {portfolios
@@ -318,7 +353,7 @@ const Portfolio = ({ portfolios, contactUsInfo }) => {
                 <CTA />
             </div>
 
-            {contactUsInfo && <Footer  contactUsInfo={contactUsInfo} />}
+            {contactUsInfo && <Footer contactUsInfo={contactUsInfo} />}
         </>
     )
 }
@@ -328,11 +363,13 @@ export default Portfolio;
 export async function getStaticProps({ params }) {
     const portfolios = await getPortfolio(); // Get Our Privileges
     const contactUsInfo = await getContactUsInfo();
+    const portfolioMeta = await getPortfolioPageMeta();
 
     return {
         props: {
             portfolios,
-            contactUsInfo
+            contactUsInfo,
+            portfolioMeta
         },
         revalidate: 5, // In seconds
     };

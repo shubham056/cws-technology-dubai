@@ -220,3 +220,67 @@ export async function getSlugs(type) {
   return elementsIds;
 }
 
+//--------------------------- Metadata Api section ------------
+export async function getHomePageMeta() {
+  const HomePageMetaRes = await fetch(API_BASE_URL + `Home_page_dubai`);
+  const homeMata = await HomePageMetaRes.json();
+  return homeMata;
+}
+
+export async function getAboutPageMeta() {
+  const AboutPageMetaRes = await fetch(API_BASE_URL + `aboutus_dubai`);
+  const aboutusMata = await AboutPageMetaRes.json();
+  return aboutusMata;
+}
+
+export async function getWhyCwsPageMeta() {
+  const WhyCwsPageRes = await fetch(API_BASE_URL + `whycws_dubai`);
+  const whycwsMata = await WhyCwsPageRes.json();
+  return whycwsMata;
+}
+
+export async function getOurClientsPageMeta() {
+  const OurClientsPageRes = await fetch(API_BASE_URL + `our_satisfied_customers_dubai`);
+  const ourClientsMeta = await OurClientsPageRes.json();
+  return ourClientsMeta;
+}
+
+export async function getTestimonialsPageMeta() {
+  const TestimonialsPageRes = await fetch(API_BASE_URL + `testimonials_dubai`);
+  const testimonialsMeta = await TestimonialsPageRes.json();
+  return testimonialsMeta;
+}
+
+export async function getServicesPageMeta() {
+  const ServicesPageMetaRes = await fetch(API_BASE_URL + `services_dubai`);
+  const servicesMeta = await ServicesPageMetaRes.json();
+  return servicesMeta;
+}
+
+export async function getOurProcessPageMeta() {
+  const OurProcessPageRes = await fetch(API_BASE_URL + `Our_Process_dubai`);
+  const ourprocessMeta = await OurProcessPageRes.json();
+  return ourprocessMeta;
+}
+
+export async function getPortfolioPageMeta() {
+  const PortfolioPagemetaRes = await fetch(API_BASE_URL + `Portfolio_dubai`);
+  const Portfoliometa = await PortfolioPagemetaRes.json();
+  return Portfoliometa;
+}
+
+export async function getCareersPageMeta() {
+  const CareersPagemetaRes = await fetch(API_BASE_URL + `career_dubai`);
+  const careerMeta = await CareersPagemetaRes.json();
+  return careerMeta;
+}
+
+export async function getcontactusPageMeta() {
+  const ContactusPagemetaRes = await fetch(API_BASE_URL + `contactus_dubai`);
+  const contactusMeta = await ContactusPagemetaRes.json();
+  return contactusMeta;
+}
+
+
+
+

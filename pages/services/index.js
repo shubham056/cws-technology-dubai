@@ -10,9 +10,52 @@ import Services from '../../components/HomeDemoOne/Services';
 import Router, { withRouter, useRouter } from 'next/router'
 
 
-import { getAllServices, getServices, getParallaxSectionInfo, getContactUsInfo, getAllCommonServices } from '../../utils/strapi';
+import {
+    getAllServices,
+    getServices,
+    getParallaxSectionInfo,
+    getContactUsInfo,
+    getAllCommonServices,
+    getServicesPageMeta
+} from '../../utils/strapi';
+import assetsURL from '../../utils/assetsURL';
+import { NextSeo } from 'next-seo';
 
-const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, currentPage }) => {
+
+const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, currentPage, servicesMeta }) => {
+
+    let facebook = servicesMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
+    let twitter = servicesMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = servicesMeta.data;
+    const { opengraph_url, title, description, opengraph_type } = facebook;
+    const { twitter_handle, site, twitter_cardType } = twitter;
+
+    const SEO = {
+        title: metaTitle,
+        description: metaDescription,
+        canonical: canonicalURL,
+        openGraph: {
+            type: opengraph_type,
+            title: title,
+            description: description,
+            url: opengraph_url,
+            images: [
+                {
+                    url: `${assetsURL}${metaImage}`,
+                    width: 800,
+                    height: 600,
+                    alt: 'Og Image Alt',
+                }
+            ],
+        },
+        twitter: {
+            handle: twitter_handle,
+            site: site,
+            cardType: twitter_cardType,
+        },
+    }
+
+
     const [menu, setMenu] = React.useState(true)
 
     const toggleNavbar = () => {
@@ -36,6 +79,9 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
     return (
         <>
+
+            {servicesMeta && <NextSeo {...SEO} />}
+
             <Navbar />
 
             <PageBanner
@@ -61,7 +107,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                         <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
-                                <p style={{fontSize:20,fontWeight:450}}>Web Development Services</p>
+                                <p style={{ fontSize: 20, fontWeight: 450 }}>Web Development Services</p>
 
                                 <ul>
                                     <li className="nav-item">
@@ -90,7 +136,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                         <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
-                                <p style={{fontSize:20,fontWeight:450}}>Mobile Application Development</p>
+                                <p style={{ fontSize: 20, fontWeight: 450 }}>Mobile Application Development</p>
 
                                 <ul>
                                     <li className="nav-item">
@@ -120,7 +166,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                         <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
-                                <p style={{fontSize:20,fontWeight:450}}> E-Commerce Development</p>
+                                <p style={{ fontSize: 20, fontWeight: 450 }}> E-Commerce Development</p>
 
                                 <ul>
                                     <li className="nav-item">
@@ -150,7 +196,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                         <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
-                                <p style={{fontSize:20,fontWeight:450}}>RIA Development</p>
+                                <p style={{ fontSize: 20, fontWeight: 450 }}>RIA Development</p>
 
                                 <ul>
                                     <li className="nav-item">
@@ -174,7 +220,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                         <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
-                                <p style={{fontSize:20,fontWeight:450}}>PHP CMS Development</p>
+                                <p style={{ fontSize: 20, fontWeight: 450 }}>PHP CMS Development</p>
 
                                 <ul>
                                     <li className="nav-item">
@@ -203,7 +249,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                         <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
-                                <p style={{fontSize:20,fontWeight:450}}>Mobile Development</p>
+                                <p style={{ fontSize: 20, fontWeight: 450 }}>Mobile Development</p>
 
                                 <ul>
                                     <li className="nav-item">
@@ -232,7 +278,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                         <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
-                                <p style={{fontSize:20,fontWeight:450}}>PHP MVC Development</p>
+                                <p style={{ fontSize: 20, fontWeight: 450 }}>PHP MVC Development</p>
 
                                 <ul>
                                     <li className="nav-item">
@@ -261,7 +307,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                         <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
-                                <p style={{fontSize:20,fontWeight:450}}>Website Design</p>
+                                <p style={{ fontSize: 20, fontWeight: 450 }}>Website Design</p>
 
                                 <ul>
                                     <li className="nav-item">
@@ -309,10 +355,12 @@ export async function getStaticProps({ params }) {
     const services = await getAllCommonServices(); // Get Services
     const parallaxInfo = await getParallaxSectionInfo();
     const contactUsInfo = await getContactUsInfo();
+    const servicesMeta = await getServicesPageMeta();
 
     return {
         props: {
             services,
+            servicesMeta,
             parallaxInfo,
             // contactUsInfo,
             // totalCount: services.meta.pagination.total,

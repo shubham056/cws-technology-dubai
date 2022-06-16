@@ -16,19 +16,49 @@ import {
     getTestimonial,
     getContactUsInfo,
     getOurClients,
+    getOurClientsPageMeta
 } from '../../utils/strapi';
+import assetsURL from '../../utils/assetsURL';
 import PartnerStyleOne from '../../components/Common/PartnerStyleOne';
 
 
-const OurSatisfiedCustomers = ({ testimonials, contactUsInfo, ourClients }) => {
+const OurSatisfiedCustomers = ({ testimonials, contactUsInfo, ourClients, ourClientsMeta }) => {
+
+    let facebook = ourClientsMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
+    let twitter = ourClientsMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = ourClientsMeta.data;
+    const { opengraph_url, title, description, opengraph_type } = facebook;
+    const { twitter_handle, site, twitter_cardType } = twitter;
+
     const SEO = {
-        title: "About title",
-        description: "About des"
+        title: metaTitle,
+        description: metaDescription,
+        canonical: canonicalURL,
+        openGraph: {
+            type: opengraph_type,
+            title: title,
+            description: description,
+            url: opengraph_url,
+            images: [
+                {
+                    url: `${assetsURL}${metaImage}`,
+                    width: 800,
+                    height: 600,
+                    alt: 'Og Image Alt',
+                }
+            ],
+        },
+        twitter: {
+            handle: twitter_handle,
+            site: site,
+            cardType: twitter_cardType,
+        },
     }
 
     return (
         <>
-            <NextSeo {...SEO} />
+            {ourClientsMeta && <NextSeo {...SEO} />}
+
             <Navbar />
 
             <PageBanner
@@ -46,7 +76,7 @@ const OurSatisfiedCustomers = ({ testimonials, contactUsInfo, ourClients }) => {
                 <CTA />
             </div>
 
-           {contactUsInfo && <Footer contactUsInfo={contactUsInfo}/>}
+            {contactUsInfo && <Footer contactUsInfo={contactUsInfo} />}
         </>
     )
 }
@@ -57,12 +87,14 @@ export async function getStaticProps({ params }) {
     const testimonials = await getTestimonial();
     const contactUsInfo = await getContactUsInfo();
     const ourClients = await getOurClients();
+    const ourClientsMeta = await getOurClientsPageMeta();
 
     return {
         props: {
             testimonials,
             contactUsInfo,
             ourClients,
+            ourClientsMeta
         },
         revalidate: 10, // In seconds
     };

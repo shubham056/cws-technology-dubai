@@ -10,8 +10,6 @@ import Footer from '../../components/_App/Footer';
 import Team from '../../components/Common/Team';
 import AboutUsContent from '../../components/HomeDemoOne/AboutUsContent';
 import { NextSeo } from 'next-seo';
-
-
 import {
     getIntroVideo,
     getfeatures,
@@ -19,19 +17,49 @@ import {
     getTestimonial,
     getTeamMembers,
     getAboutYourself,
-    getContactUsInfo
+    getContactUsInfo,
+    getWhyCwsPageMeta
 } from '../../utils/strapi';
+import assetsURL from '../../utils/assetsURL';
 
 
-const WhyCws = ({ features, introVideo, testimonials, privileges, teamMembers, aboutYourself, contactUsInfo }) => {
+const WhyCws = ({ features, introVideo, testimonials, privileges, teamMembers, aboutYourself, contactUsInfo, whycwsMeta }) => {
+
+    let facebook = whycwsMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
+    let twitter = whycwsMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = whycwsMeta.data;
+    const { opengraph_url, title, description, opengraph_type } = facebook;
+    const { twitter_handle, site, twitter_cardType } = twitter;
+
     const SEO = {
-        title: "About title",
-        description: "About des"
+        title: metaTitle,
+        description: metaDescription,
+        canonical: canonicalURL,
+        openGraph: {
+            type: opengraph_type,
+            title: title,
+            description: description,
+            url: opengraph_url,
+            images: [
+                {
+                    url: `${assetsURL}${metaImage}`,
+                    width: 800,
+                    height: 600,
+                    alt: 'Og Image Alt',
+                }
+            ],
+        },
+        twitter: {
+            handle: twitter_handle,
+            site: site,
+            cardType: twitter_cardType,
+        },
     }
 
     return (
         <>
-            <NextSeo {...SEO} />
+            {whycwsMeta && <NextSeo {...SEO} />}
+
             <Navbar />
 
             <PageBanner
@@ -43,7 +71,7 @@ const WhyCws = ({ features, introVideo, testimonials, privileges, teamMembers, a
 
             {features && <FeaturesCard features={features} />}
 
-            {aboutYourself && <AboutUsContent aboutYourself={aboutYourself} isReadmore={false}/>}
+            {aboutYourself && <AboutUsContent aboutYourself={aboutYourself} isReadmore={false} />}
 
             <div className="pt-100">
                 {privileges && <FunFactStyleTwo ourPrivileges={privileges} />}
@@ -59,7 +87,7 @@ const WhyCws = ({ features, introVideo, testimonials, privileges, teamMembers, a
                 <CTA />
             </div>
 
-           {contactUsInfo && <Footer contactUsInfo={contactUsInfo}/>}
+            {contactUsInfo && <Footer contactUsInfo={contactUsInfo} />}
         </>
     )
 }
@@ -74,6 +102,8 @@ export async function getStaticProps({ params }) {
     const teamMembers = await getTeamMembers(true);
     const aboutYourself = await getAboutYourself();
     const contactUsInfo = await getContactUsInfo();
+    const whycwsMeta = await getWhyCwsPageMeta();
+
 
     return {
         props: {
@@ -83,7 +113,8 @@ export async function getStaticProps({ params }) {
             privileges,
             teamMembers,
             aboutYourself,
-            contactUsInfo
+            contactUsInfo,
+            whycwsMeta
         },
         revalidate: 10, // In seconds
     };

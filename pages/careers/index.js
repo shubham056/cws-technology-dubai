@@ -1,15 +1,17 @@
-import React,{ useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Navbar from '../../components/_App/Navbar';
 import PageBanner from '../../components/Common/PageBanner';
 import CTA from '../../components/Common/CTA';
 import Footer from '../../components/_App/Footer';
-import { NextSeo } from 'next-seo';
 import {
     getContactUsInfo,
     getOurCareers,
-    getApplyingFor
-} from '../../utils/strapi';
+    getApplyingFor,
+    getCareersPageMeta
+} from '../../utils/strapi'; 
+import assetsURL from '../../utils/assetsURL';
+import { NextSeo } from 'next-seo';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 const MySwal = withReactContent(Swal)
@@ -31,8 +33,41 @@ const alertContent = () => {
 
 
 
-const Careers = ({ contactUsInfo, careers, vacancy }) => {
-    
+const Careers = ({ contactUsInfo, careers, vacancy, careerMeta }) => {
+
+    let facebook = careerMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
+    let twitter = careerMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = careerMeta.data;
+    const { opengraph_url, title, description, opengraph_type } = facebook;
+    const { twitter_handle, site, twitter_cardType } = twitter;
+
+    const SEO = {
+        title: metaTitle,
+        description: metaDescription,
+        canonical: canonicalURL,
+        openGraph: {
+            type: opengraph_type,
+            title: title,
+            description: description,
+            url: opengraph_url,
+            images: [
+                {
+                    url: `${assetsURL}${metaImage}`,
+                    width: 800,
+                    height: 600,
+                    alt: 'Og Image Alt',
+                }
+            ],
+        },
+        twitter: {
+            handle: twitter_handle,
+            site: site,
+            cardType: twitter_cardType,
+        },
+    }
+
+
+
     // Form initial state
     const INITIAL_STATE = {
         applyFor: "",
@@ -54,11 +89,11 @@ const Careers = ({ contactUsInfo, careers, vacancy }) => {
     };
 
     const handleChange = e => {
-       const { name, value } = ((name == 'resume') ? e.target.files[0] : e.target);
+        const { name, value } = ((name == 'resume') ? e.target.files[0] : e.target);
         // if(name == 'resume'){
         //     setfile(e.target.files[0])
         // }
-        setFormValue({...formValue, [name]: value });
+        setFormValue({ ...formValue, [name]: value });
     }
 
     console.log("after", formValue)
@@ -75,19 +110,19 @@ const Careers = ({ contactUsInfo, careers, vacancy }) => {
                 url: `${baseUrl}/api/job-applications`,
                 data: formData,
             })
-            .then(response => {
-                console.log(response);
-                if(response.status == 200){
-                    setActiveSidebarModal(!isActiveSidebarModal);
-                    setFormValue(INITIAL_STATE)
-                    alertContent();
-                }
-                
-            }).catch((error) => {
-                console.log("Error: ", error.message);
-              });
+                .then(response => {
+                    console.log(response);
+                    if (response.status == 200) {
+                        setActiveSidebarModal(!isActiveSidebarModal);
+                        setFormValue(INITIAL_STATE)
+                        alertContent();
+                    }
 
-           
+                }).catch((error) => {
+                    console.log("Error: ", error.message);
+                });
+
+
             const url = `${baseUrl}/api/jobApply`;
             const payload = { applyFor, experience, name, email, number, location };
             const response = await axios.post(url, payload);
@@ -99,15 +134,10 @@ const Careers = ({ contactUsInfo, careers, vacancy }) => {
     };
 
 
-    const SEO = {
-        title: "Careers",
-        description: "Careers des"
-    }
-
     const { applyFor, experience, name, email, number, location, resume } = formValue;
     return (
         <>
-            <NextSeo {...SEO} />
+            {careerMeta && <NextSeo {...SEO} />}
 
             <Navbar />
 
@@ -300,7 +330,7 @@ const Careers = ({ contactUsInfo, careers, vacancy }) => {
 
                                             <div className="col-lg-12 col-md-6">
                                                 <div className="form-group">
-                                                <select
+                                                    <select
                                                         className="form-control"
                                                         value={location}
                                                         onChange={handleChange}
@@ -723,12 +753,14 @@ export async function getStaticProps({ params }) {
     const contactUsInfo = await getContactUsInfo();
     const careers = await getOurCareers();
     const vacancy = await getApplyingFor();
+    const careerMeta = await getCareersPageMeta();
 
     return {
         props: {
             contactUsInfo,
             careers,
-            vacancy
+            vacancy,
+            careerMeta
         },
         revalidate: 10, // In seconds
     };
