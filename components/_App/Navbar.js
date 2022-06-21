@@ -192,6 +192,30 @@ const Navbar = () => {
                                             Services
                                             </a>
                                         </Link>
+
+                                        <ul className="dropdown-menu">
+                                            <li className="nav-item">
+                                                <Link href="/web-development-services" activeClassName="active">
+                                                    <a onClick={toggleNavbar} className="nav-link">Web Development</a>
+                                                </Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link href="/mobile-application-development" activeClassName="active">
+                                                    <a onClick={toggleNavbar} className="nav-link">Mobile Application Development</a>
+                                                </Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link href="/e-commerce-development" activeClassName="active">
+                                                    <a onClick={toggleNavbar} className="nav-link">E-Commerce Development</a>
+                                                </Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link href="/it-consulting-service" activeClassName="active">
+                                                    <a onClick={toggleNavbar} className="nav-link">IT Consulting</a>
+                                                </Link>
+                                            </li>
+                                        </ul>
+
                                     </li>
 
                                     {/* <li className="nav-item dropopen">

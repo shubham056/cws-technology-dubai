@@ -73,7 +73,7 @@ const BlogSidebar = ({ popularPosts, blogCategories }) => {
                                                         src={(post.image != null) ? `${assetsURL}${post.image}` : "/images/blog/blog-large-1.jpg"}
                                                         style={{ height: 333 }}
                                                         alt={(post.title != null) ? post.title : "blog-image"}
-                                                        width="100%" height="100%" layout="fill" objectFit="contain"
+                                                        width="100%" height="100%" objectFit="contain"
                                                     />
                                                 </a>
                                             </Link>
@@ -85,7 +85,7 @@ const BlogSidebar = ({ popularPosts, blogCategories }) => {
                                                     </Link>
                                                 </h4>
 
-                                                <span><i className="ri-time-line"></i>{Moment(post.createdAt).format('LL')}</span>
+                                                <span><i className="ri-time-line"></i>{Moment(post.date_created).format('LL')}</span>
                                             </div>
                                         </article>
                                     )

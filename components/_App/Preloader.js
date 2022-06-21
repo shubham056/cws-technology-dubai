@@ -8,10 +8,10 @@ const Preloader = () => {
                     <div className="inner flipper">
                     
                             <div className="front">
-                                <img src="/images/logo.png" alt />
+                                <img src="/images/logo.png" alt="img" />
                             </div>
                             <div className="back">
-                                <img src="/images/logo.png" alt />
+                                <img src="/images/logo.png" alt="img" />
                             </div>
                     </div>
                 </div>
@@ -20,10 +20,10 @@ const Preloader = () => {
             <div className="preloader-area">
                 <div className="flipper">
                     <div className="front">
-                        <img src="/images/logo.png" alt />
+                        <img src="/images/logo.png" alt="img" />
                     </div>
                     <div className="back">
-                        <img src="/images/logo.png" alt />
+                        <img src="/images/logo.png" alt="img" />
                     </div>
                 </div>
             </div>

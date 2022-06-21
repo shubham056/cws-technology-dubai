@@ -57,7 +57,7 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
                                         </li>
                                         <li>
                                             <i className="ri-time-line"></i>
-                                            {Moment(post.data[0].createdAt).format('LL')}
+                                            {Moment(post.data[0].date_created).format('LL')}
                                         </li>
                                         {/* <li>
                                             <i className="ri-message-2-line"></i>

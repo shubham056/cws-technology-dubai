@@ -7,7 +7,6 @@ module.exports = {
     trailingSlash: true,
     reactStrictMode: true,
     images: {
-
         domains: ["localhost","cwsadmin.in"],
       }
 }
