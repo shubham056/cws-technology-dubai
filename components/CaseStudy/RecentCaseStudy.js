@@ -19,7 +19,7 @@ const RecentCaseStudy = ({portfolios}) => {
                 <div className="container">
                     <div className="section-title">
                         <h2>Our Realizations / Recent Cases</h2>
-                        <p>Best Strategic planning dolor sit amet consectetur adipiscing elit. Scelerisque amet odio velit auctor nam elit nulla eget sodales dui pulvina</p>
+                        <p>Our clients trust us as a reliable and most-efficient website design company. So let's check how we assist our clients and empower them with our strong technical analysis skills.</p>
                     </div>
 
                     <div className="row">

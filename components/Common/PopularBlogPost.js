@@ -17,8 +17,8 @@ const PopularBlogPost = ({blog}) => {
             <div className="blog-area pt-100 pb-70">
                 <div className="container">
                     <div className="section-title">
-                        <h2>Popular Blog Post</h2>
-                        <p>We are try to Update with Latest Article and Blog Post Best Strategic Planning</p>
+                        <h2>New Blog Updates</h2>
+                        <p>With a skilled team of writers, we regularly update our articles & blog posts.</p>
                     </div>
 
                     <div className="row justify-content-center">

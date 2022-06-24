@@ -27,7 +27,7 @@ const Footer = ({ contactUsInfo }) => {
         setnewsletter(value);
     }
 
-   // console.log("after", newsletter)
+    // console.log("after", newsletter)
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -53,9 +53,9 @@ const Footer = ({ contactUsInfo }) => {
                 });
 
 
-             const url = `${baseUrl}/api/newsletters`;
-             const payload = { newsletter };
-             const response = await axios.post(url, payload);
+            const url = `${baseUrl}/api/newsletters`;
+            const payload = { newsletter };
+            const response = await axios.post(url, payload);
             // console.log(response);
         } catch (error) {
             console.log(error)
@@ -102,9 +102,19 @@ const Footer = ({ contactUsInfo }) => {
                                 <h3>Quick Link</h3>
 
                                 <ul className="footer-links-list">
+                                <li>
+                                        <Link href="/blog">
+                                            <a>Blogs</a>
+                                        </Link>
+                                    </li>
                                     <li>
-                                        <Link href="/services">
-                                            <a>Services</a>
+                                        <Link href="/contact">
+                                            <a>Contact Us</a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/careers">
+                                            <a>Careers</a>
                                         </Link>
                                     </li>
                                     <li>
@@ -113,10 +123,12 @@ const Footer = ({ contactUsInfo }) => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/contact">
-                                            <a>Contact Us</a>
+                                        <Link href="/services">
+                                            <a>Services</a>
                                         </Link>
                                     </li>
+                                    
+
                                 </ul>
                             </div>
                         </div>
@@ -131,14 +143,19 @@ const Footer = ({ contactUsInfo }) => {
                                             <a>About Us</a>
                                         </Link>
                                     </li>
-                                    {/* <li>
-                                        <Link href="/team-member">
-                                            <a>Team Member</a>
-                                        </Link>
-                                    </li> */}
                                     <li>
-                                        <Link href="/contact">
-                                            <a>Contact Us</a>
+                                        <Link href="/why-cws">
+                                            <a>Why CWS</a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/our-satisfied-customers">
+                                            <a>Our Satisfied Customers</a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/testimonials">
+                                            <a>Testimonials</a>
                                         </Link>
                                     </li>
                                 </ul>
@@ -151,20 +168,25 @@ const Footer = ({ contactUsInfo }) => {
 
                                 <ul className="footer-links-list">
                                     <li>
-                                        <Link href="/services">
-                                            <a href="pricing.html">Services</a>
+                                        <Link href="/web-development-services">
+                                            <a href="pricing.html">Web Development</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/portfolio">
-                                            <a>Portfolio</a>
+                                        <Link href="/mobile-application-development">
+                                            <a>Mobile Application Development</a>
                                         </Link>
                                     </li>
-                                    {/* <li>
-                                        <Link href="/testimonials">
-                                            <a>Testimonials</a>
+                                    <li>
+                                        <Link href="/e-commerce-development">
+                                            <a href="pricing.html">E-Commerce Development</a>
                                         </Link>
-                                    </li> */}
+                                    </li>
+                                    <li>
+                                        <Link href="/it-consulting-service">
+                                            <a>IT Consulting</a>
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

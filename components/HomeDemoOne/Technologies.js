@@ -14,7 +14,7 @@ const Technologies = ({ technologies }) => {
                 <div className="container">
                     <div className="section-title">
                         <h2>Technologies</h2>
-                        <p>We work with over 10 different technologies, including few of the latest and most talked about stacks.</p>
+                        <p>We have strong expertise and over 12 years of experience in tech stacks. Let's tell us your tech.</p>
                     </div>
 
                     <div className="row justify-content-center">

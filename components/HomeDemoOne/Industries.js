@@ -14,7 +14,7 @@ const Industries = ({ industries }) => {
                 <div className="container">
                     <div className="section-title">
                         <h2>Industries We Serve</h2>
-                        <p>Here, me make almost genre of applications. You name it and we build it.  </p>
+                        <p>With our strong industry expertise, we assist industries in stimulating their business. You think it, and we build it.</p>
                     </div>
 
                     <div className="row justify-content-center industry-main">

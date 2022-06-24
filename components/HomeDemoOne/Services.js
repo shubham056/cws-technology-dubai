@@ -23,8 +23,8 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
             <div className="services-area pt-100 pb-70">
                 <div className="container">
                     <div className="section-title">
-                        <h2>Services We Offer</h2>
-                        <p>We deal with every problem with great alacrity and go out of our way to come up with new creative ideas and reliable solutions, making us the best web development company.</p>
+                        <h2>Our Services</h2>
+                        <p>Being a renowned <b>web development company</b>, we assure you that our digital technologies service will change your future business functions and growth. Our services are focused on offering exceptional customer experience through modern technologies.</p>
                     </div>
 
                     <div className="row justify-content-center">
