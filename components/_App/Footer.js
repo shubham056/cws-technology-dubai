@@ -197,7 +197,7 @@ const Footer = ({ contactUsInfo }) => {
 
                                 <div className="widget-newsletter">
                                     <div className="newsletter-content">
-                                        <p>Best solution for your it startup business consectetur adipiscing elit.</p>
+                                        <p>{contactUsInfo.data.newsletter}</p>
                                     </div>
 
                                     <form onSubmit={handleSubmit} className="newsletter-form">
