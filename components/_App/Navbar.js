@@ -195,22 +195,22 @@ const Navbar = () => {
 
                                         <ul className="dropdown-menu">
                                             <li className="nav-item">
-                                                <Link href="/web-development-services" activeClassName="active">
+                                                <Link href="/services/web-development-services" activeClassName="active">
                                                     <a onClick={toggleNavbar} className="nav-link">Web Development</a>
                                                 </Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link href="/mobile-application-development" activeClassName="active">
+                                                <Link href="/services/mobile-application-development" activeClassName="active">
                                                     <a onClick={toggleNavbar} className="nav-link">Mobile Application Development</a>
                                                 </Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link href="/e-commerce-development" activeClassName="active">
+                                                <Link href="/services/e-commerce-development" activeClassName="active">
                                                     <a onClick={toggleNavbar} className="nav-link">E-Commerce Development</a>
                                                 </Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link href="/it-consulting-service" activeClassName="active">
+                                                <Link href="/services/it-consulting-service" activeClassName="active">
                                                     <a onClick={toggleNavbar} className="nav-link">IT Consulting</a>
                                                 </Link>
                                             </li>

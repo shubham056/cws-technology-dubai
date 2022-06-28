@@ -126,7 +126,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/cms-development-company-in-dubai" activeClassName="active">
+                                        <Link href="/services/cms-development-company-in-dubai" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Content Management System(CMS)</a>
                                         </Link>
                                     </li>
@@ -140,22 +140,22 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                                 <ul>
                                     <li className="nav-item">
-                                        <Link href="/android-app-development" activeClassName="active">
+                                        <Link href="/services/android-app-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Android App Development</a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/i-phone-application-development" activeClassName="active">
+                                        <Link href="/services/i-phone-application-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">iPhone Application Development</a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/i-pad-app-development" activeClassName="active">
+                                        <Link href="/services/i-pad-app-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">iPad App Development</a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/hybrid-app-development" activeClassName="active">
+                                        <Link href="/services/hybrid-app-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Hybrid App Development</a>
                                         </Link>
                                     </li>
@@ -170,17 +170,17 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                                 <ul>
                                     <li className="nav-item">
-                                        <Link href="/e-commerce-development" activeClassName="active">
+                                        <Link href="/services/e-commerce-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">E-Commerce Solutions</a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/woo-commerce-development" activeClassName="active">
+                                        <Link href="/services/woo-commerce-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">WooCommerce Development</a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/magento-development-services" activeClassName="active">
+                                        <Link href="/services/magento-development-services" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Magento Development Services</a>
                                         </Link>
                                     </li>
@@ -224,7 +224,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                                 <ul>
                                     <li className="nav-item">
-                                        <Link href="/wordpress-website-development-company-in-india" activeClassName="active">
+                                        <Link href="/services/wordpress-website-development-company-in-india" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">WordPress Development</a>
                                         </Link>
                                     </li>
@@ -234,12 +234,12 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/magento-development-services" activeClassName="active">
+                                        <Link href="/services/magento-development-services" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Magento Development Services</a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/drupal-development" activeClassName="active">
+                                        <Link href="/services/drupal-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Drupal Development</a>
                                         </Link>
                                     </li>
@@ -268,7 +268,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/cms-development-company-in-dubai" activeClassName="active">
+                                        <Link href="/services/cms-development-company-in-dubai" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Content Management System(CMS)</a>
                                         </Link>
                                     </li>
@@ -282,17 +282,17 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                                 <ul>
                                     <li className="nav-item">
-                                        <Link href="/cake-php-development" activeClassName="active">
+                                        <Link href="/services/cake-php-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">CakePHP Development</a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/codeigniter-development" activeClassName="active">
+                                        <Link href="/services/codeigniter-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Codeigniter Development</a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/zend-development-company" activeClassName="active">
+                                        <Link href="/services/zend-development-company" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Zend Development</a>
                                         </Link>
                                     </li>
@@ -311,7 +311,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
                                 <ul>
                                     <li className="nav-item">
-                                        <Link href="/responsive-website-development" activeClassName="active">
+                                        <Link href="/services/responsive-website-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Responsive Website Development</a>
                                         </Link>
                                     </li>
@@ -326,7 +326,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/responsive-website-development" activeClassName="active">
+                                        <Link href="/services/responsive-website-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">RIA Development</a>
                                         </Link>
                                     </li>
