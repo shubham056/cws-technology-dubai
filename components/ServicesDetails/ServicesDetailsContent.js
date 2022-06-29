@@ -19,7 +19,7 @@ const ServicesDetailsContent = ({ service }) => {
                                 >
                                 </div>
 
-                                <ul className="overview-list">
+                                {/* <ul className="overview-list">
                                     <li>
                                         <i className="ri-check-line"></i> Nunc, mauris ut in vestibulum. Consectetur phasellus ultrices fusce nibh justo, venenatis, amet. Lectus quam in lobortis
                                     </li>
@@ -32,7 +32,7 @@ const ServicesDetailsContent = ({ service }) => {
                                     <li>
                                         <i className="ri-check-line"></i> Web design and development very creative to do something , mauris ut in vestibulum. Consectetur phasellus ultrices fusce nibh justo, venenatis, amet to all design and development.
                                     </li>
-                                </ul>
+                                </ul> */}
 
                                 <div className="overview-image">
                                     <img src="/images/services-details/services-details-1.jpg" alt="image" />

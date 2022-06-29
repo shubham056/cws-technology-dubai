@@ -5,7 +5,7 @@ const ServicesDetailsSidebar = () => {
     return (
         <>
             <div className="services-details-information">
-                <ul className="services-list">
+                {/* <ul className="services-list">
                     <li>
                         <Link href="/services-details">
                             <a>Brand Identity Design</a>
@@ -36,7 +36,7 @@ const ServicesDetailsSidebar = () => {
                             <a>Domain and Hosting</a>
                         </Link>
                     </li>
-                </ul>
+                </ul> */}
 
                 <div className="services-contact-info">
                     <h3>Let's Make Something Amazing Together!</h3>

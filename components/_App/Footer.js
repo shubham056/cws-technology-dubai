@@ -168,22 +168,22 @@ const Footer = ({ contactUsInfo }) => {
 
                                 <ul className="footer-links-list">
                                     <li>
-                                        <Link href="/web-development-services">
+                                        <Link href="/services/web-development-services">
                                             <a href="pricing.html">Web Development</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/mobile-application-development">
+                                        <Link href="/services/mobile-application-development">
                                             <a>Mobile Application Development</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/e-commerce-development">
+                                        <Link href="/services/e-commerce-development">
                                             <a href="pricing.html">E-Commerce Development</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/it-consulting-service">
+                                        <Link href="/services/it-consulting-service">
                                             <a>IT Consulting</a>
                                         </Link>
                                     </li>
