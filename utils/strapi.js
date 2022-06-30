@@ -16,6 +16,7 @@ export async function getPosts(page) {
   //   }, {
   //   encodeValuesOnly: true,
   // });
+  //console.log(API_BASE_URL + `blogs_dubai_collection_?page=${page}&fields=id,title,image,content,date_created,slug,blog_categories.*.*.*,author.*.*.*&limit=9&meta=*`)
   const postsRes = await fetch(API_BASE_URL + `blogs_dubai_collection_?page=${page}&fields=id,title,image,content,date_created,slug,blog_categories.*.*.*,author.*.*.*&limit=9&meta=*`);
   const posts = await postsRes.json();
   return posts;

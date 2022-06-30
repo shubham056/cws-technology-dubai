@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react'
 import Link from 'next/link';
 import Moment from "moment-timezone";
 import Image from 'next/image';
@@ -6,19 +6,49 @@ import assetsURL from '../../utils/assetsURL';
 
 
 const BlogSidebar = ({ popularPosts, blogCategories }) => {
+    const [searchBlog, setsearchBlog] = useState("")
 
+    const handleChange = e => {
+        const {name, value } = e.target;
+        setsearchBlog(value);
+    }
+   
+    const handleSubmit = async e => {
+        e.preventDefault();
+        try {
+            console.log(searchBlog)
+            
+            // const url = `${baseUrl}/api/contact`;
+            // const { name, email, number, subject, text } = contact;
+            // const payload = { name, email, number, subject, text };
+            // const response = await axios.post(url, payload);
+            // //console.log(response);
+            // setContact(INITIAL_STATE);
+            // alertContent();
+            // setSubmitBtnText('Send Message');
+        } catch (error) {
+            console.log(error)
+            
+        }
+    };
 
     return (
         <>
             <div className="widget-area">
-                {/* <div className="widget widget_search">
-                    <form className="search-form">
-                        <input type="search" className="search-field" placeholder="Search Something" />
+                <div className="widget widget_search">
+                    <form className="search-form" onSubmit={handleSubmit}>
+                        <input 
+                            type="search" 
+                            name="serach"
+                            value={searchBlog}
+                            onChange={handleChange}
+                            className="search-field"
+                            placeholder="Search Something" />
                         <button type="submit">
                             <i className="ri-search-line"></i>
                         </button>
                     </form>
-                </div> */}
+                </div>
 
                 {/* <div className="widget widget_categories">
                     <h3 className="widget-title">Post Categories</h3>
