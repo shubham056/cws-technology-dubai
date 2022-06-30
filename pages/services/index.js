@@ -362,7 +362,7 @@ export async function getStaticProps({ params }) {
             services,
             servicesMeta,
             parallaxInfo,
-            // contactUsInfo,
+            contactUsInfo,
             // totalCount: services.meta.pagination.total,
             // pageCount: services.meta.pagination.pageCount,
             // currentPage: services.meta.pagination.page,
