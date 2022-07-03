@@ -14,7 +14,7 @@ class MyDocument extends Document {
     
     render() {
         return (
-            <Html lang="en">
+            <Html lang="english">
                 <Head>
                     <link
                         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -26,7 +26,6 @@ class MyDocument extends Document {
                         href="/images/favicon.ico"
                     ></link>
                      <script type="text/javascript" src="/js/whatsapp_script.js"></script>
-                     <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/4rwLQsl5N_ccppoTAwwwMrEN/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-o1nfdUm9cV7Sx6HxXDsnady1EGmCBTwza/JTA6OSowyOK+wq0YF0+F9jejHVacaR"></script>
                 </Head>
                 <body>
                     <Main />
