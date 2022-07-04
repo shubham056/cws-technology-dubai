@@ -40,10 +40,10 @@ const WhatsApp = ({ scrollStepInPx, delayInMs }) => {
                         opacity: 1;
                         visibility: visible;
                         bottom: 35px;
-                        background-color: green;
+                        background-color: #2bb640;
                     }
                     .go-top:hover {
-                        background-color: green;
+                        background-color: #2bb630;
                         
                         color: var(--white-color);
                         -webkit-transition: var(--transition);
