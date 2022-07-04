@@ -80,7 +80,7 @@ const GoTop = ({scrollStepInPx, delayInMs}) => {
                             height: 40px;
                             line-height: 45px;
                             font-size: 26px;
-                            bottom: 20px !important;
+                            bottom: 70px !important;
                         }
                     }
 
