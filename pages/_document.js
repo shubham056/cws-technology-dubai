@@ -1,15 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-let config = {
-    phone :"971529910891",
-    call :"Message Us",
-    position :"ww-right",
-    size : "ww-normal",
-    text : "",
-    type: "ww-extended",
-    brand: "",
-    subtitle: "",
-    welcome: ""
-    };
 class MyDocument extends Document {
     
     render() {
