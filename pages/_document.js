@@ -14,7 +14,6 @@ class MyDocument extends Document {
                         type="image/png"
                         href="/images/favicon.ico"
                     ></link>
-                     <script type="text/javascript" src="/js/whatsapp_script.js"></script>
                      <script src="https://www.google.com/recaptcha/api.js?render=6LehBL0gAAAAAHyuJu1qPCWPxAKAGnwoCfHcTD6j"></script>
                 </Head>
                 <body>
