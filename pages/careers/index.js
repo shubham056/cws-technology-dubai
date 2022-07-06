@@ -9,7 +9,7 @@ import {
     getOurCareers,
     getApplyingFor,
     getCareersPageMeta
-} from '../../utils/strapi'; 
+} from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
 import { NextSeo } from 'next-seo';
 import Swal from 'sweetalert2'
@@ -18,6 +18,7 @@ const MySwal = withReactContent(Swal)
 import axios from 'axios';
 import baseUrl from '../../utils/baseUrl'
 import fileToArrayBuffer from 'file-to-array-buffer';
+import Head from 'next/head';
 
 const alertContent = () => {
     MySwal.fire({
@@ -37,7 +38,7 @@ const Careers = ({ contactUsInfo, careers, vacancy, careerMeta }) => {
 
     let facebook = careerMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     let twitter = careerMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = careerMeta.data;
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = careerMeta.data;
     const { opengraph_url, title, description, opengraph_type } = facebook;
     const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -137,6 +138,13 @@ const Careers = ({ contactUsInfo, careers, vacancy, careerMeta }) => {
     const { applyFor, experience, name, email, number, location, resume } = formValue;
     return (
         <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </Head>
+
             {careerMeta && <NextSeo {...SEO} />}
 
             <Navbar />

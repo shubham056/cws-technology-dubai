@@ -1,5 +1,5 @@
 module.exports  = {
-    title: "CWS Technology - Offshore Software Development Services",
+    title: "Best Web Development Company, Services in India | CWS Technology",
     description: "CWS Technology is the best and leading web development company in India. We are among the top web development agency who provide website development services.",
     openGraph: {
         type: 'website',

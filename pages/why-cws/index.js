@@ -21,13 +21,14 @@ import {
     getWhyCwsPageMeta
 } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
+import Head from 'next/head';
 
 
 const WhyCws = ({ features, introVideo, testimonials, privileges, teamMembers, aboutYourself, contactUsInfo, whycwsMeta }) => {
 
     let facebook = whycwsMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     let twitter = whycwsMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = whycwsMeta.data;
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = whycwsMeta.data;
     const { opengraph_url, title, description, opengraph_type } = facebook;
     const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -58,6 +59,13 @@ const WhyCws = ({ features, introVideo, testimonials, privileges, teamMembers, a
 
     return (
         <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </Head>
+
             {whycwsMeta && <NextSeo {...SEO} />}
 
             <Navbar />

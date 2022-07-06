@@ -20,13 +20,14 @@ import {
 } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
 import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 
 
 const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, currentPage, servicesMeta }) => {
 
     let facebook = servicesMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     let twitter = servicesMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = servicesMeta.data;
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = servicesMeta.data;
     const { opengraph_url, title, description, opengraph_type } = facebook;
     const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -79,6 +80,12 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
     return (
         <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </Head>
 
             {servicesMeta && <NextSeo {...SEO} />}
 

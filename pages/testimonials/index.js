@@ -11,13 +11,14 @@ import {
     getTestimonialsPageMeta
 } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
+import Head from 'next/head';
 
 
 const Testimonials = ({ testimonials, contactUsInfo, testimonialsMeta }) => {
-    
+
     let facebook = testimonialsMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     let twitter = testimonialsMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = testimonialsMeta.data;
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = testimonialsMeta.data;
     const { opengraph_url, title, description, opengraph_type } = facebook;
     const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -54,6 +55,13 @@ const Testimonials = ({ testimonials, contactUsInfo, testimonialsMeta }) => {
 
     return (
         <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </Head>
+
             {testimonialsMeta && <NextSeo {...SEO} />}
 
             <Navbar />
@@ -73,11 +81,11 @@ const Testimonials = ({ testimonials, contactUsInfo, testimonialsMeta }) => {
 
 
                                 <h2>Testimonials</h2>
-                                <hr style={{width:35,height:15}} />
-                                <br/>
-                                  {jsxTestimonial}
+                                <hr style={{ width: 35, height: 15 }} />
+                                <br />
+                                {jsxTestimonial}
 
-                                
+
                             </div>
                         </div>
                     </div>

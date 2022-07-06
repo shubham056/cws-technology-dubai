@@ -8,12 +8,13 @@ import Footer from '../../components/_App/Footer';
 import { getContactUsInfo, getcontactusPageMeta } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
 import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 
 const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
 
     let facebook = contactUsMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     let twitter = contactUsMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = contactUsMeta.data;
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = contactUsMeta.data;
     const { opengraph_url, title, description, opengraph_type } = facebook;
     const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -44,6 +45,13 @@ const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
 
     return (
         <>
+         <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </Head>
+
             {contactUsMeta && <NextSeo {...SEO} />}
 
             <Navbar />

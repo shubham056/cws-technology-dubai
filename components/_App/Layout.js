@@ -6,6 +6,7 @@ import Preloader from './Preloader'
 import SEO from '../../next-seo-config';
 import { DefaultSeo } from 'next-seo';
 
+
 const Layout = ({ children }) => {
 
     // Preloader
@@ -14,22 +15,53 @@ const Layout = ({ children }) => {
         setTimeout(() => setLoader(false), 300);
     }, [])
 
-    return(
+    // const structuredData = [
+    //     {
+    //         "url": "https://www.cwstechnology.ae/",
+    //         "logo": "https://www.cwstechnology.ae/images/logo.png",
+    //         "name": "CWS Technology",
+    //         "@type": "Organization",
+    //         "sameAs": [
+    //             "https://www.facebook.com/cwstechnology"
+    //         ],
+    //         "@context": "http://schema.org",
+    //         "contactPoint": [
+    //             {
+    //                 "@type": "ContactPoint",
+    //                 "telephone": "+971 529910891",
+    //                 "contactType": "Business",
+    //                 "availableLanguage": "English"
+    //             }
+    //         ],
+    //         "alternateName": [
+    //             "CWSTechnology"
+    //         ]
+    //     },
+    //     {
+    //         "url": "https://www.cwstechnology.ae/",
+    //         "name": "CWS Technology",
+    //         "@type": "Website",
+    //         "@context": "http://schema.org",
+    //         "alternateName": "CWSTechnology"
+    //     }
+    // ]
+
+    return (
         <>
-            <Head>
-                {/* Required meta tags */}
-                <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="description" content="CWS Technology is the best and leading web development company in India. We are among the top web development agency who provide website development services."/>
-                <title>Best Web Development Company, Services in India | CWS Technology</title>
-            </Head>
+            {/* <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </Head> */}
             <DefaultSeo {...SEO} />
 
             {children}
 
             {loader ? <Preloader /> : null}
-  
+
             <GoTop scrollStepInPx="100" delayInMs="10.50" />
+
             <WhatsApp scrollStepInPx="100" delayInMs="10.50" />
         </>
     );

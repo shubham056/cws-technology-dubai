@@ -20,13 +20,14 @@ import {
 } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
 import PartnerStyleOne from '../../components/Common/PartnerStyleOne';
+import Head from 'next/head';
 
 
 const OurSatisfiedCustomers = ({ testimonials, contactUsInfo, ourClients, ourClientsMeta }) => {
 
     let facebook = ourClientsMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     let twitter = ourClientsMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = ourClientsMeta.data;
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = ourClientsMeta.data;
     const { opengraph_url, title, description, opengraph_type } = facebook;
     const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -57,6 +58,13 @@ const OurSatisfiedCustomers = ({ testimonials, contactUsInfo, ourClients, ourCli
 
     return (
         <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </Head>
+
             {ourClientsMeta && <NextSeo {...SEO} />}
 
             <Navbar />

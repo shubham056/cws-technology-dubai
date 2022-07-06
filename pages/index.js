@@ -31,13 +31,14 @@ import {
 import Technologies from '../components/HomeDemoOne/Technologies';
 import { NextSeo } from "next-seo";
 import assetsURL from '../utils/assetsURL';
+import Head from 'next/head';
 
 
 const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, services, aboutYourself, ourClients, industries, technologies, parallaxInfo, contactUsInfo, homeMeta }) => {
 
     let facebook = homeMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     let twitter = homeMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = homeMeta.data;
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = homeMeta.data;
     const { opengraph_url, title, description, opengraph_type } = facebook;
     const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -68,6 +69,13 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
 
     return (
         <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </Head>
+
             {homeMeta && <NextSeo {...SEO} />}
 
             <Navbar />

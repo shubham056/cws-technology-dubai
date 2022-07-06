@@ -6,11 +6,45 @@ import CTA from '../../components/Common/CTA';
 import ServicesDetailsContent from '../../components/ServicesDetails/ServicesDetailsContent';
 import Footer from '../../components/_App/Footer';
 import ErrorPage from 'next/error';
+import assetsURL from '../../utils/assetsURL';
+import { NextSeo } from 'next-seo';
 
 import { getContactUsInfo, getService } from '../../utils/strapi';
 
 const ServicesDetails = ({ service, contactUsInfo }) => {
-    // console.log("service-----------", service.data)
+    console.log("service-----------", service.data)
+
+    // let facebook = service.data.metaSocial.find(o => o.socialNetwork === 'facebook');
+    // let twitter = service.data.metaSocial.find(o => o.socialNetwork === 'twitter');
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = service.data[0];
+    // const { opengraph_url, title, description, opengraph_type } = facebook;
+    // const { twitter_handle, site, twitter_cardType } = twitter;
+
+    const SEO = {
+        title: metaTitle,
+        description: metaDescription,
+        canonical: canonicalURL,
+        // openGraph: {
+        //     type: opengraph_type,
+        //     title: title,
+        //     description: description,
+        //     url: opengraph_url,
+        //     images: [
+        //         {
+        //             url: `${assetsURL}${metaImage}`,
+        //             width: 800,
+        //             height: 600,
+        //             alt: 'Og Image Alt',
+        //         }
+        //     ],
+        // },
+        // twitter: {
+        //     handle: twitter_handle,
+        //     site: site,
+        //     cardType: twitter_cardType,
+        // },
+    }
+    console.log(SEO)
     // return false
     if (!service.data) {
         return <ErrorPage statusCode={404} />
@@ -23,6 +57,8 @@ const ServicesDetails = ({ service, contactUsInfo }) => {
                      <ErrorPage statusCode={404} />
                     :
                     <>
+                       {service && <NextSeo {...SEO} />}
+
                         <Navbar />
 
                         <PageBanner

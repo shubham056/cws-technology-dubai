@@ -5,6 +5,7 @@ import OurRespectiveClients from '../../components/Common/OurRespectiveClients';
 import CTA from '../../components/Common/CTA';
 import Footer from '../../components/_App/Footer';
 import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 
 
 import {
@@ -21,7 +22,7 @@ const Ourprocess = ({ testimonials, contactUsInfo, ourProcess, ourProcessMeta })
 
     let facebook = ourProcessMeta.data.socialNetwork.find(o => o.socialNetwork === 'facebook');
     let twitter = ourProcessMeta.data.socialNetwork.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = ourProcessMeta.data;
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = ourProcessMeta.data;
     const { opengraph_url, title, description, opengraph_type } = facebook;
     const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -52,6 +53,13 @@ const Ourprocess = ({ testimonials, contactUsInfo, ourProcess, ourProcessMeta })
 
     return (
         <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </Head>
+
             {ourProcessMeta && <NextSeo {...SEO} />}
             <Navbar />
 

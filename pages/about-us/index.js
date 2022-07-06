@@ -23,6 +23,7 @@ import {
     getAboutPageMeta
 } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
+import Head from 'next/head';
 
 
 
@@ -30,7 +31,7 @@ const AboutUs = ({ features, introVideo, testimonials, privileges, teamMembers, 
 
     let facebook = aboutMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     let twitter = aboutMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = aboutMeta.data;
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = aboutMeta.data;
     const { opengraph_url, title, description, opengraph_type } = facebook;
     const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -62,6 +63,13 @@ const AboutUs = ({ features, introVideo, testimonials, privileges, teamMembers, 
 
     return (
         <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </Head>
+
             {aboutMeta && <NextSeo {...SEO} />}
 
             <Navbar />

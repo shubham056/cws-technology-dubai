@@ -9,13 +9,14 @@ import SingleCaseStudy from '../../components/CaseStudy/SingleCaseStudy';
 import { getPortfolio, getContactUsInfo, getPortfolioPageMeta } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
 import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 
 
 const Portfolio = ({ portfolios, contactUsInfo, portfolioMeta }) => {
 
     let facebook = portfolioMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     let twitter = portfolioMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = portfolioMeta.data;
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = portfolioMeta.data;
     const { opengraph_url, title, description, opengraph_type } = facebook;
     const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -52,6 +53,13 @@ const Portfolio = ({ portfolios, contactUsInfo, portfolioMeta }) => {
     });
     return (
         <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </Head>
+
             {portfolioMeta && <NextSeo {...SEO} />}
 
             <Navbar />
