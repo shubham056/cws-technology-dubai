@@ -8,15 +8,15 @@ import Footer from '../../components/_App/Footer';
 import ErrorPage from 'next/error';
 import assetsURL from '../../utils/assetsURL';
 import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 
 import { getContactUsInfo, getService } from '../../utils/strapi';
 
 const ServicesDetails = ({ service, contactUsInfo }) => {
-    console.log("service-----------", service.data)
 
     // let facebook = service.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     // let twitter = service.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL } = service.data[0];
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = service.data[0];
     // const { opengraph_url, title, description, opengraph_type } = facebook;
     // const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -54,10 +54,17 @@ const ServicesDetails = ({ service, contactUsInfo }) => {
             {
                 (service.data.length == 0)
                     ?
-                     <ErrorPage statusCode={404} />
+                    <ErrorPage statusCode={404} />
                     :
                     <>
-                       {service && <NextSeo {...SEO} />}
+                        <Head>
+                            <script
+                                type="application/ld+json"
+                                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                            />
+                        </Head>
+
+                        {service && <NextSeo {...SEO} />}
 
                         <Navbar />
 
