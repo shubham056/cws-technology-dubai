@@ -11,19 +11,9 @@ import { getPosts, getContactUsInfo } from '../../utils/strapi';
 
 const BlogPost = ({ posts,totalCount, pageCount, currentPage, perPage, contactUsInfo }) => {
     const router = useRouter();
-
-    // console.log(posts)
-    // return false;
-
- 
-
     const jsxPosts = posts.data.map((post) => {
         const categories = post.blog_categories;
-        return <Blogs 
-                 blog={post}
-                 categories={categories}
-                 key={post.id}
-                />
+        return <Blogs blog={post} categories={categories} key={post.id}/>
     });
 
     const pagginationHandler = (page) => {
@@ -73,8 +63,7 @@ const BlogPost = ({ posts,totalCount, pageCount, currentPage, perPage, contactUs
                                     nextLinkClassName={'page-link'}
                                     breakClassName={'page-item'}
                                     breakLinkClassName={'page-link'}
-                    
-                                    initialPage={currentPage - 1}
+                                    //initialPage={currentPage - 1}
                                     pageCount={pageCount}
                                     onPageChange={pagginationHandler}
                                 />
@@ -146,9 +135,9 @@ const BlogPost = ({ posts,totalCount, pageCount, currentPage, perPage, contactUs
 
 export default BlogPost;
 
-export async function getServerSideProps({ query: {page = 1 }  }) {
-   // const page = query.page || 1; //if page empty we request the first page
-
+export async function getServerSideProps({ query  }) {
+   const page = query.page || 1; //if page empty we request the first page
+    console.log("page name---",query)
     const posts = await getPosts(page);
     const contactUsInfo = await getContactUsInfo();
    

@@ -71,8 +71,7 @@ const CategoryBlogs = ({ posts, totalCount, pageCount, currentPage, perPage, con
                                     nextLinkClassName={'page-link'}
                                     breakClassName={'page-item'}
                                     breakLinkClassName={'page-link'}
-
-                                    initialPage={currentPage - 1}
+                                    //initialPage={currentPage - 1}
                                     pageCount={pageCount}
                                     onPageChange={pagginationHandler}
                                 />
