@@ -13,7 +13,7 @@ const ServicesDetailsContent = ({ service }) => {
 
                         <div className="col-lg-9 col-md-12">
                             <div className="services-details-overview-content">
-                                <h3>{service.heading}</h3>
+                                <h1>{service.heading}</h1>
                                 <div
                                     dangerouslySetInnerHTML={{ __html: service.content }}
                                 >
