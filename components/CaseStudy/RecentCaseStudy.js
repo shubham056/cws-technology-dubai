@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SingleCaseStudy from '../CaseStudy/SingleCaseStudy';
+import Image from "next/image";
 
 
 const RecentCaseStudy = ({portfolios}) => {
@@ -40,25 +41,25 @@ const RecentCaseStudy = ({portfolios}) => {
 
                 {/* Shape Images */}
                 <div className="cases-shape-1">
-                    <img src="/images/cases-study/shape-1.png" alt="image" />
+                    <Image width={70} height={45} src="/images/cases-study/shape-1.png" alt="image" />
                 </div>
                 <div className="cases-shape-2">
-                    <img src="/images/cases-study/shape-2.png" alt="image" />
+                    <Image width={112} height={65} src="/images/cases-study/shape-2.png" alt="image" />
                 </div>
                 <div className="cases-shape-3">
-                    <img src="/images/cases-study/shape-3.png" alt="image" />
+                    <Image width={50} height={208} src="/images/cases-study/shape-3.png" alt="image" />
                 </div>
                 <div className="cases-shape-4">
-                    <img src="/images/cases-study/shape-4.png" alt="image" />
+                    <Image width={16} height={8} src="/images/cases-study/shape-4.png" alt="image" />
                 </div>
                 <div className="cases-shape-5">
-                    <img src="/images/cases-study/shape-5.png" alt="image" />
+                    <Image width={20} height={12} src="/images/cases-study/shape-5.png" alt="image" />
                 </div>
                 <div className="cases-shape-6">
-                    <img src="/images/cases-study/shape-4.png" alt="image" />
+                    <Image width={16} height={8} src="/images/cases-study/shape-4.png" alt="image" />
                 </div>
                 <div className="cases-shape-7">
-                    <img src="/images/cases-study/shape-5.png" alt="image" />
+                    <Image width={20} height={12} src="/images/cases-study/shape-5.png" alt="image" />
                 </div>
             </div>
 

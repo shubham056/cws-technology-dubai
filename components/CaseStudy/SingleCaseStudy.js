@@ -11,7 +11,7 @@ const SingleCaseStudy = ({ portfolio, categories }) => {
                 <div className="cases-image">
                     <Link href="/">
                         <a>
-                            <img 
+                            <img
                                 src={(portfolio.image != undefined) ? `${assetsURL}${portfolio.image}` : "https://ozen-react.envytheme.com/images/blog/blog-large-1.jpg"} 
                                 alt={portfolio.title} 
                             />

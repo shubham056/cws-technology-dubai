@@ -1,5 +1,6 @@
 import React from 'react';
 import assetsURL from '../../utils/assetsURL';
+import Image from "next/image";
 
 const TechSupport = ({ parallaxInfo }) => {
 
@@ -10,32 +11,32 @@ const TechSupport = ({ parallaxInfo }) => {
                 <div className="container">
                     <div className="support-content">
                         <div className="">
-                            <h3> <img style={{marginBottom:7}} src="/images/favicon.png" alt="image" /> {parallaxInfo.data.heading}</h3>
+                            <h3> <Image width={32} height={32} style={{ marginBottom: 7 }} src="/images/favicon.png" alt="image" /> {parallaxInfo.data.heading}</h3>
                         </div>
 
-                        
-                        <div dangerouslySetInnerHTML={{__html: parallaxInfo.data.content}}></div>
+
+                        <div dangerouslySetInnerHTML={{ __html: parallaxInfo.data.content }}></div>
                     </div>
                 </div>
 
                 {/* Shape Images */}
                 <div className="support-shape-1">
-                    <img src="/images/support/shape-1.png" alt="image" />
+                    <Image width={220} height={202} src="/images/support/shape-1.png" alt="image" />
                 </div>
                 <div className="support-shape-2">
-                    <img src="/images/support/shape-2.png" alt="image" />
+                    <Image width={220} height={52} src="/images/support/shape-2.png" alt="image" />
                 </div>
                 <div className="support-shape-3">
-                    <img src="/images/support/shape-3.png" alt="image" />
+                    <Image width={16} height={8} src="/images/support/shape-3.png" alt="image" />
                 </div>
                 <div className="support-shape-4">
-                    <img src="/images/support/shape-4.png" alt="image" />
+                    <Image width={20} height={12} src="/images/support/shape-4.png" alt="image" />
                 </div>
                 <div className="support-shape-5">
-                    <img src="/images/support/shape-5.png" alt="image" />
+                    <Image width={60} height={30} src="/images/support/shape-5.png" alt="image" />
                 </div>
                 <div className="support-shape-6">
-                    <img src="/images/support/shape-6.png" alt="image" />
+                    <Image width={80} height={42} src="/images/support/shape-6.png" alt="image" />
                 </div>
             </div>
 
