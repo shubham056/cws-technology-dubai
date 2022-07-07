@@ -22,6 +22,7 @@ import {
 } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
 import Head from 'next/head';
+import Script from 'next/script';
 
 
 const WhyCws = ({ features, introVideo, testimonials, privileges, teamMembers, aboutYourself, contactUsInfo, whycwsMeta }) => {
@@ -60,7 +61,7 @@ const WhyCws = ({ features, introVideo, testimonials, privileges, teamMembers, a
     return (
         <>
             <Head>
-                <script
+                <Script strategy='lazyOnload'
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

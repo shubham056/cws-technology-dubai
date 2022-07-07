@@ -24,6 +24,7 @@ import {
 } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
 import Head from 'next/head';
+import Script from "next/script";
 
 
 
@@ -64,7 +65,7 @@ const AboutUs = ({ features, introVideo, testimonials, privileges, teamMembers, 
     return (
         <>
             <Head>
-                <script
+                <Script strategy='lazyOnload'
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

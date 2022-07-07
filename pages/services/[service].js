@@ -11,6 +11,7 @@ import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 
 import { getContactUsInfo, getService } from '../../utils/strapi';
+import Script from 'next/script';
 
 const ServicesDetails = ({ service, contactUsInfo }) => {
 
@@ -58,7 +59,7 @@ const ServicesDetails = ({ service, contactUsInfo }) => {
                     :
                     <>
                         <Head>
-                            <script
+                            <Script strategy='lazyOnload'
                                 type="application/ld+json"
                                 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                             />

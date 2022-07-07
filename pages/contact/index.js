@@ -9,6 +9,7 @@ import { getContactUsInfo, getcontactusPageMeta } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
+import Script from 'next/script';
 
 const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
 
@@ -46,7 +47,7 @@ const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
     return (
         <>
          <Head>
-                <script
+                <Script strategy='lazyOnload'
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

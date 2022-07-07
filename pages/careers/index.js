@@ -19,6 +19,7 @@ import axios from 'axios';
 import baseUrl from '../../utils/baseUrl'
 import fileToArrayBuffer from 'file-to-array-buffer';
 import Head from 'next/head';
+import Script from "next/script";
 
 const alertContent = () => {
     MySwal.fire({
@@ -139,7 +140,7 @@ const Careers = ({ contactUsInfo, careers, vacancy, careerMeta }) => {
     return (
         <>
             <Head>
-                <script
+                <Script strategy='lazyOnload'
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

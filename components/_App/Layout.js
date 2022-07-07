@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
     // Preloader
     const [loader, setLoader] = React.useState(true);
     React.useEffect(() => {
-        setTimeout(() => setLoader(false), 1);
+        setTimeout(() => setLoader(false), 0);
     }, [])
 
     // const structuredData = [

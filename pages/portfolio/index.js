@@ -10,6 +10,7 @@ import { getPortfolio, getContactUsInfo, getPortfolioPageMeta } from '../../util
 import assetsURL from '../../utils/assetsURL';
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
+import Script from 'next/script';
 
 
 const Portfolio = ({ portfolios, contactUsInfo, portfolioMeta }) => {
@@ -54,7 +55,7 @@ const Portfolio = ({ portfolios, contactUsInfo, portfolioMeta }) => {
     return (
         <>
             <Head>
-                <script
+                <Script strategy='lazyOnload'
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

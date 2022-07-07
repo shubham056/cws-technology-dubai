@@ -21,6 +21,7 @@ import {
 import assetsURL from '../../utils/assetsURL';
 import PartnerStyleOne from '../../components/Common/PartnerStyleOne';
 import Head from 'next/head';
+import Script from 'next/script';
 
 
 const OurSatisfiedCustomers = ({ testimonials, contactUsInfo, ourClients, ourClientsMeta }) => {
@@ -59,7 +60,7 @@ const OurSatisfiedCustomers = ({ testimonials, contactUsInfo, ourClients, ourCli
     return (
         <>
             <Head>
-                <script
+                <Script strategy='lazyOnload'
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

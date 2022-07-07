@@ -32,6 +32,7 @@ import Technologies from '../components/HomeDemoOne/Technologies';
 import { NextSeo } from "next-seo";
 import assetsURL from '../utils/assetsURL';
 import Head from 'next/head';
+import Script from "next/script";
 
 
 const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, services, aboutYourself, ourClients, industries, technologies, parallaxInfo, contactUsInfo, homeMeta }) => {
@@ -70,7 +71,7 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
     return (
         <>
             <Head>
-                <script
+                <Script strategy='lazyOnload'
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Script from "next/script";
 class MyDocument extends Document {
 
     render() {
@@ -14,8 +15,8 @@ class MyDocument extends Document {
                         type="image/png"
                         href="/images/favicon.ico"
                     ></link>
-                    <script src="https://www.google.com/recaptcha/api.js?render=6LehBL0gAAAAAHyuJu1qPCWPxAKAGnwoCfHcTD6j"></script>
-                    <script src="/js/googleTagManager.js"></script>
+                    <Script strategy="lazyOnload" src="https://www.google.com/recaptcha/api.js?render=6LehBL0gAAAAAHyuJu1qPCWPxAKAGnwoCfHcTD6j" />
+                    <Script strategy="lazyOnload" src="/js/googleTagManager.js" />
                 </Head>
                 <body>
                 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K674W23" style={{display:'none',visibility:'hidden'}} height="0" width="0"></iframe></noscript>
