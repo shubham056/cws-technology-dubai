@@ -17,6 +17,7 @@
         "file-to-array-buffer": "^1.0.0",
         "moment-timezone": "^0.5.34",
         "next": "^12.1.4",
+        "next-pwa": "^5.5.4",
         "next-seo": "^5.4.0",
         "nodemailer": "^6.7.1",
         "nodemailer-sendgrid-transport": "^0.2.0",
