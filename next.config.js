@@ -10,5 +10,6 @@ module.exports = {
         domains: ["localhost", "cwsadmin.in"],
     },
     compress: true,
-    assetPrefix: isProd ? 'https://cdn.cwstechnology.ae' : '',
+    //assetPrefix: isProd ? 'https://cdn.cwstechnology.ae' : '',
+    crossOrigin: 'anonymous',
 }
