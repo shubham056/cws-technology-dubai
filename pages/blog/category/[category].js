@@ -144,7 +144,10 @@ const CategoryBlogs = ({ posts, totalCount, pageCount, currentPage, perPage, con
 export default CategoryBlogs;
 
 export async function getServerSideProps({ query: { page = 1, category }, res }) {
-    
+    res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=10, stale-while-revalidate=59'
+      )
     try {
         const posts = await getBlogCategoriesBySlug(page,category);
         const contactUsInfo = await getContactUsInfo();

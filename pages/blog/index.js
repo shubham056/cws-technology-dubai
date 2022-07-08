@@ -4,16 +4,20 @@ import PageBanner from '../../components/Common/PageBanner';
 import Link from 'next/link';
 import Footer from '../../components/_App/Footer';
 import Blogs from '../../components/Blog/Blogs';
-import Router, { withRouter,useRouter  } from 'next/router'
+import Router, { withRouter, useRouter } from 'next/router'
 import ReactPaginate from 'react-paginate';
 import { getPosts, getContactUsInfo } from '../../utils/strapi';
+import ErrorPage from 'next/error';
 
 
-const BlogPost = ({ posts,totalCount, pageCount, currentPage, perPage, contactUsInfo }) => {
+const BlogPost = ({ posts, totalCount, pageCount, currentPage, perPage, contactUsInfo }) => {
+    if (!posts) {
+        return <ErrorPage statusCode={404} />
+    }
     const router = useRouter();
     const jsxPosts = posts.data.map((post) => {
         const categories = post.blog_categories;
-        return <Blogs blog={post} categories={categories} key={post.id}/>
+        return <Blogs blog={post} categories={categories} key={post.id} />
     });
 
     const pagginationHandler = (page) => {
@@ -47,7 +51,7 @@ const BlogPost = ({ posts,totalCount, pageCount, currentPage, perPage, contactUs
                             {jsxPosts}
 
                             <div className="col-lg-12 col-md-12">
-                            <ReactPaginate
+                                <ReactPaginate
                                     previousLabel={<i className="ri-arrow-left-line"></i>}
                                     nextLabel={<i className="ri-arrow-right-line"></i>}
                                     breakLabel={'...'}
@@ -135,24 +139,38 @@ const BlogPost = ({ posts,totalCount, pageCount, currentPage, perPage, contactUs
 
 export default BlogPost;
 
-export async function getServerSideProps({ query  }) {
-   const page = query.page || 1; //if page empty we request the first page
-    console.log("page name---",query)
-    const posts = await getPosts(page);
-    const contactUsInfo = await getContactUsInfo();
-   
-    return {
-        props: {
-            posts,
-            totalCount: posts.meta.total_count,
-            pageCount: Math.round(posts.meta.total_count/9),
-            //currentPage: posts.meta.pagination.page,
-            currentPage: 1,
-            // perPage: 3,
-            contactUsInfo
+export async function getServerSideProps({ query, res }) {
+    res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=10, stale-while-revalidate=59'
+    )
+    try {
+        const page = query.page || 1; //if page empty we request the first page
+        //console.log("page name---", query)
+        const posts = await getPosts(page);
+        const contactUsInfo = await getContactUsInfo();
 
-            
-        },
-       // revalidate: 10, // In seconds
-    };
+        return {
+            props: {
+                posts,
+                totalCount: posts.meta.total_count,
+                pageCount: Math.round(posts.meta.total_count / 9),
+                //currentPage: posts.meta.pagination.page,
+                currentPage: 1,
+                // perPage: 3,
+                contactUsInfo
+
+
+            },
+            // revalidate: 10, // In seconds
+        };
+    } catch (error) {
+        res.statusCode = 404
+        return {
+            props: {
+                post: {}
+            }
+        }
+    }
+
 }

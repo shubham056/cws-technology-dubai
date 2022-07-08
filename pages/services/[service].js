@@ -96,6 +96,10 @@ const ServicesDetails = ({ service, contactUsInfo }) => {
 export default ServicesDetails;
 
 export async function getServerSideProps({ params, res }) {
+    res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=10, stale-while-revalidate=59'
+      )
     try {
         const contactUsInfo = await getContactUsInfo();
         const service = await getService(params.service);

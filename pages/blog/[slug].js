@@ -45,7 +45,7 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
                                     <img
                                         src={(post.data[0].image != null) ? `${assetsURL}${post.data[0].image}` : "/images/blog/blog-large-1.jpg"}
                                         alt={(post.data[0].title != null) ? post.data[0].title : "blog-image"}
-                                        width="100%"  objectFit="fill"
+                                        width="100%" objectFit="fill"
                                     />
 
                                 </div>
@@ -547,6 +547,10 @@ export default BlogDetails;
 
 //access the router, get the id, and get the data for that post
 export async function getServerSideProps({ params, res }) {
+    res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=10, stale-while-revalidate=59'
+    )
     try {
 
         const post = await getPost(params.slug);
