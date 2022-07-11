@@ -12,10 +12,10 @@ module.exports = withPWA({
     },
     compress: true,
     //assetPrefix: isProd ? 'https://cdn.cwstechnology.ae' : '',
-    crossOrigin: 'anonymous',
+    //crossOrigin: 'anonymous',
     pwa: {
         dest: 'public',
-        disable: process.env.NODE_ENV === 'development',
+        //disable: process.env.NODE_ENV === 'development',
         register: true,
 
     },
