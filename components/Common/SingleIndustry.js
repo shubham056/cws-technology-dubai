@@ -12,9 +12,8 @@ const SingleIndustry = ({ industry }) => {
                         <Image src={ (industry.image != null) ? `${assetsURL}${industry.image}`  :"/images/industries/retail.jpg"} height={50} width={50} alt={industry.heading} />
                     </div>
                     <p style={{ fontWeight: 450 }}>
-                        <Link href="#">
-                            <a onClick={e => e.preventDefault()}>{industry.heading}</a>
-                        </Link>
+                        
+                        <p style={{fontWeight:505}}>{industry.heading}</p>
                     </p>
                 </div>
             </div>
