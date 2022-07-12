@@ -42,20 +42,25 @@ const ContactForm = () => {
     const handleSubmit = async e => {
         e.preventDefault();
         setSubmitBtnText('Sending...');
-        try {
-            
-            const url = `${baseUrl}/api/contact`;
-            const { name, email, number, subject, text } = contact;
-            const payload = { name, email, number, subject, text };
-            const response = await axios.post(url, payload);
-            //console.log(response);
+        setTimeout(()=>{
             setContact(INITIAL_STATE);
             alertContent();
             setSubmitBtnText('Send Message');
-        } catch (error) {
-            console.log(error)
-            setSubmitBtnText('Send Message');
-        }
+        },3000)
+        // try {
+            
+        //     const url = `${baseUrl}/api/contact`;
+        //     const { name, email, number, subject, text } = contact;
+        //     const payload = { name, email, number, subject, text };
+        //     const response = await axios.post(url, payload);
+        //     //console.log(response);
+        //     setContact(INITIAL_STATE);
+        //     alertContent();
+        //     setSubmitBtnText('Send Message');
+        // } catch (error) {
+        //     console.log(error)
+        //     setSubmitBtnText('Send Message');
+        // }
     };
 
     return (

@@ -61,7 +61,7 @@ const WhyCws = ({ features, introVideo, testimonials, privileges, teamMembers, a
     return (
         <>
             <Head>
-                <Script strategy='lazyOnload'
+                <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

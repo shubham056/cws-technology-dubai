@@ -60,7 +60,7 @@ const OurSatisfiedCustomers = ({ testimonials, contactUsInfo, ourClients, ourCli
     return (
         <>
             <Head>
-                <Script strategy='lazyOnload'
+                <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

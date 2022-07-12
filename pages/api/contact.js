@@ -4,13 +4,12 @@ import nodemailer from 'nodemailer';
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-           user: process.env.EMAIL_USERNAME,
-           pass: process.env.EMAIL_PASSWORD
+           user: "dubaicwstechnology@gmail.com",
+           pass: "Cws@123456"
        }
    });
 
-   console.log(process.env.EMAIL_USERNAME)
-   console.log(process.env.EMAIL_PASSWORD)
+
 
    export default async (req, res) => {
 
@@ -18,7 +17,7 @@ const transporter = nodemailer.createTransport({
     const {name, email, number, subject, text} = req.body;
     const data = {
         // Update your email here
-        to: process.env.ADMIN_EMAIL,
+        to: 'shubham.k@cwsinfotech.com',
         from: email,
         subject: 'Hi there',
         text: text,

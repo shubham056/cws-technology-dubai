@@ -57,7 +57,7 @@ const Testimonials = ({ testimonials, contactUsInfo, testimonialsMeta }) => {
     return (
         <>
             <Head>
-                <Script strategy='lazyOnload'
+                <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

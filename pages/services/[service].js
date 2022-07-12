@@ -59,7 +59,7 @@ const ServicesDetails = ({ service, contactUsInfo }) => {
                     :
                     <>
                         <Head>
-                            <Script strategy='lazyOnload'
+                            <script
                                 type="application/ld+json"
                                 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                             />

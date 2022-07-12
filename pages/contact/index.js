@@ -47,7 +47,7 @@ const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
     return (
         <>
          <Head>
-                <Script strategy='lazyOnload'
+                <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

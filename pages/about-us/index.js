@@ -65,7 +65,7 @@ const AboutUs = ({ features, introVideo, testimonials, privileges, teamMembers, 
     return (
         <>
             <Head>
-                <Script 
+                <script 
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />
