@@ -8,7 +8,6 @@ import Footer from '../../components/_App/Footer';
 import ErrorPage from 'next/error';
 import assetsURL from '../../utils/assetsURL';
 import { NextSeo } from 'next-seo';
-import Head from 'next/head';
 
 import { getContactUsInfo, getService } from '../../utils/strapi';
 import Script from 'next/script';
@@ -58,12 +57,12 @@ const ServicesDetails = ({ service, contactUsInfo }) => {
                     <ErrorPage statusCode={404} />
                     :
                     <>
-                        <Head>
-                            <script
-                                type="application/ld+json"
-                                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-                            />
-                        </Head>
+
+                        <Script strategy='lazyOnload'
+                            type="application/ld+json"
+                            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                        />
+
 
                         {service && <NextSeo {...SEO} />}
 
@@ -99,7 +98,7 @@ export async function getServerSideProps({ params, res }) {
     res.setHeader(
         'Cache-Control',
         'public, s-maxage=10, stale-while-revalidate=59'
-      )
+    )
     try {
         const contactUsInfo = await getContactUsInfo();
         const service = await getService(params.service);

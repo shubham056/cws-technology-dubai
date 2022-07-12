@@ -46,12 +46,12 @@ const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
 
     return (
         <>
-         <Head>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-                />
-            </Head>
+
+            <Script strategy='lazyOnload'
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+
 
             {contactUsMeta && <NextSeo {...SEO} />}
 

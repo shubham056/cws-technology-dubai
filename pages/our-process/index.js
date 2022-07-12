@@ -5,7 +5,6 @@ import OurRespectiveClients from '../../components/Common/OurRespectiveClients';
 import CTA from '../../components/Common/CTA';
 import Footer from '../../components/_App/Footer';
 import { NextSeo } from 'next-seo';
-import Head from 'next/head';
 
 
 import {
@@ -16,6 +15,7 @@ import {
 } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
 import OurprocessView from '../../components/HomeDemoOne/Ourprocess';
+import Script from 'next/script';
 
 
 const Ourprocess = ({ testimonials, contactUsInfo, ourProcess, ourProcessMeta }) => {
@@ -53,12 +53,12 @@ const Ourprocess = ({ testimonials, contactUsInfo, ourProcess, ourProcessMeta })
 
     return (
         <>
-            <Head>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-                />
-            </Head>
+
+            <Script stringify='lazyOnload'
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+
 
             {ourProcessMeta && <NextSeo {...SEO} />}
             <Navbar />

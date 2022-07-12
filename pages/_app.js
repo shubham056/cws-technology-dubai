@@ -9,12 +9,18 @@ import '../public/css/style.css'
 import '../public/css/responsive.css'
 
 import Layout from '../components/_App/Layout';
+import Script from "next/script";
 
 const MyApp =  ({ Component, pageProps }) => {
     return (
+        <>
+        <Script strategy="lazyOnload" src="https://www.google.com/recaptcha/api.js?render=6LehBL0gAAAAAHyuJu1qPCWPxAKAGnwoCfHcTD6j" />
+
         <Layout>
             <Component {...pageProps} />
         </Layout>
+        </>
+        
     )
 }
 

@@ -56,12 +56,12 @@ const Testimonials = ({ testimonials, contactUsInfo, testimonialsMeta }) => {
 
     return (
         <>
-            <Head>
-                <script
+          
+                <Script strategy='lazyOnload'
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />
-            </Head>
+           
 
             {testimonialsMeta && <NextSeo {...SEO} />}
 

@@ -59,12 +59,12 @@ const OurSatisfiedCustomers = ({ testimonials, contactUsInfo, ourClients, ourCli
 
     return (
         <>
-            <Head>
-                <script
+          
+                <Script strategy='lazyOnload'
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />
-            </Head>
+          
 
             {ourClientsMeta && <NextSeo {...SEO} />}
 

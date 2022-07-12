@@ -23,7 +23,6 @@ import {
     getAboutPageMeta
 } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
-import Head from 'next/head';
 import Script from "next/script";
 
 
@@ -64,12 +63,12 @@ const AboutUs = ({ features, introVideo, testimonials, privileges, teamMembers, 
 
     return (
         <>
-            <Head>
-                <script 
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-                />
-            </Head>
+
+            <Script strategy='lazyOnload'
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+
 
             {aboutMeta && <NextSeo {...SEO} />}
 

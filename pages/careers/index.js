@@ -18,7 +18,6 @@ const MySwal = withReactContent(Swal)
 import axios from 'axios';
 import baseUrl from '../../utils/baseUrl'
 import fileToArrayBuffer from 'file-to-array-buffer';
-import Head from 'next/head';
 import Script from "next/script";
 
 const alertContent = () => {
@@ -139,12 +138,12 @@ const Careers = ({ contactUsInfo, careers, vacancy, careerMeta }) => {
     const { applyFor, experience, name, email, number, location, resume } = formValue;
     return (
         <>
-            <Head>
-                <script 
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-                />
-            </Head>
+
+            <Script strategy='lazyOnload'
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+
 
             {careerMeta && <NextSeo {...SEO} />}
 
