@@ -71,7 +71,7 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
     return (
         <>
             <Head>
-                <Script strategy='lazyOnload'
+                <Script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

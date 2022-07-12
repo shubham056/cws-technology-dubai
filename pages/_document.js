@@ -18,7 +18,7 @@ class MyDocument extends Document {
                         type="image/png"
                         href="/images/favicon.ico"
                     ></link>
-                    <Script  src="https://www.google.com/recaptcha/api.js?render=6LehBL0gAAAAAHyuJu1qPCWPxAKAGnwoCfHcTD6j" />
+                    <script src="https://www.google.com/recaptcha/api.js?render=6LehBL0gAAAAAHyuJu1qPCWPxAKAGnwoCfHcTD6j" />
                     <script  src="/js/googleTagManager.js" />
                 </Head>
                 <body>

@@ -65,7 +65,7 @@ const AboutUs = ({ features, introVideo, testimonials, privileges, teamMembers, 
     return (
         <>
             <Head>
-                <Script strategy='lazyOnload'
+                <Script 
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />

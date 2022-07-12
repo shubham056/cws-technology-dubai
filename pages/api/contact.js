@@ -9,6 +9,9 @@ const transporter = nodemailer.createTransport({
        }
    });
 
+   console.log(process.env.EMAIL_USERNAME)
+   console.log(process.env.EMAIL_PASSWORD)
+
    export default async (req, res) => {
 
     // console.log(req.body)
