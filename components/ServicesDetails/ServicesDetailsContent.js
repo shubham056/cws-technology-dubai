@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import ServicesDetailsSidebar from './ServicesDetailsSidebar';
 
 const ServicesDetailsContent = ({ service }) => {
@@ -7,13 +8,15 @@ const ServicesDetailsContent = ({ service }) => {
             <div className="services-details-area ptb-100">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-3 col-md-12">
+                        {/* <div className="col-lg-3 col-md-12">
                             <ServicesDetailsSidebar />
-                        </div>
+                        </div> */}
 
-                        <div className="col-lg-9 col-md-12">
+                        <div className="col-lg-12 col-md-12">
                             <div className="services-details-overview-content">
-                                <h1>{service.heading}</h1>
+                                <h1 style={{marginBottom:25}}>{service.heading}</h1>
+                                <Image width="100%" height="45%" layout="responsive"  src="/images/services-details/services-details-1.jpg" alt="image" />
+                                <div style={{marginBottom:25}}></div>
                                 <div
                                     dangerouslySetInnerHTML={{ __html: service.content }}
                                 >
@@ -34,10 +37,10 @@ const ServicesDetailsContent = ({ service }) => {
                                     </li>
                                 </ul> */}
 
-                                <div className="overview-image">
-                                    <img src="/images/services-details/services-details-1.jpg" alt="image" />
+                                {/* <div className="overview-image">
+                                    
 
-                                    {/* Shape Images */}
+                                   
                                     <div className="shape-1">
                                         <img src="/images/services-details/shape-1.png" alt="image" />
                                     </div>
@@ -47,7 +50,7 @@ const ServicesDetailsContent = ({ service }) => {
                                     <div className="shape-3">
                                         <img src="/images/services-details/shape-3.png" alt="image" />
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
