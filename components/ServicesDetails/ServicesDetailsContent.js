@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import ServicesDetailsSidebar from './ServicesDetailsSidebar';
 
 const ServicesDetailsContent = ({ service }) => {
@@ -14,9 +13,7 @@ const ServicesDetailsContent = ({ service }) => {
 
                         <div className="col-lg-12 col-md-12">
                             <div className="services-details-overview-content">
-                                <h1 style={{marginBottom:25}}>{service.heading}</h1>
-                                <Image width="100%" height="45%" layout="responsive"  src="/images/services-details/services-details-1.jpg" alt="image" />
-                                <div style={{marginBottom:25}}></div>
+                                <h1>{service.heading}</h1>
                                 <div
                                     dangerouslySetInnerHTML={{ __html: service.content }}
                                 >
@@ -37,10 +34,10 @@ const ServicesDetailsContent = ({ service }) => {
                                     </li>
                                 </ul> */}
 
-                                {/* <div className="overview-image">
-                                    
+                                <div className="overview-image">
+                                    <img style={{width:"100%"}} src="/images/services-details/services-details-1.jpg" alt="image" />
 
-                                   
+                                    {/* Shape Images */}
                                     <div className="shape-1">
                                         <img src="/images/services-details/shape-1.png" alt="image" />
                                     </div>
@@ -50,7 +47,7 @@ const ServicesDetailsContent = ({ service }) => {
                                     <div className="shape-3">
                                         <img src="/images/services-details/shape-3.png" alt="image" />
                                     </div>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                     </div>
