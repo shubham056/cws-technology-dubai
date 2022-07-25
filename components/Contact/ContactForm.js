@@ -70,7 +70,9 @@ const ContactForm = () => {
                     <div className="contact-form">
                         <h3>Get in Touch</h3>
 
-                        <form onSubmit={handleSubmit} >
+                        <div id="zf_div_Rvuqcx-bkWcjXd-G8PP7K743cnFJvqQlGqh9dNpABGE"></div>
+
+                        {/* <form onSubmit={handleSubmit} >
                             <div className="row">
                                 <div className="col-lg-6 col-md-6">
                                     <div className="form-group">
@@ -172,12 +174,15 @@ const ContactForm = () => {
                                     </button>
                                 </div>
                             </div>
-                        </form>
+                        </form> */}
                     </div>
                 </div>
             </div>
 
             <style jsx>{`
+                .backgroundBg{
+                    
+                }
                 .error-msg{
                     color: #c81f1f;
                     display: none;
