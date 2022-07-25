@@ -180,12 +180,11 @@ const ContactForm = () => {
             </div>
 
             <style jsx>{`
-                .backgroundBg{
-                    background-color: white;
-                }
-                .backgroundBg{
-                    width: 0%;
-                }
+            body,
+            body.background {
+              background-color: #ededed;
+              padding: 1rem;
+            }
                 .error-msg{
                     color: #c81f1f;
                     display: none;

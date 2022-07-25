@@ -1,22 +1,37 @@
 import nodemailer from 'nodemailer';
+import API_BASE_URL from '../../utils/apiUrl';
 // import sgTransport from 'nodemailer-sendgrid-transport';
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-           user: process.env.EMAIL_USERNAME,
-           pass: process.env.EMAIL_PASSWORD
-       }
-   });
+        user: process.env.EMAIL_USERNAME,
+        pass: process.env.EMAIL_PASSWORD
+    }
+});
 
-   export default async (req, res) => {
+export default async (req, res) => {
 
-    console.log(req.body)
     const { newsletter } = req.body;
+    fetch(`${API_BASE_URL}newsletter`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({"email": newsletter}),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            //console.log('Success:', data);
+        })
+        .catch((error) => {
+            //console.error('Error:', error);
+        });
+
     const data = {
         // Update your email here
         to: process.env.ADMIN_EMAIL,
-        from: email,
+        from: newsletter,
         subject: 'New CWS newsletter ',
         // text: text,
         html: `
@@ -31,10 +46,10 @@ const transporter = nodemailer.createTransport({
             console.log(error);
             res.status(500).send("Error proccessing charge");
         }
-        console.log(info);
+        //console.log(info);
         res.status(200).send("Email send successfully")
     });
-  };
+};
 
 
 
@@ -60,11 +75,11 @@ const transporter = nodemailer.createTransport({
 //         subject: 'Hi there',
 //         text: text,
 //         html: `
-//             <b>From:</b> ${name} <br /> 
-//             <b>Number:</b> ${number} <br /> 
-//             <b>Subject:</b> ${subject} <br /> 
-//             <b>Message:</b> ${text} 
-//         ` 
+//             <b>From:</b> ${name} <br />
+//             <b>Number:</b> ${number} <br />
+//             <b>Subject:</b> ${subject} <br />
+//             <b>Message:</b> ${text}
+//         `
 //     };
 //     try {
 //         const response = await mailer.sendMail(data);
