@@ -20,6 +20,7 @@ const alertContent = () => {
 
 const Footer = ({ contactUsInfo }) => {
     const currentYear = new Date().getFullYear();
+    const [loading, setLoading] = useState(false);
     const [newsletter, setnewsletter] = useState("");
 
     const handleChange = e => {
@@ -31,8 +32,9 @@ const Footer = ({ contactUsInfo }) => {
 
     const handleSubmit = async e => {
         e.preventDefault();
+        setLoading(true)
         try {
-            if(newsletter!=''){
+            if (newsletter != '') {
                 axios({
                     method: "post",
                     url: `${baseUrl}/api/newsletters`,
@@ -47,19 +49,21 @@ const Footer = ({ contactUsInfo }) => {
                         if (response.status == 200) {
                             setnewsletter("")
                             alertContent();
+                            setLoading(false)
                         }
-    
+
                     }).catch((error) => {
                         console.log("Error: ", error.message);
+                        setLoading(false)
                     });
-    
-    
+
+
                 // const url = `${baseUrl}/api/newsletters`;
                 // const payload = { newsletter };
                 // const response = await axios.post(url, payload);
                 // console.log(response);
             }
-            
+
         } catch (error) {
             console.log(error)
         }
@@ -105,7 +109,7 @@ const Footer = ({ contactUsInfo }) => {
                                 <h3>Quick Link</h3>
 
                                 <ul className="footer-links-list">
-                                <li>
+                                    <li>
                                         <Link href="/blog">
                                             <a>Blogs</a>
                                         </Link>
@@ -130,7 +134,7 @@ const Footer = ({ contactUsInfo }) => {
                                             <a>Services</a>
                                         </Link>
                                     </li>
-                                    
+
 
                                 </ul>
                             </div>
@@ -216,7 +220,17 @@ const Footer = ({ contactUsInfo }) => {
 
 
                                         <button type="submit">
-                                            <i className="ri-send-plane-2-line"></i>
+                                            {
+                                                (loading)
+                                                    ?
+                                                    <div className="spinner-border" role="status">
+                                                        <span className="sr-only"></span>
+                                                    </div>
+                                                    :
+                                                    <i className="ri-send-plane-2-line"></i>
+                                            }
+
+
                                         </button>
                                     </form>
                                 </div>
