@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 export default async (req, res) => {
 
     const { newsletter } = req.body;
-    fetch(`${API_BASE_URL}newsletter`, {
+    fetch(`https://cwsadmin.in/items/newsletter`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
