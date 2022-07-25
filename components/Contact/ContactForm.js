@@ -181,7 +181,10 @@ const ContactForm = () => {
 
             <style jsx>{`
                 .backgroundBg{
-                    
+                    background-color: white;
+                }
+                .backgroundBg{
+                    width: 0%;
                 }
                 .error-msg{
                     color: #c81f1f;
