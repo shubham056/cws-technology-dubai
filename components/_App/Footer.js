@@ -32,31 +32,34 @@ const Footer = ({ contactUsInfo }) => {
     const handleSubmit = async e => {
         e.preventDefault();
         try {
-            axios({
-                method: "post",
-                url: `${baseUrl}/api/newsletters`,
-                data: {
-                    "data": {
-                        'email': newsletter
-                    }
-                },
-            })
-                .then(response => {
-                    //console.log(response);
-                    if (response.status == 200) {
-                        setnewsletter("")
-                        alertContent();
-                    }
-
-                }).catch((error) => {
-                    console.log("Error: ", error.message);
-                });
-
-
-            const url = `${baseUrl}/api/newsletters`;
-            const payload = { newsletter };
-            const response = await axios.post(url, payload);
-            // console.log(response);
+            if(newsletter!=''){
+                axios({
+                    method: "post",
+                    url: `${baseUrl}/api/newsletters`,
+                    data: {
+                        "data": {
+                            'email': newsletter
+                        }
+                    },
+                })
+                    .then(response => {
+                        //console.log(response);
+                        if (response.status == 200) {
+                            setnewsletter("")
+                            alertContent();
+                        }
+    
+                    }).catch((error) => {
+                        console.log("Error: ", error.message);
+                    });
+    
+    
+                // const url = `${baseUrl}/api/newsletters`;
+                // const payload = { newsletter };
+                // const response = await axios.post(url, payload);
+                // console.log(response);
+            }
+            
         } catch (error) {
             console.log(error)
         }
