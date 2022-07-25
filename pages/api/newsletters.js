@@ -13,21 +13,6 @@ const transporter = nodemailer.createTransport({
 export default async (req, res) => {
 
     const { newsletter } = req.body;
-    fetch(`${API_BASE_URL}newsletter`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({"email": newsletter}),
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            //console.log('Success:', data);
-        })
-        .catch((error) => {
-            //console.error('Error:', error);
-        });
-
     const data = {
         // Update your email here
         to: process.env.ADMIN_EMAIL,
@@ -48,6 +33,20 @@ export default async (req, res) => {
         }
         //console.log(info);
         res.status(200).send("Email send successfully")
+        fetch(`${API_BASE_URL}newsletter`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ "email": newsletter }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                //console.log('Success:', data);
+            })
+            .catch((error) => {
+                //console.error('Error:', error);
+            });
     });
 };
 
