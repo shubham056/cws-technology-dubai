@@ -19,4 +19,12 @@ module.exports = withPWA({
         register: true,
 
     },
+    redirects: async () => [
+        {
+          source: '/:path*',
+          has: [{ type: 'host', value: 'cwstechnology.ae' }],
+          destination: 'https://www.cwstechnology.ae/:path*',
+          permanent: true
+        }
+      ]
 })
