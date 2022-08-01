@@ -19,6 +19,7 @@ class MyDocument extends Document {
                         href="/images/favicon.ico"
                     ></link>
                     <script  src="/js/googleTagManager.js" />
+                    <script type="text/javascript" src='/js/zohoContactForm.js' />
                 </Head>
                 <body>
                     
