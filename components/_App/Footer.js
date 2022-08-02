@@ -74,7 +74,7 @@ const Footer = ({ contactUsInfo }) => {
             <footer className="footer-area pt-100">
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-lg-3 col-sm-6 col-md-6">
+                        <div className="col-lg-2 col-sm-6 col-md-6">
                             <div className="single-footer-widget">
                                 <div className="widget-logo">
                                     <Link href="/">
@@ -104,7 +104,7 @@ const Footer = ({ contactUsInfo }) => {
                             </div>
                         </div>
 
-                        <div className="col-lg-2 col-sm-6 col-md-3">
+                        <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
                                 <h3>Reach Us </h3>
 
@@ -132,11 +132,7 @@ const Footer = ({ contactUsInfo }) => {
                                 <h3>Sitemap</h3>
 
                                 <ul className="footer-links-list">
-                                <li>
-                                        <Link href="/">
-                                            <a>Home</a>
-                                        </Link>
-                                    </li>
+                            
                                     <li>
                                         <Link href="/about-us">
                                             <a>About</a>
