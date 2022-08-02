@@ -5,7 +5,7 @@ import PartnerStyleOne from '../components/Common/PartnerStyleOne';
 import HomeAboutUsContent from '../components/HomeDemoOne/HomeAboutUsContent';
 import Industries from '../components/HomeDemoOne/Industries';
 import Services from '../components/HomeDemoOne/Services';
-import HomeAboutExtraContent from '../components/HomeDemoOne/HomeAboutExtraCOntent';
+import HomeAboutExtraContent from '../components/HomeDemoOne/HomeAboutExtraContent';
 import TechSupport from '../components/Common/TechSupport';
 import RecentCaseStudy from '../components/CaseStudy/RecentCaseStudy';
 import OurRespectiveClients from '../components/Common/OurRespectiveClients';
