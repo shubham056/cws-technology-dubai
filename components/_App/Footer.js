@@ -110,12 +110,12 @@ const Footer = ({ contactUsInfo }) => {
 
                                 <ul className="widget-info white-color-text">
                                     <li>
-                                        <i className="ri-customer-service-line"></i>
+                                        <i className="ri-phone-line"></i>
                                         <a style={{color: '#ffff'}} href={`tel:${contactUsInfo.data.phone_number}`}>{contactUsInfo.data.phone_number}</a>
                                     </li>
 
                                     <li>
-                                        <i className="ri-global-line"></i>
+                                        <i className="ri-mail-send-fill"></i>
                                         <a style={{ color: '#ffff' }} href={`mailto:${contactUsInfo.data.email}`}>{contactUsInfo.data.email}</a>
                                     </li>
 
@@ -251,7 +251,7 @@ const Footer = ({ contactUsInfo }) => {
                                     </li>
                                     <li>
                                         <a href={contactUsInfo.data.google_plush_url} target="_blank">
-                                            <i className="ri-map-fill"></i>
+                                            <i className="ri-map-pin-fill"></i>
                                         </a>
                                     </li>
                                 </ul>
