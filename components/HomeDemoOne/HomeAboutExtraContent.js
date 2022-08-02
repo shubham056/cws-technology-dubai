@@ -1,60 +1,26 @@
 import React from 'react';
 import Link from 'next/link';
-import SingleService from '../Common/SingleService';
-import ReactPaginate from 'react-paginate';
 
-const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
-    
-
-    const randColor = () => {
-        var color = "bg-"; // hexadecimal starting symbol
-        var letters = ["36CC72", "FF414B", "FF6D3D", "8932F8", "FFCA40"]; //Set your colors here
-        return (color += letters[Math.floor(Math.random() * letters.length)]);
-    }
-
-
-   
-    const jsxServices = services.data.map((service) => {
-        return <SingleService service={service} randColor={randColor()} key={service.id}/>
-    });
-
+const HomeAboutExtraContent = () => {
     return (
         <>
-            <div className="services-area pt-10 pb-70">
+            <div className="services-area pt-100 pb-70">
                 <div className="container">
                     <div className="section-title">
-                        <h2>Our Services</h2>
-                        <p>Being a renowned <b>web development company</b>, we assure you that our digital technologies service will change your future business functions and growth. Our services are focused on offering exceptional customer experience through modern technologies.</p>
-                    </div>
+                        <h2 className='align-center'>Web Design Company in Dubai</h2>
+                        <p >CWS Technology is one of the biggest firms providing web design & development, mobile app development, and software development services. When it comes to your internet marketing strategy, your website's design is an essential component. Every business needs a website, mobile app, and software services for its growth and development, and to enhance its marketing outreach. Our company is one of the best web design companies in Dubai.</p>
 
-                    <div className="row justify-content-center">
+                        <p >Web solutions tailored to meet your company's needs and business goals are developed by a large team of web experts. You can get a wonderful design of your website made by the experts of the best web design company, Dubai.</p>
 
-                        {jsxServices}
-
-                        {/* <div className="col-lg-12 col-md-12">
-                            <ReactPaginate
-                                    previousLabel={<i className="ri-arrow-left-line"></i>}
-                                    nextLabel={<i className="ri-arrow-right-line"></i>}
-                                    breakLabel={'...'}
-                                    marginPagesDisplayed={2}
-                                    pageRangeDisplayed={16}
-                                    activeClassName={'active'}
-                                    containerClassName={'pagination justify-content-center'}
-                                    pageClassName={'page-item'}
-                                    pageLinkClassName={'page-link'}
-                                    previousClassName={'page-item'}
-                                    previousLinkClassName={'page-link'}
-                                    nextClassName={'page-item'}
-                                    nextLinkClassName={'page-link'}
-                                    breakClassName={'page-item'}
-                                    breakLinkClassName={'page-link'}
-                    
-                                    initialPage={currentPage - 1}
-                                    pageCount={pageCount}
-                                    onPageChange={pagginationHandler}
-                                />
-                            </div> */}
-
+                        <div className="experiences-btn">
+                                    <Link href="/about-us">
+                                        <a className="default-btn">
+                                            Read More 
+                                            <i className="ri-arrow-right-line"></i>
+                                            <span></span>
+                                        </a>
+                                    </Link>
+                                </div>
                     </div>
                 </div>
 
@@ -71,9 +37,6 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
                 <div className="services-shape-4">
                     <img src="/images/services/shape-4.png" alt="image" />
                 </div>
-                <div className="services-shape-5">
-                    <img src="/images/services/shape-5.png" alt="image" />
-                </div>
             </div>
 
             {/* Services Card Style */}
@@ -83,19 +46,25 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
                     z-index: 1;
                     overflow: hidden;
                 }
-                .single-services-item {
+                .section-title p{
+                    max-width: none !important;
+                    padding: 10px;
+                }
+                .section-title .experiences-btn {
+                    padding-top: 20px;
+                }
+                .single-services {
                     margin-bottom: 30px;
                     padding: 35px;
                     border-radius: 5px;
                     -webkit-transition: var(--transition);
                     transition: var(--transition);
                     border: 1px solid #eeeeee;
-                    text-align: center;
                 }
-                .single-services-item .icon {
-                    margin-bottom: 30px;
+                .single-services .icon {
+                    margin-bottom: 25px;
                 }
-                .single-services-item .icon i {
+                .single-services .icon i {
                     display: inline-block;
                     height: 80px;
                     width: 80px;
@@ -108,47 +77,49 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
                     -webkit-transition: var(--transition);
                     transition: var(--transition);
                 }
-                .single-services-item .icon.bg-36CC72 i {
+                .single-services .icon.bg-36CC72 i {
                     background-color: #EBFAF1;
                     color: #36CC72;
                 }
-                .single-services-item .icon.bg-FF414B i {
+                .single-services .icon.bg-FF414B i {
                     background-color: #FFECED;
                     color: #FF414B;
                 }
-                .single-services-item .icon.bg-FF6D3D i {
+                .single-services .icon.bg-FF6D3D i {
                     background-color: #FFF0EC;
                     color: #FF6D3D;
                 }
-                .single-services-item .icon.bg-8932F8 i {
+                .single-services .icon.bg-8932F8 i {
                     background-color: #F3EBFE;
                     color: #8932F8;
                 }
-                .single-services-item .icon.bg-FFCA40 i {
+                .single-services .icon.bg-FFCA40 i {
                     background-color: #FFFAEC;
                     color: #FFCA40;
                 }
-                .single-services-item h3 {
+                .single-services h3 {
                     margin-bottom: 15px;
-                    font-size: 25px;
                 }
-                .single-services-item h3 a {
+                .single-services h3 a {
                     color: var(--black-color);
+                    font-size: 25px;
                     -webkit-transition: var(--transition);
                     transition: var(--transition);
                 }
-                .single-services-item p {
+                .single-services p {
                     margin-bottom: 15px;
                     font-size: 15px;
+                    -webkit-transition: var(--transition);
+                    transition: var(--transition);
                 }
-                .single-services-item .services-btn {
+                .single-services .services-btn {
                     font-size: 15px;
                     font-weight: 500;
                     position: relative;
                     -webkit-transition: var(--transition);
                     transition: var(--transition);
                 }
-                .single-services-item .services-btn i {
+                .single-services .services-btn i {
                     position: absolute;
                     right: -20px;
                     top: 50%;
@@ -156,40 +127,40 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
                             transform: translateY(-50%);
                     font-size: 15px;
                 }
-                .single-services-item:hover {
+                .single-services:hover {
                     background-color: var(--white-color);
                     -webkit-box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
                             box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
                     -webkit-transform: translateY(-10px);
                             transform: translateY(-10px);
                 }
-                .single-services-item:hover .icon i {
+                .single-services:hover .icon i {
                     background-color: var(--main-color);
                     color: var(--white-color);
                 }
-                .single-services-item:hover .icon.bg-36CC72 i {
+                .single-services:hover .icon.bg-36CC72 i {
                     background-color: #36CC72;
                 }
-                .single-services-item:hover .icon.bg-FF414B i {
+                .single-services:hover .icon.bg-FF414B i {
                     background-color: #FF414B;
                 }
-                .single-services-item:hover .icon.bg-FF6D3D i {
+                .single-services:hover .icon.bg-FF6D3D i {
                     background-color: #FF6D3D;
                 }
-                .single-services-item:hover .icon.bg-8932F8 i {
+                .single-services:hover .icon.bg-8932F8 i {
                     background-color: #8932F8;
                 }
-                .single-services-item:hover .icon.bg-FFCA40 i {
+                .single-services:hover .icon.bg-FFCA40 i {
                     background-color: #FFCA40;
                 }
-                .single-services-item:hover h3 a {
+                .single-services:hover h3 a {
                     color: var(--main-color);
                 }
-                .single-services-item:hover .services-btn {
+                .single-services:hover .services-btn {
                     color: var(--main-color);
                     letter-spacing: 1px;
                 }
-
+                
                 // shape
                 .services-shape-1 {
                     position: absolute;
@@ -225,7 +196,7 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
                 }
                 .services-shape-5 {
                     position: absolute;
-                    bottom: 0;
+                    bottom: 10%;
                     left: 35%;
                     -webkit-transform: translateY(-10%) translateX(-35%);
                             transform: translateY(-10%) translateX(-35%);
@@ -234,54 +205,89 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
 	
                 // Responsive Style
                 @media only screen and (max-width: 767px) {
-                    .single-services-item {
-                        padding: 30px 20px;
+                    .single-services {
+                        padding: 30px 15px;
+                        text-align: center;
                     }
-                    .single-services-item .icon {
-                        margin-bottom: 25px;
+                    .single-services .icon {
+                        margin-bottom: 30px;
                     }
-                    .single-services-item h3 {
+                    .single-services h3 a {
                         font-size: 20px;
-                        margin-bottom: 10px;
                     }
-                    .single-services-item p {
-                        margin-bottom: 12px;
+                    .services-shape-1 {
+                        display: none;
                     }
-                    .services-shape-1, .services-shape-2, .services-shape-3, .services-shape-4, .services-shape-5 {
+                    .services-shape-2 {
+                        display: none;
+                    }
+                    .services-shape-3 {
+                        display: none;
+                    }
+                    .services-shape-4 {
+                        display: none;
+                    }
+                    .services-shape-5 {
                         display: none;
                     }
                 }
 
                 @media only screen and (min-width : 768px) and (max-width : 991px) {
-                    .single-services-item {
+                    .single-services {
                         padding: 30px 20px;
                     }
-                    .single-services-item .icon {
-                        margin-bottom: 25px;
+                    .single-services .icon {
+                        margin-bottom: 30px;
                     }
-                    .single-services-item h3 {
+                    .single-services h3 a {
                         font-size: 20px;
-                        margin-bottom: 15px;
                     }
-                    .services-shape-1, .services-shape-2, .services-shape-3, .services-shape-4, .services-shape-5 {
+                    .services-shape-1 {
+                        display: none;
+                    }
+                    .services-shape-2 {
+                        display: none;
+                    }
+                    .services-shape-3 {
+                        display: none;
+                    }
+                    .services-shape-4 {
+                        display: none;
+                    }
+                    .services-shape-5 {
                         display: none;
                     }
                 }
 
                 @media only screen and (min-width : 992px) and (max-width : 1199px) {
-                    .single-services-item {
-                        padding: 35px 15px;
+                    .single-services {
+                        padding: 35px 20px;
                     }
-                    .single-services-item h3 {
+                    .single-services h3 a {
                         font-size: 20px;
+                    }
+                    .services-shape-1 {
+                        display: none;
+                    }
+                    .services-shape-2 {
+                        display: none;
+                    }
+                    .services-shape-3 {
+                        display: none;
+                    }
+                    .services-shape-4 {
+                        display: none;
+                    }
+                    .services-shape-5 {
+                        display: none;
                     }
                 }
 
                 @media only screen and (min-width : 1200px) and (max-width : 1399px) {
-                    .single-services-item {
+                    .single-services {
                         padding: 30px;
                     }
-                    .single-services-item h3 a {
+                    .single-services h3 a {
                         font-size: 24px;
                     }
                 }
@@ -290,4 +296,4 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
     )
 }
 
-export default Services;
+export default HomeAboutExtraContent;

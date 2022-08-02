@@ -86,7 +86,7 @@ export async function getTestimonial() {
 }
 
 export async function getPortfolio() {
-  const PortfoliosRes = await fetch(API_BASE_URL + 'portfolios_dubai_collection');
+  const PortfoliosRes = await fetch(API_BASE_URL + 'portfolios_dubai_collection?limit=3');
   const portfolios = await PortfoliosRes.json();
   return portfolios;
 }

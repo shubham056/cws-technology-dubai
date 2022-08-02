@@ -2,9 +2,10 @@ import React from 'react';
 import Navbar from '../components/_App/Navbar';
 import MainBanner from '../components/HomeDemoOne/MainBanner';
 import PartnerStyleOne from '../components/Common/PartnerStyleOne';
-import AboutUsContent from '../components/HomeDemoOne/AboutUsContent';
+import HomeAboutUsContent from '../components/HomeDemoOne/HomeAboutUsContent';
 import Industries from '../components/HomeDemoOne/Industries';
 import Services from '../components/HomeDemoOne/Services';
+import HomeAboutExtraContent from '../components/HomeDemoOne/HomeAboutExtraCOntent';
 import TechSupport from '../components/Common/TechSupport';
 import RecentCaseStudy from '../components/CaseStudy/RecentCaseStudy';
 import OurRespectiveClients from '../components/Common/OurRespectiveClients';
@@ -32,6 +33,7 @@ import Technologies from '../components/HomeDemoOne/Technologies';
 import { NextSeo } from "next-seo";
 import assetsURL from '../utils/assetsURL';
 import Script from "next/script";
+
 
 
 const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, services, aboutYourself, ourClients, industries, technologies, parallaxInfo, contactUsInfo, homeMeta }) => {
@@ -80,9 +82,13 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
 
             {banner && <MainBanner bannerData={banner} />}
 
-            {aboutYourself && <AboutUsContent aboutYourself={aboutYourself} isReadmore={true} />}
+            <HomeAboutUsContent />
+
+            {/* {aboutYourself && <AboutUsContent aboutYourself={aboutYourself} isReadmore={true} />} */}
 
             {services && <Services services={services} />}
+
+            <HomeAboutExtraContent/>
 
             <div className="pt-100">
                 {privileges && <FunFactStyleTwo ourPrivileges={privileges} />}
@@ -96,9 +102,9 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
 
             {getTestimonial && <OurRespectiveClients testimonials={testimonials} />}
 
-            {posts && <PopularBlogPost blog={posts} />}
-
             {technologies && <Technologies technologies={technologies} />}
+
+            {posts && <PopularBlogPost blog={posts} />}
 
             <div className="pb-100">
                 <CTA />

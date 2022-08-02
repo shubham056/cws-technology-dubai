@@ -85,48 +85,61 @@ const Footer = ({ contactUsInfo }) => {
                                 </div>
                                 <p className='white-color-text'>{contactUsInfo.data.info}</p>
 
-                                <ul className="widget-info white-color-text">
-                                    {/* <li>
+                                {/* <ul className="widget-info white-color-text">
+                                    <li>
                                         <i className="ri-customer-service-line"></i>
                                         <a style={{color: '#ffff'}} href={`tel:${contactUsInfo.data.phone_number}`}>{contactUsInfo.data.phone_number}</a>
-                                    </li> */}
+                                    </li>
 
                                     <li>
                                         <i className="ri-global-line"></i>
                                         <a style={{ color: '#ffff' }} href={`mailto:${contactUsInfo.data.email}`}>{contactUsInfo.data.email}</a>
                                     </li>
 
-                                    {/* <li>
+                                    <li>
                                         <i className="ri-map-pin-line"></i>
                                         {contactUsInfo.data.address}
-                                    </li> */}
+                                    </li>
+                                </ul> */}
+                            </div>
+                        </div>
+
+                        <div className="col-lg-2 col-sm-6 col-md-3">
+                            <div className="single-footer-widget">
+                                <h3>Reach Us </h3>
+
+                                <ul className="widget-info white-color-text">
+                                    <li>
+                                        <i className="ri-customer-service-line"></i>
+                                        <a style={{color: '#ffff'}} href={`tel:${contactUsInfo.data.phone_number}`}>{contactUsInfo.data.phone_number}</a>
+                                    </li>
+
+                                    <li>
+                                        <i className="ri-global-line"></i>
+                                        <a style={{ color: '#ffff' }} href={`mailto:${contactUsInfo.data.email}`}>{contactUsInfo.data.email}</a>
+                                    </li>
+
+                                    <li>
+                                        <i className="ri-map-pin-line"></i>
+                                        {contactUsInfo.data.address}
+                                    </li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="col-lg-2 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
-                                <h3>Quick Link</h3>
+                                <h3>Sitemap</h3>
 
                                 <ul className="footer-links-list">
-                                    <li>
-                                        <Link href="/blog">
-                                            <a>Blogs</a>
+                                <li>
+                                        <Link href="/">
+                                            <a>Home</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/contact">
-                                            <a>Contact Us</a>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/careers">
-                                            <a>Careers</a>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/portfolio">
-                                            <a>Portfolio</a>
+                                        <Link href="/about-us">
+                                            <a>About</a>
                                         </Link>
                                     </li>
                                     <li>
@@ -134,35 +147,19 @@ const Footer = ({ contactUsInfo }) => {
                                             <a>Services</a>
                                         </Link>
                                     </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-2 col-sm-6 col-md-3">
-                            <div className="single-footer-widget">
-                                <h3>About Us</h3>
-
-                                <ul className="footer-links-list">
                                     <li>
-                                        <Link href="/about-us">
-                                            <a>About Us</a>
+                                        <Link href="/careers">
+                                            <a>Career</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/why-cws">
-                                            <a>Why CWS</a>
+                                        <Link href="/blog">
+                                            <a>Blog</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/our-satisfied-customers">
-                                            <a>Our Satisfied Customers</a>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/testimonials">
-                                            <a>Testimonials</a>
+                                        <Link href="/contact">
+                                            <a>Contact</a>
                                         </Link>
                                     </li>
                                 </ul>
@@ -258,7 +255,7 @@ const Footer = ({ contactUsInfo }) => {
                                     </li>
                                     <li>
                                         <a href={contactUsInfo.data.google_plush_url} target="_blank">
-                                            <i className="ri-google-fill"></i>
+                                            <i className="ri-map-fill"></i>
                                         </a>
                                     </li>
                                 </ul>

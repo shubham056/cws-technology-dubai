@@ -4,263 +4,163 @@ import Image from 'next/image';
 import assetsURL from '../../utils/assetsURL';
 
 const SingleCaseStudy = ({ portfolio, categories }) => {
-
     return (
         <>
-            <div className="col-md-6 single-cases">
-                <div className="cases-image">
-                    <Link href="/">
-                        <a>
+            <div className="col-lg-4 col-md-6">
+                <div className="single-projects-box">
+                    <div className="projects-image">
+                        <Link href="/">
+                            <a>
                             <Image width={750} height={473}
                                 src={(portfolio.image != undefined) ? `${assetsURL}${portfolio.image}` : "https://ozen-react.envytheme.com/images/blog/blog-large-1.jpg"} 
                                 alt={portfolio.title} 
                             />
-                        </a>
-                    </Link>
-                </div>
-
-                <div className="cases-content">
-                    {/* <div className="tags">
-                        <Link href="/">
-                            <a>
-                                {(categories.length > 0) ? categories.map((item) => item.attributes.name).join(", ") : null}
                             </a>
                         </Link>
-                       
-                    </div> */}
+                    </div>
 
-                    <h3>
-                        <Link href="/">
-                            <a>{portfolio.title}</a>
-                        </Link>
-                    </h3>
-                    <p>{portfolio.description}</p>
+                    <div className="projects-content">
+                        <h3>
+                           
+                            {portfolio.title}
+                       
+                        </h3>
+                        <p>{portfolio.description}</p>
+
+                    </div>
                 </div>
             </div>
 
-            {/* Recent Case Study Style */ }
-    <style jsx>{`
-                .cases-area {
+
+            <style jsx>{`
+                .projects-area {
                     position: relative;
                     z-index: 1;
                     overflow: hidden;
                 }
-                .single-cases {
+                .single-projects-box {
                     margin-bottom: 30px;
+                    -webkit-transition: var(--transition);
+                    transition: var(--transition);
                 }
-                .single-cases .cases-image {
+                .single-projects-box .projects-image {
                     overflow: hidden;
                 }
-                .single-cases .cases-image img {
+                .single-projects-box .projects-image img {
                     -webkit-transition: var(--transition);
                     transition: var(--transition);
-                }
-                .single-cases .cases-content {
-                    margin-top: 30px;
-                }
-                .single-cases .cases-content .tags a {
-                    color: var(--main-color);
-                    padding: 5px 15px;
                     display: inline-block;
-                    background-color: #EAF0FF;
-                    font-size: 14px;
-                    font-weight: 500;
-                    border-radius: 5px;
-                    -webkit-transition: var(--transition);
-                    transition: var(--transition);
-                    margin-right: 15px;
                 }
-                .single-cases .cases-content .tags a:last-child {
-                    margin-right: 0;
-                }
-                .single-cases .cases-content .tags a:hover {
-                    background-color: var(--main-color);
-                    color: var(--white-color);
-                }
-                .single-cases .cases-content h3 {
-                    font-size: 25px;
+                .single-projects-box .projects-content {
                     margin-top: 25px;
+                }
+                .single-projects-box .projects-content h3 {
+                    font-size: 25px;
                     margin-bottom: 15px;
                 }
-                .single-cases .cases-content h3 a {
-                    position: relative;
+                .single-projects-box .projects-content h3 a {
+                    color: var(--black-color);
                 }
-                .single-cases .cases-content h3 a::before {
-                    content: "";
-                    position: absolute;
-                    width: 0%;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                    border-bottom: 1px solid var(--main-color);
+                .single-projects-box .projects-content p {
+                    margin-bottom: 15px;
+                }
+                .single-projects-box .projects-content .projects-btn {
+                    color: var(--paragraph-color);
+                    position: relative;
                     -webkit-transition: var(--transition);
                     transition: var(--transition);
-                    z-index: -1;
+                    font-weight: 500;
                 }
-                .single-cases:hover .cases-image img {
+                .single-projects-box .projects-content .projects-btn i {
+                    position: absolute;
+                    right: -20px;
+                    top: 58%;
+                    -webkit-transform: translateY(-58%);
+                            transform: translateY(-58%);
+                    font-size: 14px;
+                }
+                .single-projects-box:hover {
+                    -webkit-transform: translateY(-10px);
+                            transform: translateY(-10px);
+                }
+                .single-projects-box:hover .projects-image img {
                     -webkit-transform: scale(1.1);
                             transform: scale(1.1);
                 }
-                .single-cases:hover .cases-content h3 a {
+                .single-projects-box:hover .projects-content h3 a {
                     color: var(--main-color);
                 }
-                .single-cases:hover .cases-content h3 a::before {
-                    width: 100%;
-                }
-                
-                // Cases View Button
-                .cases-view-all-btn {
-                    text-align: center;
-                    margin-top: 15px;
-                }
-                .cases-view-all-btn .default-btn {
-                    color: var(--white-color);
-                    background-color: var(--optional-color);
-                }
-                .cases-view-all-btn .default-btn span {
-                    background-color: var(--main-color);
-                }
-                .cases-view-all-btn .default-btn:hover {
-                    color: var(--white-color);
+                .single-projects-box:hover .projects-content .projects-btn {
+                    letter-spacing: 1px;
+                    color: var(--main-color);
                 }
 
-                // shape
-                .cases-shape-1 {
+                // Projects shape
+                .projects-shape-1 {
                     position: absolute;
-                    top: 5%;
-                    right: 18%;
-                    -webkit-transform: translateY(-5%) translateX(-18%);
-                            transform: translateY(-5%) translateX(-18%);
+                    top: 25%;
+                    left: 0;
+                    -webkit-transform: translateY(-25%);
+                            transform: translateY(-25%);
                 }
-                .cases-shape-2 {
+                .projects-shape-2 {
                     position: absolute;
-                    bottom: 8%;
+                    top: 20%;
+                    left: 30%;
+                    -webkit-transform: translateY(-20%) translateX(-30%);
+                            transform: translateY(-20%) translateX(-30%);
+                    z-index: -1;
+                }
+                .projects-shape-3 {
+                    position: absolute;
+                    top: 10%;
+                    right: 15%;
+                    -webkit-transform: translateY(-10%) translateX(-15%);
+                            transform: translateY(-10%) translateX(-15%);
+                }
+                .projects-shape-4 {
+                    position: absolute;
+                    bottom: 15%;
+                    right: 15%;
+                    -webkit-transform: translateY(-15%) translateX(-15%);
+                            transform: translateY(-15%) translateX(-15%);
+                }
+                .projects-shape-5 {
+                    position: absolute;
+                    bottom: 10%;
                     right: 12%;
-                    -webkit-transform: translateY(-8%) translateX(-12%);
-                            transform: translateY(-8%) translateX(-12%);
-                }
-                .cases-shape-3 {
-                    position: absolute;
-                    top: 45%;
-                    right: 0;
-                    -webkit-transform: translateY(-45%);
-                            transform: translateY(-45%);
-                }
-                .cases-shape-4 {
-                    position: absolute;
-                    top: 45%;
-                    left: 2%;
-                    -webkit-transform: translateY(-45%) translateX(-2%);
-                            transform: translateY(-45%) translateX(-2%);
-                    z-index: -1;
-                }
-                .cases-shape-5 {
-                    position: absolute;
-                    top: 48%;
-                    left: 2%;
-                    -webkit-transform: translateY(-48%) translateX(-2%);
-                            transform: translateY(-48%) translateX(-2%);
-                    z-index: -1;
-                }
-                .cases-shape-6 {
-                    position: absolute;
-                    top: 45%;
-                    left: 50%;
-                    -webkit-transform: translateY(-45%) translateX(-50%);
-                            transform: translateY(-45%) translateX(-50%);
-                    z-index: -1;
-                    opacity: 35%;
-                }
-                .cases-shape-7 {
-                    position: absolute;
-                    top: 46%;
-                    left: 52%;
-                    -webkit-transform: translateY(-46%) translateX(-52%);
-                            transform: translateY(-46%) translateX(-52%);
-                    z-index: -1;
-                    opacity: 35%;
+                    -webkit-transform: translateY(-10%) translateX(-12%);
+                            transform: translateY(-10%) translateX(-12%);
                 }
 	
                 // Responsive Style
                 @media only screen and (max-width: 767px) {
-                    .single-cases .cases-content h3 {
-                        font-size: 22px;
-                        margin-top: 20px;
-                        margin-bottom: 10px;
-                        line-height: 1.4;
-                    }
-                    .cases-shape-1 {
+                    .projects-shape-1, .projects-shape-2, .projects-shape-3, .projects-shape-4, .projects-shape-5 {
                         display: none;
                     }
-                    .cases-shape-2 {
-                        display: none;
-                    }
-                    .cases-shape-3 {
-                        display: none;
-                    }
-                    .cases-shape-4 {
-                        display: none;
-                    }
-                    .cases-shape-5 {
-                        display: none;
-                    }
-                    .cases-shape-6 {
-                        display: none;
-                    }
-                    .cases-shape-7 {
-                        display: none;
+                    .single-projects-box .projects-content h3 {
+                        font-size: 21px;
+                        margin-bottom: 15px;
                     }
                 }
 
                 @media only screen and (min-width : 768px) and (max-width : 991px) {
-                    .cases-shape-1 {
+                    .projects-shape-1, .projects-shape-2, .projects-shape-3, .projects-shape-4, .projects-shape-5 {
                         display: none;
                     }
-                    .cases-shape-2 {
-                        display: none;
-                    }
-                    .cases-shape-3 {
-                        display: none;
-                    }
-                    .cases-shape-4 {
-                        display: none;
-                    }
-                    .cases-shape-5 {
-                        display: none;
-                    }
-                    .cases-shape-6 {
-                        display: none;
-                    }
-                    .cases-shape-7 {
-                        display: none;
+                    .single-projects-box .projects-content h3 {
+                        font-size: 22px;
+                        margin-bottom: 15px;
                     }
                 }
 
                 @media only screen and (min-width : 992px) and (max-width : 1199px) {
-                    .single-cases .cases-content h3 {
-                        font-size: 23px;
+                    .projects-shape-1, .projects-shape-2, .projects-shape-3, .projects-shape-4, .projects-shape-5 {
+                        display: none;
+                    }
+                    .single-projects-box .projects-content h3 {
+                        font-size: 20px;
                         margin-bottom: 15px;
-                    }
-                    .cases-shape-1 {
-                        display: none;
-                    }
-                    .cases-shape-2 {
-                        display: none;
-                    }
-                    .cases-shape-3 {
-                        display: none;
-                    }
-                    .cases-shape-4 {
-                        display: none;
-                    }
-                    .cases-shape-5 {
-                        display: none;
-                    }
-                    .cases-shape-6 {
-                        display: none;
-                    }
-                    .cases-shape-7 {
-                        display: none;
                     }
                 }
             `}</style>
