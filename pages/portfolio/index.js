@@ -6,7 +6,7 @@ import CTA from '../../components/Common/CTA';
 import Footer from '../../components/_App/Footer';
 import SingleCaseStudy from '../../components/CaseStudy/SingleCaseStudy';
 
-import { getPortfolio, getContactUsInfo, getPortfolioPageMeta } from '../../utils/strapi';
+import { getAllPortfolio, getContactUsInfo, getPortfolioPageMeta } from '../../utils/strapi';
 import assetsURL from '../../utils/assetsURL';
 import { NextSeo } from 'next-seo';
 import Script from 'next/script';
@@ -369,7 +369,7 @@ const Portfolio = ({ portfolios, contactUsInfo, portfolioMeta }) => {
 export default Portfolio;
 
 export async function getStaticProps({ params }) {
-    const portfolios = await getPortfolio(); // Get Our Privileges
+    const portfolios = await getAllPortfolio();
     const contactUsInfo = await getContactUsInfo();
     const portfolioMeta = await getPortfolioPageMeta();
 

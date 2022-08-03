@@ -91,6 +91,12 @@ export async function getPortfolio() {
   return portfolios;
 }
 
+export async function getAllPortfolio() {
+  const PortfoliosRes = await fetch(API_BASE_URL + 'portfolios_dubai_collection');
+  const portfolios = await PortfoliosRes.json();
+  return portfolios;
+}
+
 export async function getOurProcess() {
   const OurProcessRes = await fetch(API_BASE_URL + 'our_process_dubai_collection');
   const ourProcess = await OurProcessRes.json();
