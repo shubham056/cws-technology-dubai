@@ -44,6 +44,7 @@ const ContactForm = () => {
     //login submit handler
     const onSubmit = async formValue => {
         setisLoading(true)
+        setSubmitBtnText('Sending Message...');
         console.log(JSON.stringify(formValue))
         try {
             const url = `${baseUrl}/api/contact`;
