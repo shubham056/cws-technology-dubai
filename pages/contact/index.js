@@ -47,7 +47,7 @@ const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
     return (
         <>
             <Head>
-                <script type="text/javascript" src='/js/zohoContactForm.js' />
+                {/* <script type="text/javascript" src='/js/zohoContactForm.js' /> */}
             </Head>
 
             <Script strategy='lazyOnload'

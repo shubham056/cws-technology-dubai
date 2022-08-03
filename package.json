@@ -12,6 +12,7 @@
     "author": "envytheme.com",
     "license": "ISC",
     "dependencies": {
+        "@hookform/resolvers": "^2.9.7",
         "axios": "^0.21.4",
         "dotenv": "^16.0.0",
         "file-to-array-buffer": "^1.0.0",
@@ -25,6 +26,8 @@
         "react": "^18.0.0",
         "react-accessible-accordion": "^5.0.0",
         "react-dom": "^18.0.0",
+        "react-google-recaptcha": "^2.1.0",
+        "react-hook-form": "^7.34.0",
         "react-image-lightbox": "^5.1.4",
         "react-modal-video": "^1.2.8",
         "react-owl-carousel3": "^2.2.5",
@@ -35,6 +38,7 @@
         "solid-particles": "^2.0.6",
         "sweetalert2": "^11.2.0",
         "sweetalert2-react-content": "^4.2.0",
-        "vercel": "^24.1.0"
+        "vercel": "^24.1.0",
+        "yup": "^0.32.11"
     }
 }

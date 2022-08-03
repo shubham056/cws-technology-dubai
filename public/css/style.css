@@ -1336,6 +1336,3 @@ img {
         
 }
 
-input:invalid[focused="true"] ~ span{
-                    display: block;
-                }

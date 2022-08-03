@@ -4,6 +4,11 @@ import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 const MySwal = withReactContent(Swal)
 import baseUrl from '../../utils/baseUrl'
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as Yup from 'yup'
+import Recaptcha from 'react-google-recaptcha'
+
 
 const alertContent = () => {
     MySwal.fire({
@@ -16,52 +21,49 @@ const alertContent = () => {
     })
 }
 
-// Form initial state
-const INITIAL_STATE = {
-    name: "",
-    email: "",
-    number: "",
-    subject: "",
-    text: ""
-};
 
 const ContactForm = () => {
-    const [contact, setContact] = useState(INITIAL_STATE);
+
+    const [loading, setisLoading] = useState(false)
     const [submitBtnText, setSubmitBtnText] = useState("Send Message");
-    const [focused, setFocused] = useState(false);
 
-    const handleFocus = e => {
-        setFocused(true);
-    }
-
-    const handleChange = e => {
-        const { name, value } = e.target;
-        setContact(prevState => ({ ...prevState, [name]: value }));
-    }
-
-    const handleSubmit = async e => {
-        e.preventDefault();
-        setSubmitBtnText('Sending...');
-        setTimeout(()=>{
-            setContact(INITIAL_STATE);
+    const schema = Yup.object().shape({
+        name: Yup.string().required('First name is required.').matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field "),
+        email: Yup.string().email('Enter valid email id.').required('Email id is required.'),
+        number: Yup.string().required('Number is required.')
+            .matches(/^[0-9\s]+$/, "Only numbers are allowed for this field ")
+            .min(10, 'Enter minimum 10 digit mobile number.')
+            .max(13, "Nobile number can't exceed 13 digits")
+        ,
+        subject: Yup.string().required('Subject is required.'),
+        text: Yup.string().required('Number is required.'),
+    })
+    //validation schema end
+    const formOptionsLogin = { resolver: yupResolver(schema) }
+    const { register, formState: { errors, isSubmitting }, handleSubmit, resetField } = useForm(formOptionsLogin);
+    //login submit handler
+    const onSubmit = async formValue => {
+        setisLoading(true)
+        console.log(JSON.stringify(formValue))
+        try {
+            const url = `${baseUrl}/api/contact`;
+            const payload = formValue;
+            const response = await axios.post(url, payload);
+            console.log(response);
+            setisLoading(false)
             alertContent();
             setSubmitBtnText('Send Message');
-        },3000)
-        // try {
-            
-        //     const url = `${baseUrl}/api/contact`;
-        //     const { name, email, number, subject, text } = contact;
-        //     const payload = { name, email, number, subject, text };
-        //     const response = await axios.post(url, payload);
-        //     //console.log(response);
-        //     setContact(INITIAL_STATE);
-        //     alertContent();
-        //     setSubmitBtnText('Send Message');
-        // } catch (error) {
-        //     console.log(error)
-        //     setSubmitBtnText('Send Message');
-        // }
-    };
+            resetField('name');
+            resetField('email');
+            resetField('number');
+            resetField('subject');
+            resetField('text');
+        } catch (error) {
+            setisLoading(false)
+            console.log(error)
+            setSubmitBtnText('Send Message');
+        }
+    }
 
     return (
         <>
@@ -70,111 +72,96 @@ const ContactForm = () => {
                     <div className="contact-form">
                         <h3>Get in Touch</h3>
 
-                        <div id="zf_div_Rvuqcx-bkWcjXd-G8PP7K743cnFJvqQlGqh9dNpABGE"></div>
+                        {/* <div id="zf_div_Rvuqcx-bkWcjXd-G8PP7K743cnFJvqQlGqh9dNpABGE"></div> */}
 
-                        {/* <form onSubmit={handleSubmit} >
+                        <form onSubmit={handleSubmit(onSubmit)} >
                             <div className="row">
                                 <div className="col-lg-6 col-md-6">
                                     <div className="form-group">
-                                        <input 
-                                            type="text" 
-                                            name="name" 
-                                            placeholder="Full Name" 
-                                            className="form-control" 
-                                            value={contact.name}
-                                            onChange={handleChange} 
-                                            onBlur={handleFocus}
-                                            focused={focused.toString()}
-                                            required 
-                                            pattern="^[A-Za-z0-9]{3,20}$"
+
+
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            {...register("name")}
+                                            placeholder="Full Name"
+                                            className={`form-control ${errors.name ? 'is-invalids' : ''}`}
                                         />
-                                        <span className='error-msg'>Name should be 3-20 characters & should't include any special characters!.</span>
+                                        <span className='error-msg'>{errors.name?.message}</span>
                                     </div>
                                 </div>
 
                                 <div className="col-lg-6 col-md-6">
                                     <div className="form-group">
-                                        <input 
-                                            type="text" 
-                                            name="email" 
-                                            placeholder="Email" 
-                                            className="form-control" 
-                                            value={contact.email}
-                                            onChange={handleChange} 
-                                            onBlur={handleFocus}
-                                            focused={focused.toString()}
-                                            required 
-                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                        <input
+                                            type="text"
+                                            name="email"
+                                            {...register("email")}
+                                            placeholder="Email"
+                                            className={`form-control ${errors.email ? 'is-invalids' : ''}`}
                                         />
-                                        <span className='error-msg'>It should be valid email address!.</span>
+                                        <span className='error-msg'>{errors.email?.message}</span>
                                     </div>
                                 </div>
 
                                 <div className="col-lg-6 col-md-6">
                                     <div className="form-group">
-                                        <input 
-                                            type="text" 
-                                            name="number" 
-                                            placeholder="Phone number" 
-                                            className="form-control" 
-                                            value={contact.number}
-                                            onChange={handleChange} 
-                                            onBlur={handleFocus}
-                                            focused={focused.toString()}
-                                            required 
-                                            pattern="^[+0-9]{10,20}$"
+                                        <input
+                                            type="text"
+                                            name="number"
+                                            {...register("number")}
+                                            placeholder="Phone number"
+                                            className={`form-control ${errors.number ? 'is-invalids' : ''}`}
                                         />
-                                        <span className='error-msg'>Phone Number id is required!.</span>
+                                        <span className='error-msg'>{errors.number?.message}</span>
                                     </div>
                                 </div>
 
                                 <div className="col-lg-6 col-md-6">
                                     <div className="form-group">
-                                        <input 
-                                            type="text" 
-                                            name="subject" 
-                                            placeholder="Subject" 
-                                            className="form-control" 
-                                            value={contact.subject}
-                                            onChange={handleChange} 
-                                            onBlur={handleFocus}
-                                            focused={focused.toString()}
-                                            required 
-                                            pattern="^[A-Za-z0-9]{3,40}$"
+                                        <input
+                                            type="text"
+                                            name="subject"
+                                            {...register("subject")}
+                                            placeholder="Subject"
+                                            className={`form-control ${errors.subject ? 'is-invalids' : ''}`}
                                         />
-                                        <span className='error-msg'>Subject is required!.</span>
+                                        <span className='error-msg'>{errors.subject?.message}</span>
                                     </div>
                                 </div>
 
                                 <div className="col-lg-12 col-md-12">
                                     <div className="form-group">
-                                        <input 
+                                        <textarea
                                             name="text"
-                                            type="text" 
-                                            cols="30" 
-                                            rows="6" 
-                                            placeholder="Write your message..." 
-                                            className="form-control" 
-                                            value={contact.text}
-                                            onChange={handleChange} 
-                                            onBlur={handleFocus}
-                                            focused={focused.toString()}
-                                            required 
-                                            pattern="^[A-Za-z0-9]{5,40}$"
+                                            type="text"
+                                            {...register("text")}
+                                            cols="30"
+                                            rows="6"
+                                            placeholder="Write your message..."
+                                            className={`form-control ${errors.text ? 'is-invalids' : ''}`}
                                         />
-                                        <span className='error-msg'>Message is required!.</span>
+                                        <span className='error-msg'>{errors.text?.message}</span>
+                                        {/* <Recaptcha
+                                            sitekey="6LegBL0gAAAAAF-gggsfjiClr1vVnGPT_BBUm0yL"
+                                            render="explicit"
+                                            theme="dark"
+                                            // onloadCallback={recaptchaLoaded}
+                                            // verifyCallback={verifyCallback}
+                                        /> */}
+
                                     </div>
                                 </div>
 
                                 <div className="col-lg-12 col-md-12">
-                                    <button type="submit" className="default-btn" onBlur={handleFocus}>
-                                       {submitBtnText} 
+                                    <button type="submit" className="default-btn">
+                                        {submitBtnText}
                                         <i className="ri-arrow-right-line"></i>
                                         <span></span>
                                     </button>
                                 </div>
                             </div>
-                        </form> */}
+                        </form>
                     </div>
                 </div>
             </div>
@@ -187,9 +174,11 @@ const ContactForm = () => {
             }
                 .error-msg{
                     color: #c81f1f;
-                    display: none;
                     font-size: 12px;
-                    text-align: left;
+                    float: left;
+                }
+                .is-invalids{
+                    border: 1px solid red !important;
                 }
                 
                 textarea:invalid ~ span{
@@ -253,7 +242,7 @@ const ContactForm = () => {
                 .contact-form .form-group .form-control:focus {
                     outline: 0;
                     background-color: var(--white-color);
-                    border-color: var(--optional-color);
+                    border-color: green;
                     -webkit-box-shadow: none;
                             box-shadow: none;
                 }
