@@ -37,7 +37,7 @@ let url = API_BASE_URL + `blogs_dubai_collection_?filter[slug][_eq]=${slug}`
 }
 
 export async function getPopularBlogPost(pageLimit) {
-  const postsRes = await fetch(API_BASE_URL + `blogs_dubai_collection_?fields=id,title,image,content,date_created,slug,blog_categories.*.*.*,author.*.*.*&page=1&limit=${pageLimit}&meta=*`);
+  const postsRes = await fetch(API_BASE_URL + `blogs_dubai_collection_?fields=id,title,image,content,date_created,slug,blog_categories.*.*.*,author.*.*.*&page=1&sort=sort,-date_created&limit=${pageLimit}&meta=*`);
   const posts = await postsRes.json();
   return posts;
 }
