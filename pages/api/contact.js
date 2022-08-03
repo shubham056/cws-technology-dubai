@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import API_BASE_URL from '../../utils/apiUrl';
 // import sgTransport from 'nodemailer-sendgrid-transport';
 
 const transporter = nodemailer.createTransport({
@@ -15,6 +16,22 @@ export default async (req, res) => {
 
     // console.log(req.body)
     const { name, email, number, subject, text } = req.body;
+
+    fetch(`${API_BASE_URL}get_in_touch_dudai`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({"name":name,"email": email,"number": number,"subject": subject,"message": text}),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
     const data = {
         // Update your email here
         to: process.env.ADMIN_EMAIL,
