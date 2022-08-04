@@ -13,7 +13,10 @@ const AboutUsContent = ({aboutYourself, isReadmore}) => {
                             <div className="experiences-item">
                                 <div className="experiences-content">
                                     <div className="">
-                                        <h3> <Image width={32} height={32} style={{marginBottom:10}} src="/images/favicon.ico" alt="image" /> {aboutYourself.data.heading}</h3>
+                                        {/* <Image width={32} height={32} style={{marginBottom:10}} src="/images/favicon.ico" alt="image" />  */}
+                                        <h3>
+                                             
+                                        {aboutYourself.data.heading}</h3>
                                     </div>
                                     
                                     <div dangerouslySetInnerHTML={{__html: aboutYourself.data.content}}></div>
@@ -47,9 +50,9 @@ const AboutUsContent = ({aboutYourself, isReadmore}) => {
                 </div>
 
                 {/* Shape Images */}
-                <div className="experiences-shape-1" data-speed="0.08" data-revert="true">
+                {/* <div className="experiences-shape-1" data-speed="0.08" data-revert="true">
                     <Image width={70} height={75} src="/images/experiences/shape-1.png" alt="image" />
-                </div>
+                </div> */}
                 <div className="experiences-shape-2" data-speed="0.06" data-revert="true">
                     <Image width={16} height={8} src="/images/experiences/shape-2.png" alt="image" />
                 </div>

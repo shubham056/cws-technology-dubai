@@ -35,7 +35,7 @@ const BlogSidebar = ({ popularPosts, blogCategories }) => {
     return (
         <>
             <div className="widget-area">
-                <div className="widget widget_search">
+                {/* <div className="widget widget_search">
                     <form className="search-form" onSubmit={handleSubmit}>
                         <input 
                             type="search" 
@@ -48,7 +48,7 @@ const BlogSidebar = ({ popularPosts, blogCategories }) => {
                             <i className="ri-search-line"></i>
                         </button>
                     </form>
-                </div>
+                </div> */}
 
                 {/* <div className="widget widget_categories">
                     <h3 className="widget-title">Post Categories</h3>
