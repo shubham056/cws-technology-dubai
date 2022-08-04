@@ -37,7 +37,7 @@ const HomeAboutUsContent = () => {
 
                         <div className="col-lg-6">
                             <div className="analysis-image">
-                                <img src="/images/analysis/analysis.png" alt="analysis.png" />
+                                <img src="/images/about/about.png" alt="analysis.png" />
                             </div>
                         </div>
                     </div>
