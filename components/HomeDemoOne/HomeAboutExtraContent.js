@@ -7,20 +7,33 @@ const HomeAboutExtraContent = () => {
             <div className="services-area pt-100 pb-70">
                 <div className="container">
                     <div className="section-title">
-                        <h2 className='align-center'>Web Design Company in Dubai</h2>
-                        <p >CWS Technology is one of the biggest firms providing web design & development, mobile app development, and software development services. When it comes to your internet marketing strategy, your website's design is an essential component. Every business needs a website, mobile app, and software services for its growth and development, and to enhance its marketing outreach. Our company is one of the best web design companies in Dubai.</p>
+                        <h2 className='align-center'>Top Rated Web Design & Development Company in Dubai</h2>
+                        <p style={{textAlign:'justify'}}>Web solutions tailored to meet your company's needs and business goals are developed by a skilled team of web experts. You can get a wonderful design of your website made by the experts of the best <strong>web design company in Dubai.</strong></p>
 
-                        <p >Web solutions tailored to meet your company's needs and business goals are developed by a large team of web experts. You can get a wonderful design of your website made by the experts of the best web design company, Dubai.</p>
+                        <p style={{textAlign:'justify'}}>CWS Technology is one of the most renowned and fastest-growing website design companies in Dubai. We develop and design websites for all types of industries, such as education and e-learning, retail, social networking, etc. You will get the best website developed by the no. 1 <Link href="https://www.cwstechnology.ae/services/web-development-services"><a>web development company in Dubai</a></Link>. CWS has catered to support the growth of various web design agencies in Dubai in the past and continues to increase the numbers in the future.</p>
 
-                        <div className="experiences-btn">
-                                    <Link href="/about-us">
-                                        <a className="default-btn">
-                                            Read More 
-                                            <i className="ri-arrow-right-line"></i>
-                                            <span></span>
-                                        </a>
-                                    </Link>
-                                </div>
+                        <p style={{textAlign:'justify'}}>Once we have a clear picture of the customer's business strategy, we can create a digital platform that meets their needs while staying within their budget. We work determinedly to develop tools that make it simple for you to automate your business in a fast, safe, and secure manner.</p>
+
+                        <h2 style={{fontSize:30}}>Creative Mobile App Development Company in Dubai, UAE</h2>
+
+                        <p style={{textAlign:'justify'}}>Get strong, feature-rich, and UI/UX-friendly mobile apps to tap into the vast Android app market. Our Android app development services in Dubai and the experience of industry-level application developers will help your company generate new records. CWS Technology is one of the famous Mobile app development companies in Dubai.</p>
+
+                        <p style={{textAlign:'justify'}}>As there are so many options for developing mobile applications, with extensive research figure out which approach is right for your project, whether it's Flutter, React Native, or both. We create Android mobile applications and also iOS mobile applications.</p>
+
+                        <h2 style={{fontSize:30}}>Award-Winning Techies at Your Service to Provide Customized Mobile Apps</h2>
+
+                        <p style={{textAlign:'justify'}}>With inventive Android, iOS, and cross-platform mobile applications, you can effectively increase your business's impact beyond the target demographic. We are the best partner for your project because we have worked on mobile application development solutions for years and have access to innovations that are ready for the future.</p>
+
+                        <p style={{textAlign:'justify'}}>CWS Technology provides end-to-end mobile app development services, including strategy, design, development, testing, and deployment. We offer end-to-end mobile application development services in many different industries, whether the app is for customers or businesses.</p>
+
+                        <p style={{textAlign:'justify'}}>Designing a simple and user-friendly mobile app for smartphones, tablets, or both can help your organization flourish.</p>
+
+                        <h2 style={{fontSize:30}}>Custom Software Development Company in Dubai, UAE</h2>
+
+                        <p style={{textAlign:'justify'}}>As a prominent <strong>software development company in Dubai</strong> with more than ten years of experience, CWS Technology has a wide variety of expertise, a staff of highly qualified individuals, and an established working procedure that ensures the best results. We take your ideas and turn them into high-impact products for the future. Develop software as per your business requirements made by the custom software development company in Dubai, <strong>CWS Technology</strong>.</p>
+
+                        <p style={{textAlign:'justify'}}>CWS Technology is one of the <strong>best web design companies in Dubai</strong>, which caters to the requirements of web development Dubai industries.</p>
+
                     </div>
                 </div>
 

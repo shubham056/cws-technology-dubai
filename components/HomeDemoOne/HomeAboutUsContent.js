@@ -10,19 +10,15 @@ const HomeAboutUsContent = () => {
                     <div className="col-lg-6">
                             <div className="analysis-item">
                                 <div className="analysis-content">
-                                    <h3>Software & Web Development Company in Dubai</h3>
+                                    <h3>Leading Software and Web Development Company in Dubai</h3>
                                     <strong>Revolutionize your business progress with our intuitive IT solutions</strong>
                                 </div>
 
                                 <div className="analysis-inner-content">
-                                    <img src="/images/analysis/img1.png" alt="img1.png" />
-                                    <p>CWS is a reliable, affordable, and full-service web design company Dubai partners with expertise in different technology domains. We create the best-in-class and market-ready digital solutions for businesses that deliver huge impact and build a strong foundation for their future growth.</p>
+                                    <p>CWS Technology is one of the biggest firms providing web design & development, mobile app development, and software development services in Dubai. When it comes to your internet marketing strategy, website design becomes the most essential component. Every reputed business requires a website, mobile app, and software services for its growth and development, and to enhance its marketing outreach. Our company is undoubted, one of the best mobile app development companies and best website design companies in Dubai.</p>
                                 </div>
 
-                                <div className="analysis-inner-content">
-                                    <img src="/images/analysis/img2.png" alt="img2.png" />
-                                    <p>Experts at CWS offer web and mobile app development services to improve your business visibility, productivity and increase profits. Experience lucrative designs, intuitive UI, and managed services with us.</p>
-                                </div>
+                               
 
                                
                                 <div className="experiences-btn">
