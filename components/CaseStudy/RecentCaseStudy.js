@@ -30,7 +30,7 @@ const RecentCaseStudy = ({portfolios}) => {
                         <div className="cases-view-all-btn">
                             <Link href="/portfolio">
                                 <a className="default-btn">
-                                    View All Protfolio 
+                                    View All Portfolio
                                     <i className="ri-briefcase-line"></i>
                                     <span></span>
                                 </a>

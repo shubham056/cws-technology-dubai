@@ -16,7 +16,7 @@ const HomeAboutUsContent = () => {
 
                                 <div className="analysis-inner-content">
                                     <img src="/images/analysis/img1.png" alt="img1.png" />
-                                    <p>CWS is a reliable, affordable, and full-service web design company Dubai partner with expertise in different technology domains. We create the best-in-class and market-ready digital solutions for businesses that deliver huge impact and build a strong foundation for their future growth.</p>
+                                    <p>CWS is a reliable, affordable, and full-service web design company Dubai partners with expertise in different technology domains. We create the best-in-class and market-ready digital solutions for businesses that deliver huge impact and build a strong foundation for their future growth.</p>
                                 </div>
 
                                 <div className="analysis-inner-content">
