@@ -83,7 +83,7 @@ const HomeAboutUsContent = () => {
                 .analysis-item .analysis-inner-content {
                     position: relative;
                     margin-top: 30px;
-                    padding-left: 80px;
+                    
                 }
                 
                 .analysis-item .analysis-inner-content img {
