@@ -41,25 +41,25 @@ const RecentCaseStudy = ({portfolios}) => {
 
                 {/* Shape Images */}
                 <div className="cases-shape-1">
-                    <Image width={70} height={45} src="/images/cases-study/shape-1.png" alt="image" />
+                    <Image width={70} height={45} src="/images/cases-study/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="cases-shape-2">
-                    <Image width={112} height={65} src="/images/cases-study/shape-2.png" alt="image" />
+                    <Image width={112} height={65} src="/images/cases-study/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="cases-shape-3">
-                    <Image width={50} height={208} src="/images/cases-study/shape-3.png" alt="image" />
+                    <Image width={50} height={208} src="/images/cases-study/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="cases-shape-4">
-                    <Image width={16} height={8} src="/images/cases-study/shape-4.png" alt="image" />
+                    <Image width={16} height={8} src="/images/cases-study/shape-4.png" alt="shape-4.png" />
                 </div>
                 <div className="cases-shape-5">
-                    <Image width={20} height={12} src="/images/cases-study/shape-5.png" alt="image" />
+                    <Image width={20} height={12} src="/images/cases-study/shape-5.png" alt="shape-5.png" />
                 </div>
                 <div className="cases-shape-6">
-                    <Image width={16} height={8} src="/images/cases-study/shape-4.png" alt="image" />
+                    <Image width={16} height={8} src="/images/cases-study/shape-4.png" alt="shape-4.png" />
                 </div>
                 <div className="cases-shape-7">
-                    <Image width={20} height={12} src="/images/cases-study/shape-5.png" alt="image" />
+                    <Image width={20} height={12} src="/images/cases-study/shape-5.png" alt="shape-5.png" />
                 </div>
             </div>
 

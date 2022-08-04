@@ -15,12 +15,12 @@ const HomeAboutUsContent = () => {
                                 </div>
 
                                 <div className="analysis-inner-content">
-                                    <img src="/images/analysis/img1.png" alt="image" />
+                                    <img src="/images/analysis/img1.png" alt="img1.png" />
                                     <p>CWS is a reliable, affordable, and full-service web design company Dubai partner with expertise in different technology domains. We create the best-in-class and market-ready digital solutions for businesses that deliver huge impact and build a strong foundation for their future growth.</p>
                                 </div>
 
                                 <div className="analysis-inner-content">
-                                    <img src="/images/analysis/img2.png" alt="image" />
+                                    <img src="/images/analysis/img2.png" alt="img2.png" />
                                     <p>Experts at CWS offer web and mobile app development services to improve your business visibility, productivity and increase profits. Experience lucrative designs, intuitive UI, and managed services with us.</p>
                                 </div>
 
@@ -41,7 +41,7 @@ const HomeAboutUsContent = () => {
 
                         <div className="col-lg-6">
                             <div className="analysis-image">
-                                <img src="/images/analysis/analysis.png" alt="image" />
+                                <img src="/images/analysis/analysis.png" alt="analysis.png" />
                             </div>
                         </div>
                     </div>
@@ -49,19 +49,19 @@ const HomeAboutUsContent = () => {
                 
                 {/* Shape Images */}
                 <div className="analysis-shape-1">
-                    <img src="/images/analysis/shape-1.png" alt="image" />
+                    <img src="/images/analysis/shape-1.png" alt="shape-1.png" />
                 </div>
                 {/* <div className="analysis-shape-2">
-                    <img src="/images/analysis/shape-2.png" alt="image" />
+                    <img src="/images/analysis/shape-2.png" alt="shape-2.png" />
                 </div> */}
                 <div className="analysis-shape-3">
-                    <img src="/images/analysis/shape-3.png" alt="image" />
+                    <img src="/images/analysis/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="analysis-shape-4">
-                    <img src="/images/analysis/shape-4.png" alt="image" />
+                    <img src="/images/analysis/shape-4.png" alt="shape-4.png" />
                 </div>
                 <div className="analysis-shape-5">
-                    <img src="/images/analysis/shape-5.png" alt="image" />
+                    <img src="/images/analysis/shape-5.png" alt="shape-5.png" />
                 </div>
             </div>
 

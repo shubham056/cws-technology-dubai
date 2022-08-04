@@ -64,16 +64,16 @@ const FunFacts = () => {
 
                 {/* Shape Images */}
                 <div className="fun-facts-shape-1">
-                    <img src="/images/fun-facts/shape-1.png" alt="image" />
+                    <img src="/images/fun-facts/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="fun-facts-shape-2">
-                    <img src="/images/fun-facts/shape-2.png" alt="image" />
+                    <img src="/images/fun-facts/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="fun-facts-shape-3">
-                    <img src="/images/fun-facts/shape-3.png" alt="image" />
+                    <img src="/images/fun-facts/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="fun-facts-shape-4">
-                    <img src="/images/fun-facts/shape-4.png" alt="image" />
+                    <img src="/images/fun-facts/shape-4.png" alt="shape-4.png" />
                 </div>
             </div>
 

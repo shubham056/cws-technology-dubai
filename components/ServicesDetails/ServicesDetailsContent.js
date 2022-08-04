@@ -35,17 +35,17 @@ const ServicesDetailsContent = ({ service }) => {
                                 </ul> */}
 
                                 <div className="overview-image">
-                                    <img style={{width:"100%"}} src="/images/services-details/services-details-1.jpg" alt="image" />
+                                    <img style={{width:"100%"}} src="/images/services-details/services-details-1.jpg" alt="services-details-1.jpg" />
 
                                     {/* Shape Images */}
                                     <div className="shape-1">
-                                        <img src="/images/services-details/shape-1.png" alt="image" />
+                                        <img src="/images/services-details/shape-1.png" alt="shape-1.png" />
                                     </div>
                                     <div className="shape-2">
-                                        <img src="/images/services-details/shape-2.png" alt="image" />
+                                        <img src="/images/services-details/shape-2.png" alt="shape-2.png" />
                                     </div>
                                     <div className="shape-3">
-                                        <img src="/images/services-details/shape-3.png" alt="image" />
+                                        <img src="/images/services-details/shape-3.png" alt="shape-3.png" />
                                     </div>
                                 </div>
                             </div>

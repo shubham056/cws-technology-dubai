@@ -23,16 +23,16 @@ const FeaturesCard = ({ features }) => {
 
                 {/* Shape Images */}
                 <div className="features-shape-1">
-                    <img src="/images/features/shape-1.png" alt="image" />
+                    <img src="/images/features/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="features-shape-2">
-                    <img src="/images/features/shape-2.png" alt="image" />
+                    <img src="/images/features/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="features-shape-3">
-                    <img src="/images/features/shape-3.png" alt="image" />
+                    <img src="/images/features/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="features-shape-4">
-                    <img src="/images/features/shape-4.png" alt="image" />
+                    <img src="/images/features/shape-4.png" alt="shape-4.png" />
                 </div>
             </div>
 

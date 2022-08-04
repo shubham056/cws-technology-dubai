@@ -49,7 +49,7 @@ const OurRespectiveClientsTwo = () => {
                         {...options}
                     >
                         <div className="clients-item">
-                            <img src="/images/clients/clients-1.png" alt="image" />
+                            <img src="/images/clients/clients-1.png" alt="clients-1.png" />
                             <p>‘’As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies along with the scalability and expertise of the big ones.’’</p>
 
                             <div className="title-name">
@@ -66,20 +66,20 @@ const OurRespectiveClientsTwo = () => {
                             </div>
 
                             <div className="shape-1">
-                                <img src="/images/clients/shape-4.png" alt="image" />
+                                <img src="/images/clients/shape-4.png" alt="shape-4.png" />
                             </div>
 
                             <div className="shape-2">
-                                <img src="/images/clients/shape-5.png" alt="image" />
+                                <img src="/images/clients/shape-5.png" alt="shape-5.png" />
                             </div>
 
                             <div className="shape-3">
-                                <img src="/images/clients/shape-6.png" alt="image" />
+                                <img src="/images/clients/shape-6.png" alt="shape-6.png" />
                             </div>
                         </div>
 
                         <div className="clients-item">
-                            <img src="/images/clients/clients-2.png" alt="image" />
+                            <img src="/images/clients/clients-2.png" alt="clients-2.png" />
                             <p>‘’Ozen is the best digital agency in our area As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies.</p>
 
                             <div className="title-name">
@@ -96,20 +96,20 @@ const OurRespectiveClientsTwo = () => {
                             </div>
 
                             <div className="shape-1">
-                                <img src="/images/clients/shape-4.png" alt="image" />
+                                <img src="/images/clients/shape-4.png" alt="shape-4.png" />
                             </div>
 
                             <div className="shape-2">
-                                <img src="/images/clients/shape-5.png" alt="image" />
+                                <img src="/images/clients/shape-5.png" alt="shape-5.png" />
                             </div>
 
                             <div className="shape-3">
-                                <img src="/images/clients/shape-6.png" alt="image" />
+                                <img src="/images/clients/shape-6.png" alt="shape-6.png" />
                             </div>
                         </div>
 
                         <div className="clients-item">
-                            <img src="/images/clients/clients-3.png" alt="image" />
+                            <img src="/images/clients/clients-3.png" alt="clients-3.png" />
                             <p>‘’As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies along with the scalability and expertise of the big ones.’’</p>
 
                             <div className="title-name">
@@ -126,20 +126,20 @@ const OurRespectiveClientsTwo = () => {
                             </div>
 
                             <div className="shape-1">
-                                <img src="/images/clients/shape-4.png" alt="image" />
+                                <img src="/images/clients/shape-4.png" alt="shape-4.png" />
                             </div>
 
                             <div className="shape-2">
-                                <img src="/images/clients/shape-5.png" alt="image" />
+                                <img src="/images/clients/shape-5.png" alt="shape-5.png" />
                             </div>
 
                             <div className="shape-3">
-                                <img src="/images/clients/shape-6.png" alt="image" />
+                                <img src="/images/clients/shape-6.png" alt="shape-6.png" />
                             </div>
                         </div>
 
                         <div className="clients-item">
-                            <img src="/images/clients/clients-1.png" alt="image" />
+                            <img src="/images/clients/clients-1.png" alt="clients-1.png" />
                             <p>‘’As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies along with the scalability and expertise of the big ones.’’</p>
 
                             <div className="title-name">
@@ -156,20 +156,20 @@ const OurRespectiveClientsTwo = () => {
                             </div>
 
                             <div className="shape-1">
-                                <img src="/images/clients/shape-4.png" alt="image" />
+                                <img src="/images/clients/shape-4.png" alt="shape-4.png" />
                             </div>
 
                             <div className="shape-2">
-                                <img src="/images/clients/shape-5.png" alt="image" />
+                                <img src="/images/clients/shape-5.png" alt="shape-5.png" />
                             </div>
 
                             <div className="shape-3">
-                                <img src="/images/clients/shape-6.png" alt="image" />
+                                <img src="/images/clients/shape-6.png" alt="shape-6.png" />
                             </div>
                         </div>
 
                         <div className="clients-item">
-                            <img src="/images/clients/clients-2.png" alt="image" />
+                            <img src="/images/clients/clients-2.png" alt="clients-2.png" />
                             <p>‘’Ozen is the best digital agency in our area As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies.</p>
 
                             <div className="title-name">
@@ -186,20 +186,20 @@ const OurRespectiveClientsTwo = () => {
                             </div>
 
                             <div className="shape-1">
-                                <img src="/images/clients/shape-4.png" alt="image" />
+                                <img src="/images/clients/shape-4.png" alt="shape-4.png" />
                             </div>
 
                             <div className="shape-2">
-                                <img src="/images/clients/shape-5.png" alt="image" />
+                                <img src="/images/clients/shape-5.png" alt="shape-5.png" />
                             </div>
 
                             <div className="shape-3">
-                                <img src="/images/clients/shape-6.png" alt="image" />
+                                <img src="/images/clients/shape-6.png" alt="shape-6.png" />
                             </div>
                         </div>
 
                         <div className="clients-item">
-                            <img src="/images/clients/clients-3.png" alt="image" />
+                            <img src="/images/clients/clients-3.png" alt="clients-3.png" />
                             <p>‘’As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies along with the scalability and expertise of the big ones.’’</p>
 
                             <div className="title-name">
@@ -216,20 +216,20 @@ const OurRespectiveClientsTwo = () => {
                             </div>
 
                             <div className="shape-1">
-                                <img src="/images/clients/shape-4.png" alt="image" />
+                                <img src="/images/clients/shape-4.png" alt="shape-4.png" />
                             </div>
 
                             <div className="shape-2">
-                                <img src="/images/clients/shape-5.png" alt="image" />
+                                <img src="/images/clients/shape-5.png" alt="shape-5.png" />
                             </div>
 
                             <div className="shape-3">
-                                <img src="/images/clients/shape-6.png" alt="image" />
+                                <img src="/images/clients/shape-6.png" alt="shape-6.png" />
                             </div>
                         </div>
 
                         <div className="clients-item">
-                            <img src="/images/clients/clients-1.png" alt="image" />
+                            <img src="/images/clients/clients-1.png" alt="clients-1.png" />
                             <p>‘’As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies along with the scalability and expertise of the big ones.’’</p>
 
                             <div className="title-name">

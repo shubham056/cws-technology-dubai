@@ -65,13 +65,13 @@ const OurRespectiveClients = ({testimonials}) => {
 
                 {/* Shape Images */}
                 <div className="clients-shape-1">
-                    <img src="/images/clients/shape-1.png" alt="image" />
+                    <img src="/images/clients/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="clients-shape-2">
-                    <img src="/images/clients/shape-2.png" alt="image" />
+                    <img src="/images/clients/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="clients-shape-3">
-                    <img src="/images/clients/shape-3.png" alt="image" />
+                    <img src="/images/clients/shape-3.png" alt="shape-3.png" />
                 </div>
             </div>
 

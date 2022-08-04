@@ -37,7 +37,7 @@ const WorkProcess = () => {
                         </div>
 
                         <div className="process-bar-shape">
-                            <img src="/images/process-bar.png" alt="image" />
+                            <img src="/images/process-bar.png" alt="process-bar.png" />
                         </div>
                     </div>
                 </div>

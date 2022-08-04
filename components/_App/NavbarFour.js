@@ -401,7 +401,7 @@ const NavbarFour = () => {
                             <div className="title">
                                 <Link href="/">
                                     <a className="d-inline-block">
-                                        <img src="/images/logo.png" alt="image" />
+                                        <img src="/images/logo.png" alt="logo.png" />
                                     </a>
                                 </Link>
                             </div>

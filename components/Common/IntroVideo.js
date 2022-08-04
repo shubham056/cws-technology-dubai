@@ -32,10 +32,10 @@ const IntroVideo = ({video}) => {
 
                 {/* Shape Images */}
                 <div className="video-shape-1">
-                    <img src="/images/video/shape-1.png" alt="image" />
+                    <img src="/images/video/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="video-shape-2">
-                    <img src="/images/video/shape-2.png" alt="image" />
+                    <img src="/images/video/shape-2.png" alt="shape-2.png" />
                 </div>
             </div>
 

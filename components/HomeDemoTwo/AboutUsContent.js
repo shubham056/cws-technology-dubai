@@ -9,7 +9,7 @@ const AboutUsContent = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="about-image">
-                                <img src="/images/about/about.png" alt="image" />
+                                <img src="/images/about/about.png" alt="about.png" />
                             </div>
                         </div>
 
@@ -17,24 +17,24 @@ const AboutUsContent = () => {
                             <div className="about-item">
                                 <div className="about-content">
                                     <div className="tag">
-                                        <img src="/images/about/tag-icon.png" alt="image" />
+                                        <img src="/images/about/tag-icon.png" alt="ag-icon.png" />
                                     </div>
                                     <h3>Over 12 Year Professional Experiences</h3>
                                     <p>Best Strategic planning dolor sit amet consectetur adipiscing elit. Scelerisque amet odio velit  auctor. nam elit nulla eget sodales dui pulvinar. Best Strategic planning dolor sit sectetur morethe Scelerisque amet odio velit eu auctor.</p>
                                 </div>
 
                                 <div className="about-inner-content">
-                                    <img src="/images/about/img1.png" alt="image" />
+                                    <img src="/images/about/img1.png" alt="img1.png" />
                                     <p>Best Strategic planning dolor sit amet consectetur adipiscing elit. risque amet odio velit eu auctor. Aliquet nam elit nulla eget sodales dui pulvinar. Best eone Strategic planning dolor.</p>
                                 </div>
 
                                 <div className="about-inner-content">
-                                    <img src="/images/about/img2.png" alt="image" />
+                                    <img src="/images/about/img2.png" alt="img2.png" />
                                     <p>Ozen digital agency for your start  planning dolor sit amet consectetur adipiscing elit. Scelerisque amet odio velit eu auctor. Aliquet nam elit nulla eget sodales dui pulvinar. Best Strategic planning.</p>
                                 </div>
 
                                 <div className="about-inner-content">
-                                    <img src="/images/about/img3.png" alt="image" />
+                                    <img src="/images/about/img3.png" alt="img3.png" />
                                     <p>Best Strategic planning dolor sit amet consectetur adipiscing elit. risque amet odio velit eu auctor. Aliquet nam elit nulla eget sodales dui pulvinar. Best eone Strategic planning dolor.</p>
                                 </div>
 
@@ -54,25 +54,25 @@ const AboutUsContent = () => {
 
                 {/* Shape Images */}
                 <div className="about-shape-1">
-                    <img src="/images/about/shape-1.png" alt="image" />
+                    <img src="/images/about/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="about-shape-2">
-                    <img src="/images/about/shape-2.png" alt="image" />
+                    <img src="/images/about/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="about-shape-3">
-                    <img src="/images/about/shape-3.png" alt="image" />
+                    <img src="/images/about/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="about-shape-4">
-                    <img src="/images/about/shape-4.png" alt="image" />
+                    <img src="/images/about/shape-4.png" alt="shape-4.png" />
                 </div>
                 <div className="about-shape-5">
-                    <img src="/images/about/shape-5.png" alt="image" />
+                    <img src="/images/about/shape-5.png" alt="shape-5.png" />
                 </div>
                 <div className="about-shape-6">
-                    <img src="/images/about/shape-4.png" alt="image" />
+                    <img src="/images/about/shape-4.png" alt="shape-4.png" />
                 </div>
                 <div className="about-shape-7">
-                    <img src="/images/about/shape-5.png" alt="image" />
+                    <img src="/images/about/shape-5.png" alt="shape-5.png" />
                 </div>
             </div>
 

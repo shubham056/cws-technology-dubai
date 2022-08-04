@@ -14,7 +14,7 @@ const CTA = () => {
                                 <Link href="/contact">
                                     <a className="overview-btn-one">Get Started</a>
                                 </Link>
-                                <img src="/images/overview/bar.png" alt="image" />
+                                <img src="/images/overview/bar.png" alt="bar.png" />
                             </div>
                         </div>
                     </div>
@@ -22,19 +22,19 @@ const CTA = () => {
 
                 {/* Shape Images */}
                 <div className="overview-shape-1">
-                    <img src="/images/overview/shape-1.png" alt="image" />
+                    <img src="/images/overview/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="overview-shape-2">
-                    <img src="/images/overview/shape-2.png" alt="image" />
+                    <img src="/images/overview/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="overview-shape-3">
-                    <img src="/images/overview/shape-3.png" alt="image" />
+                    <img src="/images/overview/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="overview-shape-4">
-                    <img src="/images/overview/shape-4.png" alt="image" />
+                    <img src="/images/overview/shape-4.png" alt="shape-4.png" />
                 </div>
                 <div className="overview-shape-5">
-                    <img src="/images/overview/shape-5.png" alt="image" />
+                    <img src="/images/overview/shape-5.png" alt="shape-5.png" />
                 </div>
             </div>
 

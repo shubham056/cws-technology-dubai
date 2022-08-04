@@ -12,7 +12,7 @@ const MainBanner = () => {
                             <div className="main-banner-white-content">
                                 <ScrollAnimation animateIn="fadeInLeft" delay={50} animateOnce={true}>
                                     <div className="tag">
-                                        <img src="/images/main-banner/banner-two/tag-icon.png" alt="image" />
+                                        <img src="/images/main-banner/banner-two/tag-icon.png" alt="tag-icon.png" />
                                         # Ozen Best Startup Company
                                     </div>
                                 </ScrollAnimation>
@@ -44,60 +44,60 @@ const MainBanner = () => {
                                 {/* Do not remove the div, is required! */}
                                 <div>
                                     <ScrollAnimation animateIn="fadeInDown" delay={100} animateOnce={true}>
-                                        <img src="/images/main-banner/banner-two/img1.png" alt="image" />
+                                        <img src="/images/main-banner/banner-two/img1.png" alt="img1.png" />
                                     </ScrollAnimation>
                                 </div>
 
                                 <div>
                                     <ScrollAnimation animateIn="fadeInDown" delay={100} animateOnce={true}>
-                                        <img src="/images/main-banner/banner-two/img2.png" alt="image" />
+                                        <img src="/images/main-banner/banner-two/img2.png" alt="img2.png" />
                                     </ScrollAnimation>
                                 </div>
 
                                 <div>
                                     <ScrollAnimation animateIn="fadeInDown" delay={100} animateOnce={true}>
-                                        <img src="/images/main-banner/banner-two/img3.png" alt="image" />
+                                        <img src="/images/main-banner/banner-two/img3.png" alt="img3.png" />
                                     </ScrollAnimation>
                                 </div>
                                 
                                 <div>
                                     <ScrollAnimation animateIn="fadeInDown" delay={100} animateOnce={true}>
-                                        <img src="/images/main-banner/banner-two/img4.png" alt="image" />
+                                        <img src="/images/main-banner/banner-two/img4.png" alt="img4.png" />
                                     </ScrollAnimation>
                                 </div>
 
                                 <div>
                                     <ScrollAnimation animateIn="fadeInUp" delay={100} animateOnce={true}>
-                                        <img src="/images/main-banner/banner-two/img5.png" alt="image" />
+                                        <img src="/images/main-banner/banner-two/img5.png" alt="img5.png" />
                                     </ScrollAnimation>
                                 </div>
                                 
                                 <div>
                                     <ScrollAnimation animateIn="fadeInLeft" delay={100} animateOnce={true}>
-                                        <img src="/images/main-banner/banner-two/img6.png" alt="image" />
+                                        <img src="/images/main-banner/banner-two/img6.png" alt="img6.png" />
                                     </ScrollAnimation>
                                 </div>
 
                                 <div>
                                     <ScrollAnimation animateIn="fadeInDown" delay={100} animateOnce={true}>
-                                        <img src="/images/main-banner/banner-two/img7.png" alt="image" />
+                                        <img src="/images/main-banner/banner-two/img7.png" alt="img7.png" />
                                     </ScrollAnimation>
                                 </div>
 
                                 <div>
                                     <ScrollAnimation animateIn="fadeInDown" delay={100} animateOnce={true}>
-                                        <img src="/images/main-banner/banner-two/img8.png" alt="image" />
+                                        <img src="/images/main-banner/banner-two/img8.png" alt="img8.png" />
                                     </ScrollAnimation>
                                 </div>
 
                                 <div>
                                     <ScrollAnimation animateIn="fadeInDown" delay={100} animateOnce={true}>
-                                        <img src="/images/main-banner/banner-two/img9.png" alt="image" />
+                                        <img src="/images/main-banner/banner-two/img9.png" alt="img9.png" />
                                     </ScrollAnimation>
                                 </div>
 
                                 <div>  
-                                    <img src="/images/main-banner/banner-two/main-pic.png" alt="image" />
+                                    <img src="/images/main-banner/banner-two/main-pic.png" alt="main-pic.png" />
                                 </div>
                             </div>
                         </div>
@@ -106,19 +106,19 @@ const MainBanner = () => {
 
                 {/* Shape Images */}
                 <div className="main-banner-shape-5">
-                    <img src="/images/main-banner/banner-two/shape-1.png" alt="image" />
+                    <img src="/images/main-banner/banner-two/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="main-banner-shape-6">
-                    <img src="/images/main-banner/banner-two/shape-2.png" alt="image" />
+                    <img src="/images/main-banner/banner-two/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="main-banner-shape-7">
-                    <img src="/images/main-banner/banner-two/shape-3.png" alt="image" />
+                    <img src="/images/main-banner/banner-two/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="main-banner-shape-8">
-                    <img src="/images/main-banner/banner-two/shape-4.png" alt="image" />
+                    <img src="/images/main-banner/banner-two/shape-4.png" alt="shape-4.png" />
                 </div>
                 <div className="main-banner-large-shape">
-                    <img src="/images/main-banner/banner-two/large-shape.png" alt="image" />
+                    <img src="/images/main-banner/banner-two/large-shape.png" alt="large-shape.png" />
                 </div>
             </div>
 

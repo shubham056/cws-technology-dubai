@@ -79,7 +79,7 @@ const Footer = ({ contactUsInfo }) => {
                                 <div className="widget-logo">
                                     <Link href="/">
                                         <a>
-                                            <img src="/images/logo.png" alt="image" />
+                                            <img src="/images/logo.png" alt="logo.png" />
                                         </a>
                                     </Link>
                                 </div>
@@ -272,19 +272,19 @@ const Footer = ({ contactUsInfo }) => {
 
                 {/* Shape Images */}
                 <div className="footer-shape-1">
-                    <img src="/images/footer/shape-1.png" alt="image" />
+                    <img src="/images/footer/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="footer-shape-2">
-                    <img src="/images/footer/shape-2.png" alt="image" />
+                    <img src="/images/footer/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="footer-shape-3">
-                    <img src="/images/footer/shape-3.png" alt="image" />
+                    <img src="/images/footer/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="footer-shape-4">
-                    <img src="/images/footer/shape-4.png" alt="image" />
+                    <img src="/images/footer/shape-4.png" alt="shape-4.png" />
                 </div>
                 <div className="footer-shape-5">
-                    <img src="/images/footer/shape-5.png" alt="image" />
+                    <img src="/images/footer/shape-5.png" alt="shape-5.png" />
                 </div>
             </footer>
 

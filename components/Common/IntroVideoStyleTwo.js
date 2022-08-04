@@ -29,7 +29,7 @@ const IntroVideoStyleTwo = () => {
                         <div className="col-lg-4 col-md-12">
                             <div className="technology-content">
                                 <div className="tag">
-                                    <img src="/images/technology/tag-icon.png" alt="image" />
+                                    <img src="/images/technology/tag-icon.png" alt="tag-icon.png" />
                                 </div>
             
                                 <h3>Lightning-Fast Tech Support, Guaranteed</h3>
@@ -40,7 +40,7 @@ const IntroVideoStyleTwo = () => {
 
                         <div className="col-lg-8 col-md-12">
                             <div className="technology-image">
-                                <img src="/images/technology/technology-1.jpg" alt="image" />
+                                <img src="/images/technology/technology-1.jpg" alt="technology-1.jpg" />
  
                                 <div
                                     onClick={e => {e.preventDefault(); openModal()}}
@@ -55,28 +55,28 @@ const IntroVideoStyleTwo = () => {
 
                 {/* Shape Images */}
                 <div className="technology-shape-1">
-                    <img src="/images/technology/shape-1.png" alt="image" />
+                    <img src="/images/technology/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="technology-shape-2">
-                    <img src="/images/technology/shape-2.png" alt="image" />
+                    <img src="/images/technology/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="technology-shape-3">
-                    <img src="/images/technology/shape-1.png" alt="image" />
+                    <img src="/images/technology/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="technology-shape-4">
-                    <img src="/images/technology/shape-2.png" alt="image" />
+                    <img src="/images/technology/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="technology-shape-5">
-                    <img src="/images/technology/shape-3.png" alt="image" />
+                    <img src="/images/technology/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="technology-shape-6">
-                    <img src="/images/technology/shape-4.png" alt="image" />
+                    <img src="/images/technology/shape-4.png" alt="shape-4.png" />
                 </div>
                 <div className="technology-shape-7">
-                    <img src="/images/technology/shape-3.png" alt="image" />
+                    <img src="/images/technology/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="technology-shape-8">
-                    <img src="/images/technology/shape-4.png" alt="image" />
+                    <img src="/images/technology/shape-4.png" alt="shape-4.png" />
                 </div>
             </div>
             

@@ -21,16 +21,16 @@ const PageBanner = ({pageTitle, homePageUrl, homePageText, activePageText}) => {
 
                 {/* Shape Images */}
                 <div className="page-banner-shape-1">
-                    <img src="/images/page-banner/shape-1.png" alt="image" />
+                    <img src="/images/page-banner/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="page-banner-shape-2">
-                    <img src="/images/page-banner/shape-2.png" alt="image" />
+                    <img src="/images/page-banner/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="page-banner-shape-3">
-                    <img src="/images/page-banner/shape-3.png" alt="image" />
+                    <img src="/images/page-banner/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="page-banner-shape-4">
-                    <img src="/images/page-banner/shape-4.png" alt="image" />
+                    <img src="/images/page-banner/shape-4.png" alt="shape-4.png" />
                 </div>
             </div>
 

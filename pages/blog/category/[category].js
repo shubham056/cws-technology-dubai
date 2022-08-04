@@ -81,10 +81,10 @@ const CategoryBlogs = ({ posts, totalCount, pageCount, currentPage, perPage, con
 
                     {/* Shape Images */}
                     <div className="blog-shape-1">
-                        <img src="/images/blog/shape-1.png" alt="image" />
+                        <img src="/images/blog/shape-1.png" alt="shape-1.png" />
                     </div>
                     <div className="blog-shape-2">
-                        <img src="/images/blog/shape-2.png" alt="image" />
+                        <img src="/images/blog/shape-2.png" alt="shape-2.png" />
                     </div>
                 </div>
 

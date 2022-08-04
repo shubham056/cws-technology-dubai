@@ -31,19 +31,19 @@ const OurprocessView = ({ourProcess}) => {
 
                 {/* Shape Images */}
                 <div className="experiences-shape-1" data-speed="0.08" data-revert="true">
-                    <img src="/images/experiences/shape-1.png" alt="image" />
+                    <img src="/images/experiences/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="experiences-shape-2" data-speed="0.06" data-revert="true">
-                    <img src="/images/experiences/shape-2.png" alt="image" />
+                    <img src="/images/experiences/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="experiences-shape-3" data-speed="0.08" data-revert="true">
-                    <img src="/images/experiences/shape-3.png" alt="image" />
+                    <img src="/images/experiences/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="experiences-shape-4" data-speed="0.06" data-revert="true">
-                    <img src="/images/experiences/shape-2.png" alt="image" />
+                    <img src="/images/experiences/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="experiences-shape-5" data-speed="0.08" data-revert="true">
-                    <img src="/images/experiences/shape-3.png" alt="image" />
+                    <img src="/images/experiences/shape-3.png" alt="shape-3.png" />
                 </div>
             </div>
             

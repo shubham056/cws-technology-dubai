@@ -20,13 +20,13 @@ const MainBanner = ({ bannerData }) => {
                             <div className="main-banner-content">
                                 {/* <ScrollAnimation animateIn="fadeInLeft" delay={50} animateOnce={true}>
                                     <div className="tag">
-                                        <img src="/images/favicon.ico" width={25} alt="image" />
+                                        <img src="/images/favicon.ico" width={25} alt="favicon.ico" />
                                         # {bannerData.data.attributes.hashtag}
                                     </div>
                                 </ScrollAnimation> */}
 
                                 {/* <div className="tag">
-                                    <img src="/images/favicon.ico" width={25} alt="image" />
+                                    <img src="/images/favicon.ico" width={25} alt="favicon.ico" />
                                     {bannerData.data.attributes.hashtag}
                                 </div> */}
 
@@ -58,16 +58,16 @@ const MainBanner = ({ bannerData }) => {
 
                 {/* Shape Images */}
                 {/* <div className="main-banner-shape-1">
-                    <img src="/images/main-banner/banner-one/shape-1.png" alt="image" />
+                    <img src="/images/main-banner/banner-one/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="main-banner-shape-2">
-                    <img src="/images/main-banner/banner-one/shape-2.png" alt="image" />
+                    <img src="/images/main-banner/banner-one/shape-2.png" alt="shape-2.png" />
                 </div> */}
                 <div className="main-banner-shape-3">
-                    <img src="/images/main-banner/banner-one/shape-3.png" alt="image" />
+                    <img src="/images/main-banner/banner-one/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="main-banner-shape-4">
-                    <img src="/images/main-banner/banner-one/shape-4.png" alt="image" />
+                    <img src="/images/main-banner/banner-one/shape-4.png" alt="shape-4.png" />
                 </div>
             </div>
 

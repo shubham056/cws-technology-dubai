@@ -15,7 +15,7 @@ const EventSpeakers = () => {
                         <div className="col-lg-3 col-md-6">
                             <div className="single-team-box">
                                 <div className="image">
-                                    <img src="/images/team/team-1.jpg" alt="image" />
+                                    <img src="/images/team/team-1.jpg" alt="team-1.jpg" />
 
                                     <ul className="social">
                                         <li>
@@ -51,7 +51,7 @@ const EventSpeakers = () => {
                         <div className="col-lg-3 col-md-6">
                             <div className="single-team-box">
                                 <div className="image">
-                                    <img src="/images/team/team-2.jpg" alt="image" />
+                                    <img src="/images/team/team-2.jpg" alt="team-1.jpg" />
 
                                     <ul className="social">
                                         <li>
@@ -87,7 +87,7 @@ const EventSpeakers = () => {
                         <div className="col-lg-3 col-md-6">
                             <div className="single-team-box">
                                 <div className="image">
-                                    <img src="/images/team/team-3.jpg" alt="image" />
+                                    <img src="/images/team/team-3.jpg" alt="team-3.jpg" />
 
                                     <ul className="social">
                                         <li>
@@ -123,7 +123,7 @@ const EventSpeakers = () => {
                         <div className="col-lg-3 col-md-6">
                             <div className="single-team-box">
                                 <div className="image">
-                                    <img src="/images/team/team-4.jpg" alt="image" />
+                                    <img src="/images/team/team-4.jpg" alt="team-4.jpg" />
 
                                     <ul className="social">
                                         <li>

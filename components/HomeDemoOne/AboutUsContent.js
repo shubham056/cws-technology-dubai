@@ -13,7 +13,7 @@ const AboutUsContent = ({aboutYourself, isReadmore}) => {
                             <div className="experiences-item">
                                 <div className="experiences-content">
                                     <div className="">
-                                        {/* <Image width={32} height={32} style={{marginBottom:10}} src="/images/favicon.ico" alt="image" />  */}
+                                        {/* <Image width={32} height={32} style={{marginBottom:10}} src="/images/favicon.ico" alt="favicon.ico" />  */}
                                         <h3>
                                              
                                         {aboutYourself.data.heading}</h3>
@@ -43,7 +43,7 @@ const AboutUsContent = ({aboutYourself, isReadmore}) => {
 
                         <div className="col-lg-6">
                             <div className="experiences-image">
-                                <Image width={615} height={785} src={`${assetsURL}${aboutYourself.data.image}`} alt="image" />
+                                <Image width={615} height={785} src={`${assetsURL}${aboutYourself.data.image}`} alt="about-image" />
                             </div>
                         </div>
                     </div>
@@ -51,25 +51,25 @@ const AboutUsContent = ({aboutYourself, isReadmore}) => {
 
                 {/* Shape Images */}
                 {/* <div className="experiences-shape-1" data-speed="0.08" data-revert="true">
-                    <Image width={70} height={75} src="/images/experiences/shape-1.png" alt="image" />
+                    <Image width={70} height={75} src="/images/experiences/shape-1.png" alt="shape-1.png" />
                 </div> */}
                 <div className="experiences-shape-2" data-speed="0.06" data-revert="true">
-                    <Image width={16} height={8} src="/images/experiences/shape-2.png" alt="image" />
+                    <Image width={16} height={8} src="/images/experiences/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="experiences-shape-3" data-speed="0.08" data-revert="true">
-                    <Image width={20} height={12} src="/images/experiences/shape-3.png" alt="image" />
+                    <Image width={20} height={12} src="/images/experiences/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="experiences-shape-4" data-speed="0.06" data-revert="true">
-                    <Image width={16} height={8} src="/images/experiences/shape-2.png" alt="image" />
+                    <Image width={16} height={8} src="/images/experiences/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="experiences-shape-5" data-speed="0.08" data-revert="true">
-                    <Image width={20} height={12} src="/images/experiences/shape-3.png" alt="image" />
+                    <Image width={20} height={12} src="/images/experiences/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="experiences-shape-6" data-speed="0.06" data-revert="true">
-                    <Image width={75} height={38} src="/images/experiences/shape-4.png" alt="image" />
+                    <Image width={75} height={38} src="/images/experiences/shape-4.png" alt="shape-4.png" />
                 </div>
                 <div className="experiences-shape-7" data-speed="0.08" data-revert="true">
-                    <Image width={100} height={50} src="/images/experiences/shape-5.png" alt="image" />
+                    <Image width={100} height={50} src="/images/experiences/shape-5.png" alt="shape-5.png" />
                 </div>
             </div>
             

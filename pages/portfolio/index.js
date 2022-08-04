@@ -109,25 +109,25 @@ const Portfolio = ({ portfolios, contactUsInfo, portfolioMeta }) => {
 
                     {/* Shape Images */}
                     <div className="cases-shape-1">
-                        <img src="/images/cases-study/shape-1.png" alt="image" />
+                        <img src="/images/cases-study/shape-1.png" alt="shape-1.png" />
                     </div>
                     <div className="cases-shape-2">
-                        <img src="/images/cases-study/shape-2.png" alt="image" />
+                        <img src="/images/cases-study/shape-2.png" alt="shape-2.png" />
                     </div>
                     <div className="cases-shape-3">
-                        <img src="/images/cases-study/shape-3.png" alt="image" />
+                        <img src="/images/cases-study/shape-3.png" alt="shape-3.png" />
                     </div>
                     <div className="cases-shape-4">
-                        <img src="/images/cases-study/shape-4.png" alt="image" />
+                        <img src="/images/cases-study/shape-4.png" alt="shape-4.png" />
                     </div>
                     <div className="cases-shape-5">
-                        <img src="/images/cases-study/shape-5.png" alt="image" />
+                        <img src="/images/cases-study/shape-5.png" alt="shape-5.png" />
                     </div>
                     <div className="cases-shape-6">
-                        <img src="/images/cases-study/shape-4.png" alt="image" />
+                        <img src="/images/cases-study/shape-4.png" alt="shape-4.png" />
                     </div>
                     <div className="cases-shape-7">
-                        <img src="/images/cases-study/shape-5.png" alt="image" />
+                        <img src="/images/cases-study/shape-5.png" alt="shape-5.png" />
                     </div>
                 </div>
 

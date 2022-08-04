@@ -56,7 +56,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-1.jpg" alt="image" />
+                                        <img src="/images/projects/projects-1.jpg" alt="projects-1.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -82,7 +82,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-2.jpg" alt="image" />
+                                        <img src="/images/projects/projects-2.jpg" alt="projects-2.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -108,7 +108,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-3.jpg" alt="image" />
+                                        <img src="/images/projects/projects-3.jpg" alt="projects-3.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -134,7 +134,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-4.jpg" alt="image" />
+                                        <img src="/images/projects/projects-4.jpg" alt="projects-4.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -160,7 +160,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-5.jpg" alt="image" />
+                                        <img src="/images/projects/projects-5.jpg" alt="projects-5.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -186,7 +186,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-6.jpg" alt="image" />
+                                        <img src="/images/projects/projects-6.jpg" alt="projects-6.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -212,7 +212,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-1.jpg" alt="image" />
+                                        <img src="/images/projects/projects-1.jpg" alt="projects-1.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -238,7 +238,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-2.jpg" alt="image" />
+                                        <img src="/images/projects/projects-2.jpg" alt="projects-2.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -264,7 +264,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-3.jpg" alt="image" />
+                                        <img src="/images/projects/projects-3.jpg" alt="projects-3.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -290,7 +290,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-4.jpg" alt="image" />
+                                        <img src="/images/projects/projects-4.jpg" alt="projects-4.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -316,7 +316,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-5.jpg" alt="image" />
+                                        <img src="/images/projects/projects-5.jpg" alt="projects-5.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -342,7 +342,7 @@ const RecentCaseStudySlider = () => {
                             <div className="projects-image">
                                 <Link href="/case-study-details">
                                     <a>
-                                        <img src="/images/projects/projects-6.jpg" alt="image" />
+                                        <img src="/images/projects/projects-6.jpg" alt="projects-6.jpg" />
                                     </a>
                                 </Link>
                             </div>
@@ -368,19 +368,19 @@ const RecentCaseStudySlider = () => {
 
                 {/* Shape Images */}
                 <div className="projects-shape-1">
-                    <img src="/images/projects/shape-1.png" alt="image" />
+                    <img src="/images/projects/shape-1.png" alt="shape-1.png" />
                 </div>
                 <div className="projects-shape-2">
-                    <img src="/images/projects/shape-2.png" alt="image" />
+                    <img src="/images/projects/shape-2.png" alt="shape-2.png" />
                 </div>
                 <div className="projects-shape-3">
-                    <img src="/images/projects/shape-3.png" alt="image" />
+                    <img src="/images/projects/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="projects-shape-4">
-                    <img src="/images/projects/shape-4.png" alt="image" />
+                    <img src="/images/projects/shape-4.png" alt="shape-4.png" />
                 </div>
                 <div className="projects-shape-5">
-                    <img src="/images/projects/shape-5.png" alt="image" />
+                    <img src="/images/projects/shape-5.png" alt="shape-5.png" />
                 </div>
             </div>
 
