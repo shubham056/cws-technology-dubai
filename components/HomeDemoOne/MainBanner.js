@@ -63,12 +63,12 @@ const MainBanner = ({ bannerData }) => {
                 <div className="main-banner-shape-2">
                     <img src="/images/main-banner/banner-one/shape-2.png" alt="shape-2.png" />
                 </div> */}
-                <div className="main-banner-shape-3">
+                {/* <div className="main-banner-shape-3">
                     <img src="/images/main-banner/banner-one/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="main-banner-shape-4">
                     <img src="/images/main-banner/banner-one/shape-4.png" alt="shape-4.png" />
-                </div>
+                </div> */}
             </div>
 
             {/* Main Banner Style */}

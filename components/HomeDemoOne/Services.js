@@ -59,13 +59,13 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
                 </div>
 
                 {/* Shape Images */}
-                <div className="services-shape-1">
+                {/* <div className="services-shape-1">
                     <img src="/images/services/shape-1.png" alt="shape-1.png" />
-                </div>
+                </div> */}
                 <div className="services-shape-2">
                     <img src="/images/services/shape-2.png" alt="shape-2.png" />
                 </div>
-                <div className="services-shape-3">
+                {/* <div className="services-shape-3">
                     <img src="/images/services/shape-3.png" alt="shape-3.png" />
                 </div>
                 <div className="services-shape-4">
@@ -73,7 +73,7 @@ const Services = ({ services, pageCount, currentPage, pagginationHandler }) => {
                 </div>
                 <div className="services-shape-5">
                     <img src="/images/services/shape-5.png" alt="shape-5.png" />
-                </div>
+                </div> */}
             </div>
 
             {/* Services Card Style */}

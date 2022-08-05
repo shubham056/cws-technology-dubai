@@ -43,15 +43,15 @@ const HomeAboutUsContent = ({aboutYourself}) => {
                 {/* <div className="analysis-shape-2">
                     <img src="/images/analysis/shape-2.png" alt="shape-2.png" />
                 </div> */}
-                <div className="analysis-shape-3">
+                {/* <div className="analysis-shape-3">
                     <img src="/images/analysis/shape-3.png" alt="shape-3.png" />
-                </div>
-                <div className="analysis-shape-4">
+                </div> */}
+                {/* <div className="analysis-shape-4">
                     <img src="/images/analysis/shape-4.png" alt="shape-4.png" />
-                </div>
-                <div className="analysis-shape-5">
+                </div> */}
+                {/* <div className="analysis-shape-5">
                     <img src="/images/analysis/shape-5.png" alt="shape-5.png" />
-                </div>
+                </div> */}
             </div>
 
             {/* About Us Style */}

@@ -30,7 +30,7 @@ const OurRespectiveClientsSingle = ({ testimonial, path }) => {
                         null
                 }
 
-
+{/* 
                 <div className="shape-1">
                     <img src="/images/clients/shape-4.png" alt="shape-4.png" />
                 </div>
@@ -41,7 +41,7 @@ const OurRespectiveClientsSingle = ({ testimonial, path }) => {
 
                 <div className="shape-3">
                     <img src="/images/clients/shape-6.png" alt="shape-6.png" />
-                </div>
+                </div> */}
             </div>
 
 

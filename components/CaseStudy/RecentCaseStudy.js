@@ -46,9 +46,9 @@ const RecentCaseStudy = ({portfolios}) => {
                 <div className="cases-shape-2">
                     <Image width={112} height={65} src="/images/cases-study/shape-2.png" alt="shape-2.png" />
                 </div>
-                <div className="cases-shape-3">
+                {/* <div className="cases-shape-3">
                     <Image width={50} height={208} src="/images/cases-study/shape-3.png" alt="shape-3.png" />
-                </div>
+                </div> */}
                 <div className="cases-shape-4">
                     <Image width={16} height={8} src="/images/cases-study/shape-4.png" alt="shape-4.png" />
                 </div>
