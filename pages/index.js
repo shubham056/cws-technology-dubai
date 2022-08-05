@@ -57,8 +57,8 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
             images: [
                 {
                     url: `${assetsURL}${metaImage}`,
-                    width: 800,
-                    height: 600,
+                    width: 200,
+                    height: 200,
                     alt: 'Og Image Alt',
                 }
             ],

@@ -24,9 +24,9 @@ const TechSupport = ({ parallaxInfo }) => {
                 {/* <div className="support-shape-1">
                     <Image width={220} height={202} src="/images/support/shape-1.png" alt="shape-1.png" />
                 </div> */}
-                <div className="support-shape-2">
+                {/* <div className="support-shape-2">
                     <Image width={220} height={52} src="/images/support/shape-2.png" alt="shape-2.png" />
-                </div>
+                </div> */}
                 <div className="support-shape-3">
                     <Image width={16} height={8} src="/images/support/shape-3.png" alt="shape-3.png" />
                 </div>
