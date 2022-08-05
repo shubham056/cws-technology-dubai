@@ -1,14 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 
-const HomeAboutExtraContent = () => {
+const HomeAboutExtraContent = ({content}) => {
     return (
         <>
             <div className="services-area pt-100 pb-70">
                 <div className="container">
-                    <div className="section-title">
-                        <h2 className='align-center'>Top Rated Web Design & Development Company in Dubai</h2>
-                        <p style={{textAlign:'justify'}}>Web solutions tailored to meet your company's needs and business goals are developed by a skilled team of web experts. You can get a wonderful design of your website made by the experts of the best <strong>web design company in Dubai.</strong></p>
+                    <div className="section-titles">
+                        <h2>{content.data.heading}</h2>
+                        <div dangerouslySetInnerHTML={{__html: content.data.content}}></div>
+                        {/* <p style={{textAlign:'justify'}}>Web solutions tailored to meet your company's needs and business goals are developed by a skilled team of web experts. You can get a wonderful design of your website made by the experts of the best <strong>web design company in Dubai.</strong></p>
 
                         <p style={{textAlign:'justify'}}>CWS Technology is one of the most renowned and fastest-growing website design companies in Dubai. We develop and design websites for all types of industries, such as education and e-learning, retail, social networking, etc. You will get the best website developed by the no. 1 <Link href="https://www.cwstechnology.ae/services/web-development-services"><a>web development company in Dubai</a></Link>. CWS has catered to support the growth of various web design agencies in Dubai in the past and continues to increase the numbers in the future.</p>
 
@@ -32,7 +33,7 @@ const HomeAboutExtraContent = () => {
 
                         <p style={{textAlign:'justify'}}>As a prominent <strong>software development company in Dubai</strong> with more than ten years of experience, CWS Technology has a wide variety of expertise, a staff of highly qualified individuals, and an established working procedure that ensures the best results. We take your ideas and turn them into high-impact products for the future. Develop software as per your business requirements made by the custom software development company in Dubai, <strong>CWS Technology</strong>.</p>
 
-                        <p style={{textAlign:'justify'}}>CWS Technology is one of the <strong>best web design companies in Dubai</strong>, which caters to the requirements of web development Dubai industries.</p>
+                        <p style={{textAlign:'justify'}}>CWS Technology is one of the <strong>best web design companies in Dubai</strong>, which caters to the requirements of web development Dubai industries.</p> */}
 
                     </div>
                 </div>
@@ -59,9 +60,9 @@ const HomeAboutExtraContent = () => {
                     z-index: 1;
                     overflow: hidden;
                 }
+                
                 .section-title p{
-                    max-width: none !important;
-                    padding: 10px;
+                    text-align: justify !important;
                 }
                 .section-title .experiences-btn {
                     padding-top: 20px;

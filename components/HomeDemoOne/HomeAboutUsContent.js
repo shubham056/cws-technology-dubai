@@ -1,7 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+import assetsURL from '../../utils/assetsURL';
+import Image from "next/image";
 
-const HomeAboutUsContent = () => {
+const HomeAboutUsContent = ({aboutYourself}) => {
     return (
         <>
             <div className="analysis-area ptb-100">
@@ -10,17 +12,10 @@ const HomeAboutUsContent = () => {
                     <div className="col-lg-6">
                             <div className="analysis-item">
                                 <div className="analysis-content">
-                                    <h3>Leading Software and Web Development Company in Dubai</h3>
-                                    <strong>Revolutionize your business progress with our intuitive IT solutions</strong>
+                                     <Image width={42} height={42} style={{marginBottom:10}} src="/images/favicon.ico" alt="favicon.ico" /> 
+                                <h3>{aboutYourself.data.heading}</h3>
                                 </div>
-
-                                <div className="analysis-inner-content">
-                                    <p>CWS Technology is one of the biggest firms providing web design & development, mobile app development, and software development services in Dubai. When it comes to your internet marketing strategy, website design becomes the most essential component. Every reputed business requires a website, mobile app, and software services for its growth and development, and to enhance its marketing outreach. Our company is undoubted, one of the best mobile app development companies and best website design companies in Dubai.</p>
-                                </div>
-
-                               
-
-                               
+                                <div dangerouslySetInnerHTML={{__html: aboutYourself.data.content}}></div>
                                 <div className="experiences-btn">
                                     <Link href="/about-us">
                                         <a className="default-btn">
@@ -33,11 +28,9 @@ const HomeAboutUsContent = () => {
                             </div>
                         </div>
 
-                        
-
                         <div className="col-lg-6">
                             <div className="analysis-image">
-                                <img src="/images/about/about.png" alt="analysis.png" />
+                            <Image width={615} height={785} src={`${assetsURL}${aboutYourself.data.image}`} alt="home-about-image" />
                             </div>
                         </div>
                     </div>

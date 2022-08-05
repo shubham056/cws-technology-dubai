@@ -121,6 +121,18 @@ export async function getAboutYourself() {
   return aboutYourself;
 }
 
+export async function getHomeAboutYourself() {
+  const AboutYourselfRes = await fetch(API_BASE_URL + 'dubai_home_about_content');
+  const aboutYourself = await AboutYourselfRes.json();
+  return aboutYourself;
+}
+
+export async function getHomeAbouthomeServices() {
+  const HomeAbouthomeServicesRes = await fetch(API_BASE_URL + 'dubai_home_about_services');
+  const homeAbouthomeServices = await HomeAbouthomeServicesRes.json();
+  return homeAbouthomeServices;
+}
+
 export async function getBannerData() {
   const BannerDataRes = await fetch(API_BASE_URL + 'home_banner_dubai');
   const bannerData = await BannerDataRes.json();

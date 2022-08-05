@@ -19,7 +19,7 @@ import {
     getPopularBlogPost,
     getPortfolio,
     getServices,
-    getAboutYourself,
+    getHomeAboutYourself,
     getOurClients,
     getParallaxSectionInfo,
     getContactUsInfo,
@@ -27,7 +27,8 @@ import {
     getIndustries,
     getTechnologies,
     getBannerData,
-    getHomePageMeta
+    getHomePageMeta,
+    getHomeAbouthomeServices
 } from '../utils/strapi';
 import Technologies from '../components/HomeDemoOne/Technologies';
 import { NextSeo } from "next-seo";
@@ -36,7 +37,7 @@ import Script from "next/script";
 
 
 
-const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, services, aboutYourself, ourClients, industries, technologies, parallaxInfo, contactUsInfo, homeMeta }) => {
+const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, services, aboutYourself, ourClients, industries, technologies, parallaxInfo, contactUsInfo, homeMeta, homeAbouthomeServices }) => {
 
     let facebook = homeMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     let twitter = homeMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
@@ -82,13 +83,13 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
 
             {banner && <MainBanner bannerData={banner} />}
 
-            <HomeAboutUsContent />
+            {aboutYourself && <HomeAboutUsContent aboutYourself={aboutYourself} />}
 
             {/* {aboutYourself && <AboutUsContent aboutYourself={aboutYourself} isReadmore={true} />} */}
 
             {services && <Services services={services} />}
 
-            <HomeAboutExtraContent/>
+            {homeAbouthomeServices && <HomeAboutExtraContent content={homeAbouthomeServices}/>}
 
             <div className="pt-100">
                 {privileges && <FunFactStyleTwo ourPrivileges={privileges} />}
@@ -127,7 +128,8 @@ export async function getStaticProps({ params }) {
     const privileges = await getOurPrivileges(); // Get Our Privileges
     const portfolios = await getPortfolio(); // Get Our Privileges
     const services = await getAllCommonServices(); // Get Services
-    const aboutYourself = await getAboutYourself(); // Get Services
+    const aboutYourself = await getHomeAboutYourself(); // Get Services
+    const homeAbouthomeServices = await getHomeAbouthomeServices(); // Get Services
     const ourClients = await getOurClients(); // Get Our Clients
     const industries = await getIndustries(); // Get Industries
     const technologies = await getTechnologies(); // Get Industries
@@ -149,7 +151,8 @@ export async function getStaticProps({ params }) {
             technologies,
             parallaxInfo,
             contactUsInfo,
-            homeMeta
+            homeMeta,
+            homeAbouthomeServices
         },
         revalidate: 10, // In seconds
     };
