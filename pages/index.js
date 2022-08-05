@@ -41,7 +41,7 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
 
     let facebook = homeMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
     let twitter = homeMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = homeMeta.data;
+    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData, facebook_image, twitter_image } = homeMeta.data;
     const { opengraph_url, title, description, opengraph_type } = facebook;
     const { twitter_handle, site, twitter_cardType } = twitter;
 
@@ -56,10 +56,10 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
             url: opengraph_url,
             images: [
                 {
-                    url: `${assetsURL}${metaImage}`,
+                    url: (facebook_image != null) ? `${assetsURL}${facebook_image}` : `${assetsURL}${metaImage}`,
                     width: 200,
                     height: 200,
-                    alt: 'Og Image Alt',
+                    alt: 'facebook Og Image alt',
                 }
             ],
         },
