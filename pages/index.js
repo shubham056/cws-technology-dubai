@@ -67,6 +67,16 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
             handle: twitter_handle,
             site: site,
             cardType: twitter_cardType,
+            title: title,
+            description : description,
+            images: [
+                {
+                    url: (twitter_image != null) ? `${assetsURL}${twitter_image}` : `${assetsURL}${metaImage}`,
+                    width: 200,
+                    height: 200,
+                    alt: 'facebook Og Image alt',
+                }
+            ]
         },
     }
 
