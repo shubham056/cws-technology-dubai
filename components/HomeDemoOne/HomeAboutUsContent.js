@@ -3,34 +3,41 @@ import Link from 'next/link';
 import assetsURL from '../../utils/assetsURL';
 import Image from "next/image";
 
+
 const HomeAboutUsContent = ({aboutYourself}) => {
     return (
         <>
             <div className="analysis-area ptb-100">
                 <div className="container">
                     <div className="row align-items-center">
-                    <div className="col-lg-6">
+                        <div className="col-lg-6">
+                            <div className="analysis-image">
+                                <img src={`${assetsURL}${aboutYourself.data.image}`} alt="image" />
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6">
                             <div className="analysis-item">
                                 <div className="analysis-content">
-                                     <Image width={42} height={42} style={{marginBottom:10}} src="/images/favicon.ico" alt="favicon.ico" /> 
                                 <h3>{aboutYourself.data.heading}</h3>
                                 </div>
                                 <div dangerouslySetInnerHTML={{__html: aboutYourself.data.content}}></div>
-                                <div className="experiences-btn">
-                                    <Link href="/about-us">
-                                        <a className="default-btn">
-                                            Read More 
-                                            <i className="ri-arrow-right-line"></i>
-                                            <span></span>
-                                        </a>
-                                    </Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row align-items-center">
+                        <div className="col-lg-6">
+                            <div className="analysis-item">
+                                <div className="analysis-content">
+                                <h3>{aboutYourself.data.heading_two}</h3>
                                 </div>
+                                <div dangerouslySetInnerHTML={{__html: aboutYourself.data.content_two}}></div>
                             </div>
                         </div>
 
                         <div className="col-lg-6">
                             <div className="analysis-image">
-                            <Image width={615} height={785} src={`${assetsURL}${aboutYourself.data.image}`} alt="home-about-image" />
+                                <img src={`${assetsURL}${aboutYourself.data.image_two}`} alt="image two" />
                             </div>
                         </div>
                     </div>
@@ -38,20 +45,20 @@ const HomeAboutUsContent = ({aboutYourself}) => {
                 
                 {/* Shape Images */}
                 <div className="analysis-shape-1">
-                    <img src="/images/analysis/shape-1.png" alt="shape-1.png" />
+                    <img src="/images/analysis/shape-1.png" alt="image" />
                 </div>
-                {/* <div className="analysis-shape-2">
-                    <img src="/images/analysis/shape-2.png" alt="shape-2.png" />
-                </div> */}
-                {/* <div className="analysis-shape-3">
-                    <img src="/images/analysis/shape-3.png" alt="shape-3.png" />
-                </div> */}
-                {/* <div className="analysis-shape-4">
-                    <img src="/images/analysis/shape-4.png" alt="shape-4.png" />
-                </div> */}
-                {/* <div className="analysis-shape-5">
-                    <img src="/images/analysis/shape-5.png" alt="shape-5.png" />
-                </div> */}
+                <div className="analysis-shape-2">
+                    <img src="/images/analysis/shape-2.png" alt="image" />
+                </div>
+                <div className="analysis-shape-3">
+                    <img src="/images/analysis/shape-3.png" alt="image" />
+                </div>
+                <div className="analysis-shape-4">
+                    <img src="/images/analysis/shape-4.png" alt="image" />
+                </div>
+                <div className="analysis-shape-5">
+                    <img src="/images/analysis/shape-5.png" alt="image" />
+                </div>
             </div>
 
             {/* About Us Style */}
@@ -76,21 +83,13 @@ const HomeAboutUsContent = ({aboutYourself}) => {
                 .analysis-item .analysis-inner-content {
                     position: relative;
                     margin-top: 30px;
-                    
+                    padding-left: 80px;
                 }
                 
                 .analysis-item .analysis-inner-content img {
                     position: absolute;
                     left: 0;
                     top: 0;
-                }
-                .analysis-item .experiences-btn {
-                    margin-top: 30px;
-                    padding-left: 85px;
-                }
-                .analysis-item .experiences-btn {
-                    padding-left: 0;
-                    text-align: left;
                 }
                 .analysis-shape-1 {
                     position: absolute;
