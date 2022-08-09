@@ -7,7 +7,7 @@ const SingleService = ({ service, randColor }) => {
         <>
             <div className="col-lg-3 col-md-6" key={service.id}>
                 <div className="single-services-item">
-                    <div className={`icon ${randColor}`}>
+                    <div className={`icon bg-FF414B`}>
                         <i className={(service.icon !=null )? `ri-${service.icon}-line` : "ri-quill-pen-line"}></i>
                     </div>
                     <h3>

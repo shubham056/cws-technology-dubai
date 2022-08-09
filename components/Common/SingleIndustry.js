@@ -17,8 +17,6 @@ const SingleIndustry = ({ industry }) => {
                     </p>
                 </div>
             </div>
-
-            {/* Services Card Style */}
             <style jsx>{`
                 .single-services-item {
                     margin-bottom: 30px;

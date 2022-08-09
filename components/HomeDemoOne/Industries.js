@@ -5,7 +5,7 @@ import SingleIndustry from '../Common/SingleIndustry';
 const Industries = ({ industries }) => {
 
     const jsxIndustries = industries.data.map((industry) => {
-        return <SingleIndustry industry={industry} />
+        return <SingleIndustry industry={industry} key={industry.id}/>
     });
 
     return (

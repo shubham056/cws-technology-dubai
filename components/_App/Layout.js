@@ -15,45 +15,8 @@ const Layout = ({ children }) => {
         setTimeout(() => setLoader(false), 0);
     }, [])
 
-    // const structuredData = [
-    //     {
-    //         "url": "https://www.cwstechnology.ae/",
-    //         "logo": "https://www.cwstechnology.ae/images/logo.png",
-    //         "name": "CWS Technology",
-    //         "@type": "Organization",
-    //         "sameAs": [
-    //             "https://www.facebook.com/cwstechnology"
-    //         ],
-    //         "@context": "http://schema.org",
-    //         "contactPoint": [
-    //             {
-    //                 "@type": "ContactPoint",
-    //                 "telephone": "+971 529910891",
-    //                 "contactType": "Business",
-    //                 "availableLanguage": "English"
-    //             }
-    //         ],
-    //         "alternateName": [
-    //             "CWSTechnology"
-    //         ]
-    //     },
-    //     {
-    //         "url": "https://www.cwstechnology.ae/",
-    //         "name": "CWS Technology",
-    //         "@type": "Website",
-    //         "@context": "http://schema.org",
-    //         "alternateName": "CWSTechnology"
-    //     }
-    // ]
-
     return (
         <>
-            {/* <Head>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-                />
-            </Head> */}
             <DefaultSeo {...SEO} />
 
             {children}
