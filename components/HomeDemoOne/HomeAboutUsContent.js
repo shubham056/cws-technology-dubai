@@ -11,12 +11,6 @@ const HomeAboutUsContent = ({aboutYourself}) => {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6">
-                            <div className="analysis-image">
-                                <img src={`${assetsURL}${aboutYourself.data.image}`} alt="image" />
-                            </div>
-                        </div>
-
-                        <div className="col-lg-6">
                             <div className="analysis-item">
                                 <div className="analysis-content">
                                 <h3>{aboutYourself.data.heading}</h3>
@@ -24,15 +18,30 @@ const HomeAboutUsContent = ({aboutYourself}) => {
                                 <div dangerouslySetInnerHTML={{__html: aboutYourself.data.content}}></div>
                             </div>
                         </div>
+                        <div className="col-lg-6">
+                            <div className="analysis-image">
+                                <img src={`${assetsURL}${aboutYourself.data.image}`} alt="image" />
+                            </div>
+                        </div>
                     </div>
-                    <div className="row align-items-center">
+                    {/* <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="analysis-item">
                                 <div className="analysis-content">
                                 <h3>{aboutYourself.data.heading_two}</h3>
                                 </div>
                                 <div dangerouslySetInnerHTML={{__html: aboutYourself.data.content_two}}></div>
+                                <div className="about-btn" style={{paddingTop:10}}>
+                                    <Link href="/about-us">
+                                        <a className="default-btn">
+                                            Read More 
+                                            <i className="ri-arrow-right-line"></i>
+                                            <span></span>
+                                        </a>
+                                    </Link>
+                                </div>
                             </div>
+                            
                         </div>
 
                         <div className="col-lg-6">
@@ -40,25 +49,27 @@ const HomeAboutUsContent = ({aboutYourself}) => {
                                 <img src={`${assetsURL}${aboutYourself.data.image_two}`} alt="image two" />
                             </div>
                         </div>
-                    </div>
+                        
+                        
+                    </div> */}
                 </div>
                 
                 {/* Shape Images */}
                 <div className="analysis-shape-1">
                     <img src="/images/analysis/shape-1.png" alt="image" />
                 </div>
-                <div className="analysis-shape-2">
+                {/* <div className="analysis-shape-2">
                     <img src="/images/analysis/shape-2.png" alt="image" />
                 </div>
                 <div className="analysis-shape-3">
                     <img src="/images/analysis/shape-3.png" alt="image" />
-                </div>
+                </div> */}
                 <div className="analysis-shape-4">
                     <img src="/images/analysis/shape-4.png" alt="image" />
                 </div>
-                <div className="analysis-shape-5">
+                {/* <div className="analysis-shape-5">
                     <img src="/images/analysis/shape-5.png" alt="image" />
-                </div>
+                </div> */}
             </div>
 
             {/* About Us Style */}
