@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 
-const SingleService = ({ service, randColor }) => {
+const SingleService = ({ service }) => {
 
     return (
         <>
             <div className="col-lg-3 col-md-6" key={service.id}>
                 <div className="single-services-item">
-                    <div className={`icon bg-FF414B`}>
+                    <div className={`icon ${service.icon_background_color}`}>
                         <i className={(service.icon !=null )? `ri-${service.icon}-line` : "ri-quill-pen-line"}></i>
                     </div>
                     <h3>
