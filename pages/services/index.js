@@ -153,7 +153,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/services/i-phone-application-development" activeClassName="active">
+                                        <Link href="/services/iphone-app-development-company-in-dubai" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">iPhone Application Development</a>
                                         </Link>
                                     </li>
