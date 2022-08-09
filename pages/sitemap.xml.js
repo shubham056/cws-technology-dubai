@@ -1,6 +1,4 @@
-{/*?xml version="1.0" encoding="UTF-8"?*/}
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.sitemaps.org/schemas/sitemap/0.9
-      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.cwstechnology.ae/</loc>
     <lastmod>2022-08-09T07:55:05+00:00</lastmod>
