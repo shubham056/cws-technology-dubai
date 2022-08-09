@@ -1,175 +1,169 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>https://www.cwstechnology.ae/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/about-us/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/why-cws/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/our-satisfied-customers/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/testimonials/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/web-development-services/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/mobile-application-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/e-commerce-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/it-consulting-service/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/our-process/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/blog/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/portfolio/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/careers/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/contact/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/blog/cws-technologys-ceo-amit-shukla-is-excited-about-the-prospect-of-growing-his-business-through-excellent-communication/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/php-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/enterprise-portal-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/social-networking-apps/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/cms-development-company-in-dubai/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/android-app-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/iphone-app-development-company-in-dubai/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/i-pad-app-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/hybrid-app-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/woo-commerce-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/magento-development-services/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/virtuemart-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/html5-web-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/web-2-0-design-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/responsive-mobile-design-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/joomla-development-services/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/drupal-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.cwstechnology.ae/services/cake-php-development/</loc>
-  <lastmod>2022-08-09T07:55:05+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
-
+{/*?xml version="1.0" encoding="UTF-8"?*/}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.sitemaps.org/schemas/sitemap/0.9
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://www.cwstechnology.ae/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/about-us/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/why-cws/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/our-satisfied-customers/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/testimonials/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/web-development-services/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/mobile-application-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/e-commerce-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/it-consulting-service/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/our-process/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/blog/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/portfolio/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/careers/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/contact/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/blog/cws-technologys-ceo-amit-shukla-is-excited-about-the-prospect-of-growing-his-business-through-excellent-communication/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/php-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/enterprise-portal-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/social-networking-apps/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/cms-development-company-in-dubai/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/android-app-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/iphone-app-development-company-in-dubai/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/i-pad-app-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/hybrid-app-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/woo-commerce-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/magento-development-services/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/virtuemart-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/html5-web-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/web-2-0-design-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/responsive-mobile-design-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/joomla-development-services/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/drupal-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cwstechnology.ae/services/cake-php-development/</loc>
+    <lastmod>2022-08-09T07:55:05+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
