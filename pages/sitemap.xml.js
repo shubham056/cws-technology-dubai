@@ -8,7 +8,7 @@ const Sitemap = () => {
 
 export const getServerSideProps = async ({ res }) => {
 
-  const BASE_URL = { development: "http://localhost:3000", production: "https://cwstechnology.ae"}[process.env.NODE_ENV];
+  const BASE_URL = { development: "http://localhost:3000", production: "https://www.cwstechnology.ae"}[process.env.NODE_ENV];
    
   const staticPaths = fs
     .readdirSync("pages")
