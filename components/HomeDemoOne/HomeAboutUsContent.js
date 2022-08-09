@@ -16,6 +16,15 @@ const HomeAboutUsContent = ({aboutYourself}) => {
                                 <h3>{aboutYourself.data.heading}</h3>
                                 </div>
                                 <div dangerouslySetInnerHTML={{__html: aboutYourself.data.content}}></div>
+                                <div className="about-btn" style={{paddingTop:10}}>
+                                    <Link href="/about-us">
+                                        <a className="default-btn">
+                                            Read More 
+                                            <i className="ri-arrow-right-line"></i>
+                                            <span></span>
+                                        </a>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                         <div className="col-lg-6">
@@ -49,8 +58,6 @@ const HomeAboutUsContent = ({aboutYourself}) => {
                                 <img src={`${assetsURL}${aboutYourself.data.image_two}`} alt="image two" />
                             </div>
                         </div>
-                        
-                        
                     </div> */}
                 </div>
                 
