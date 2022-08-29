@@ -46,9 +46,7 @@ const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
 
     return (
         <>
-            <Head>
-                <script type="text/javascript" src='/js/contactForm.js' />
-            </Head>
+            
 
             <Script strategy='lazyOnload'
                 type="application/ld+json"
@@ -67,7 +65,7 @@ const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
                 activePageText="Contact"
             />
 
-            {/* <ContactForm /> */}
+            <ContactForm />
 
             {contactUsInfo && <ContactInfo contactUsInfo={contactUsInfo} />}
 

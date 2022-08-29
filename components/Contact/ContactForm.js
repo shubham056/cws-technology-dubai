@@ -7,7 +7,9 @@ import baseUrl from '../../utils/baseUrl'
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
-import Recaptcha from 'react-google-recaptcha'
+// import Recaptcha from 'react-google-recaptcha';
+import HubspotForm from 'react-hubspot-form'
+
 
 
 const alertContent = () => {
@@ -73,9 +75,15 @@ const ContactForm = () => {
                     <div className="contact-form">
                         <h3>Get in Touch</h3>
 
-                        {/* <div id="zf_div_Rvuqcx-bkWcjXd-G8PP7K743cnFJvqQlGqh9dNpABGE"></div> */}
+                        <HubspotForm
+                            portalId='22579069'
+                            formId='4b4d5861-9bb0-4294-a80b-238d1169ed8e'
+                            onSubmit={() => console.log('Submit!')}
+                            onReady={(form) => console.log('Form ready!')}
+                            loading={<div>Loading...</div>}
+                        />
 
-                        <form onSubmit={handleSubmit(onSubmit)} >
+                        {/* <form onSubmit={handleSubmit(onSubmit)} >
                             <div className="row">
                                 <div className="col-lg-6 col-md-6">
                                     <div className="form-group">
@@ -143,13 +151,7 @@ const ContactForm = () => {
                                             className={`form-control ${errors.text ? 'is-invalids' : ''}`}
                                         />
                                         <span className='error-msg'>{errors.text?.message}</span>
-                                        {/* <Recaptcha
-                                            sitekey="6LegBL0gAAAAAF-gggsfjiClr1vVnGPT_BBUm0yL"
-                                            render="explicit"
-                                            theme="dark"
-                                            // onloadCallback={recaptchaLoaded}
-                                            // verifyCallback={verifyCallback}
-                                        /> */}
+                                        
 
                                     </div>
                                 </div>
@@ -162,7 +164,7 @@ const ContactForm = () => {
                                     </button>
                                 </div>
                             </div>
-                        </form>
+                        </form> */}
                     </div>
                 </div>
             </div>
