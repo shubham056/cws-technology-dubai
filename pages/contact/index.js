@@ -47,7 +47,7 @@ const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
     return (
         <>
             <Head>
-                {/* <script type="text/javascript" src='/js/zohoContactForm.js' /> */}
+                <script type="text/javascript" src='/js/contactForm.js' />
             </Head>
 
             <Script strategy='lazyOnload'
@@ -67,7 +67,7 @@ const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
                 activePageText="Contact"
             />
 
-            <ContactForm />
+            {/* <ContactForm /> */}
 
             {contactUsInfo && <ContactInfo contactUsInfo={contactUsInfo} />}
 

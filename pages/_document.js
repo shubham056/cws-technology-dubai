@@ -19,6 +19,8 @@ class MyDocument extends Document {
                         href="/images/favicon.ico"
                     ></link>
                     <script  src="/js/googleTagManager.js" />
+                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js?pre=1"></script>
+
                 </Head>
                 <body>
                     
