@@ -486,7 +486,7 @@ const Navbar = () => {
                                 <div className="option-item">
                                     <a target="_blank" href="https://meetings.hubspot.com/cws/cws-meeting" activeClassName="active">
                                         <a className="default-btn">
-                                            Book a meating
+                                            Book a meeting
                                             <i className="ri-user-voice-line"></i>
                                             <span></span>
                                         </a>
