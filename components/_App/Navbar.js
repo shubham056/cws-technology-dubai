@@ -484,13 +484,13 @@ const Navbar = () => {
                                 </div> */}
 
                                 <div className="option-item">
-                                    <Link href="/contact" activeClassName="active">
+                                    <a target="_blank" href="https://meetings.hubspot.com/cws/cws-meeting" activeClassName="active">
                                         <a className="default-btn">
-                                            Let’s Talk
-                                            <i className="ri-message-line"></i>
+                                            Book a meating
+                                            <i className="ri-user-voice-line"></i>
                                             <span></span>
                                         </a>
-                                    </Link>
+                                    </a>
                                 </div>
 
                                 {/* <div className="option-item">
@@ -554,7 +554,7 @@ const Navbar = () => {
                                 <div className="sidebar-btn">
                                     <Link href="/contact">
                                         <a className="default-btn">
-                                            Let’s Talk
+                                            Book a meating
                                             <i className="ri-message-line"></i>
                                             <span></span>
                                         </a>
