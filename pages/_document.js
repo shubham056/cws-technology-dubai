@@ -19,6 +19,7 @@ class MyDocument extends Document {
                         href="/images/favicon.ico"
                     ></link>
                     <script  src="/js/googleTagManager.js" />
+                    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/22579069.js"></script>
                 </Head>
                 <body>
                     
