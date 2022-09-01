@@ -18,7 +18,7 @@ const WhatsApp = ({ scrollStepInPx, delayInMs }) => {
                         position: fixed;
                         cursor: pointer;
                         bottom: -100px;
-                        right: 20px;
+                        left: 20px;
                         color: var(--white-color);
                         background-color: var(--black-color);
                         z-index: 4;
