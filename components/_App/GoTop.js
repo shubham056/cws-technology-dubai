@@ -60,7 +60,7 @@ const GoTop = ({scrollStepInPx, delayInMs}) => {
                     .go-top.active {
                         opacity: 1;
                         visibility: visible;
-                        bottom: 104px;
+                        bottom: 104px !important;
                     }
                     .go-top:hover {
                         background-color: var(--main-color);
