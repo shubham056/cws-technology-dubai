@@ -39,7 +39,7 @@ const GoTop = ({scrollStepInPx, delayInMs}) => {
                         position: fixed;
                         cursor: pointer;
                         bottom: -100px;
-                        right: 20px;
+                        right: 27px;
                         color: var(--white-color);
                         background-color: var(--black-color);
                         z-index: 4;
@@ -60,7 +60,7 @@ const GoTop = ({scrollStepInPx, delayInMs}) => {
                     .go-top.active {
                         opacity: 1;
                         visibility: visible;
-                        bottom: 90px;
+                        bottom: 104px;
                     }
                     .go-top:hover {
                         background-color: var(--main-color);
