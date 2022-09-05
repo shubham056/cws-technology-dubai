@@ -20,6 +20,8 @@ class MyDocument extends Document {
                     ></link>
                     <script  src="/js/googleTagManager.js" />
                     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/22579069.js"></script>
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10973477917"></script>
+                    <script src="/js/analytics.js" />
                 </Head>
                 <body>
                     
