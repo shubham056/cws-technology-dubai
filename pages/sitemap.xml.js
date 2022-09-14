@@ -27,7 +27,11 @@ export const getServerSideProps = async ({ res }) => {
     return `${BASE_URL}/${staticPagePath.replace('.js', '')}`;
   });
 
-  console.log(staticPaths)
+  //console.log(staticPaths)
+
+  // remove index path
+  let staticPathss = staticPaths.filter((item ,index )=> index != 4 )
+  //console.log( staticPathss )
 
    const blogs = await getAllBlogPosts();
    const services = await getAllServicesData();
@@ -39,7 +43,7 @@ export const getServerSideProps = async ({ res }) => {
 
    const homePath = 'https://www.cwstechnology.ae/'
 
-  const allPaths = [homePath,...staticPaths,...dynamicBlogPaths,...dynamicServicesPaths];
+  const allPaths = [homePath,...staticPathss,...dynamicBlogPaths,...dynamicServicesPaths];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
