@@ -27,17 +27,19 @@ export const getServerSideProps = async ({ res }) => {
     return `${BASE_URL}/${staticPagePath.replace('.js', '')}`;
   });
 
+  console.log(staticPaths)
+
    const blogs = await getAllBlogPosts();
    const services = await getAllServicesData();
    const blogCategories = await getBlogCategories();
 
    const dynamicBlogPaths = blogs.data.map( singleBlog => `${BASE_URL}/blog/${singleBlog.slug}`)
    const dynamicServicesPaths = services.data.map( singleService => `${BASE_URL}/services/${singleService.slug}`)
-   const dynamicBlogCategoriesPaths = blogCategories.data.map( singleBlogCategory => `${BASE_URL}/category/${singleBlogCategory.slug}${BASE_URL}/category/${singleBlogCategory.slug}`)
+   //const dynamicBlogCategoriesPaths = blogCategories.data.map( singleBlogCategory => `${BASE_URL}/category/${singleBlogCategory.slug}${BASE_URL}/category/${singleBlogCategory.slug}`)
 
    const homePath = 'https://www.cwstechnology.ae/'
 
-  const allPaths = [homePath,...staticPaths,...dynamicBlogPaths,...dynamicServicesPaths,...dynamicBlogCategoriesPaths];
+  const allPaths = [homePath,...staticPaths,...dynamicBlogPaths,...dynamicServicesPaths];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -47,8 +49,8 @@ export const getServerSideProps = async ({ res }) => {
             <url>
               <loc>${url}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
-              <changefreq>monthly</changefreq>
-              <priority>${index == 0 ? 1.0 : 0.8}</priority>
+              <changefreq>${index == 0 ? "daily" : "monthly"}</changefreq>
+              <priority>${index == 0 ? 1.00 : 0.8}</priority>
             </url>
           `;
         })
