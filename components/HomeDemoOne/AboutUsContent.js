@@ -6,26 +6,16 @@ import Image from "next/image";
 const AboutUsContent = ({aboutYourself, isReadmore}) => {
     return (
         <>
-            <div className="experiences-area">
+            <div className="analysis-area ptb-100">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6">
-                            <div className="experiences-item">
-                                <div className="experiences-content">
-                                    <div className="">
-                                        {/* <Image width={32} height={32} style={{marginBottom:10}} src="/images/favicon.ico" alt="favicon.ico" />  */}
-                                        <h3>
-                                             
-                                        {aboutYourself.data.heading}</h3>
-                                    </div>
-                                    
-                                    <div dangerouslySetInnerHTML={{__html: aboutYourself.data.content}}></div>
+                            <div className="analysis-item">
+                                <div className="analysis-content">
+                                <h3>{aboutYourself.data.heading}</h3>
                                 </div>
-
-                                {
-                                    (isReadmore)
-                                    ?
-                                    <div className="experiences-btn">
+                                <div dangerouslySetInnerHTML={{__html: aboutYourself.data.content}}></div>
+                                {/* <div className="about-btn" style={{paddingTop:10}}>
                                     <Link href="/about-us">
                                         <a className="default-btn">
                                             Read More 
@@ -33,277 +23,180 @@ const AboutUsContent = ({aboutYourself, isReadmore}) => {
                                             <span></span>
                                         </a>
                                     </Link>
-                                </div>
-                                    :
-                                    null
-                                }
-                                
+                                </div> */}
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="analysis-image">
+                                <img src={`${assetsURL}${aboutYourself.data.image}`} alt="image" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row align-items-center" style={{paddingTop: 20}}>
+                    <div className="col-lg-6">
+                            <div className="analysis-image">
+                                <img src={`${assetsURL}${aboutYourself.data.image_two}`} alt="image two" />
                             </div>
                         </div>
 
                         <div className="col-lg-6">
-                            <div className="experiences-image">
-                                <Image width={615} height={785} src={`${assetsURL}${aboutYourself.data.image}`} alt="about-image" />
+                            <div className="analysis-item">
+                                <div className="analysis-content">
+                                <h3>{aboutYourself.data.heading_two}</h3>
+                                </div>
+                                <div dangerouslySetInnerHTML={{__html: aboutYourself.data.content_two}}></div>
+                                {/* <div className="about-btn" style={{paddingTop:10}}>
+                                    <Link href="/about-us">
+                                        <a className="default-btn">
+                                            Read More 
+                                            <i className="ri-arrow-right-line"></i>
+                                            <span></span>
+                                        </a>
+                                    </Link>
+                                </div> */}
                             </div>
+                            
                         </div>
+
+                        
                     </div>
                 </div>
-
+                
                 {/* Shape Images */}
-                {/* <div className="experiences-shape-1" data-speed="0.08" data-revert="true">
-                    <Image width={70} height={75} src="/images/experiences/shape-1.png" alt="shape-1.png" />
+                {/* <div className="analysis-shape-1">
+                    <img src="/images/analysis/shape-1.png" alt="image" />
                 </div> */}
-                <div className="experiences-shape-2" data-speed="0.06" data-revert="true">
-                    <Image width={16} height={8} src="/images/experiences/shape-2.png" alt="shape-2.png" />
+                {/* <div className="analysis-shape-2">
+                    <img src="/images/analysis/shape-2.png" alt="image" />
                 </div>
-                <div className="experiences-shape-3" data-speed="0.08" data-revert="true">
-                    <Image width={20} height={12} src="/images/experiences/shape-3.png" alt="shape-3.png" />
+                <div className="analysis-shape-3">
+                    <img src="/images/analysis/shape-3.png" alt="image" />
+                </div> */}
+                <div className="analysis-shape-4">
+                    <img src="/images/analysis/shape-4.png" alt="image" />
                 </div>
-                <div className="experiences-shape-4" data-speed="0.06" data-revert="true">
-                    <Image width={16} height={8} src="/images/experiences/shape-2.png" alt="shape-2.png" />
-                </div>
-                <div className="experiences-shape-5" data-speed="0.08" data-revert="true">
-                    <Image width={20} height={12} src="/images/experiences/shape-3.png" alt="shape-3.png" />
-                </div>
-                <div className="experiences-shape-6" data-speed="0.06" data-revert="true">
-                    <Image width={75} height={38} src="/images/experiences/shape-4.png" alt="shape-4.png" />
-                </div>
-                <div className="experiences-shape-7" data-speed="0.08" data-revert="true">
-                    <Image width={100} height={50} src="/images/experiences/shape-5.png" alt="shape-5.png" />
-                </div>
+                {/* <div className="analysis-shape-5">
+                    <img src="/images/analysis/shape-5.png" alt="image" />
+                </div> */}
             </div>
             
             {/* About Us Content Style */}
             <style jsx>{`
-                .experiences-area {
+                .analysis-area {
                     position: relative;
                     z-index: 1;
+                    overflow: hidden;
                 }
-                .experiences-area::before {
-                    position: absolute;
-                    content: "";
-                    height: 100%;
-                    width: 50%;
-                    background-color: #F4F8FC;
-                    left: 0;
-                    top: 0;
-                    z-index: -1;
+                .analysis-item {
+                    padding-left: 30px;
                 }
-                .experiences-area::after {
-                    position: absolute;
-                    content: "";
-                    height: 100%;
-                    width: 50%;
-                    background-color: var(--white-color);
-                    right: 0;
-                    top: 0;
-                    z-index: -1;
-                }
-                .experiences-item {
-                    padding-top: 20px;
-                    padding-bottom: 80px;
-                    padding-right: 30px;
-                }
-                .experiences-item .experiences-content .tag {
-                    display: inline-block;
-                    height: 50px;
-                    width: 50px;
-                    line-height: 50px;
-                    background-color: var(--white-color);
-                    text-align: center;
-                    border-radius: 50px;
-                    -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
-                            box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
-                }
-                .experiences-item .experiences-content h3 {
+                .analysis-item .analysis-content h3 {
                     font-size: 40px;
-                    margin-top: 25px;
                     margin-bottom: 20px;
                     line-height: 1.4;
                 }
-                .experiences-item .experiences-inner-content {
+                .analysis-item .analysis-content p {
+                    position: relative;
+                    z-index: 1;
+                }
+                .analysis-item .analysis-inner-content {
                     position: relative;
                     margin-top: 30px;
                     padding-left: 80px;
                 }
-                .experiences-item .experiences-inner-content img {
+                
+                .analysis-item .analysis-inner-content img {
                     position: absolute;
                     left: 0;
                     top: 0;
                 }
-                .experiences-item .experiences-btn {
-                    margin-top: 30px;
-                    padding-left: 85px;
-                }
-                .experiences-image {
-                    text-align: right;
-                }
-                .experiences-shape-1 {
+                .analysis-shape-1 {
                     position: absolute;
-                    top: 8%;
-                    left: 40%;
-                    -webkit-transform: translateY(-8%) translateX(-40%);
-                            transform: translateY(-8%) translateX(-40%);
-                    z-index: -1;
+                    top: 5%;
+                    left: 10%;
+                    -webkit-transform: translateY(-5%) translateX(-10%);
+                            transform: translateY(-5%) translateX(-10%);
+                    max-width: 80px;
                 }
-                .experiences-shape-2 {
+                .analysis-shape-2 {
                     position: absolute;
-                    top: 50%;
-                    left: 2%;
-                    -webkit-transform: translateY(-50%) translateX(-2%);
-                            transform: translateY(-50%) translateX(-2%);
-                    z-index: -1;
+                    top: 5%;
+                    left: 30%;
+                    -webkit-transform: translateY(-5%) translateX(-30%);
+                            transform: translateY(-5%) translateX(-30%);
+                    max-width: 45px;
                 }
-                .experiences-shape-3 {
+                .analysis-shape-3 {
                     position: absolute;
-                    top: 52%;
-                    left: 5%;
-                    -webkit-transform: translateY(-52%) translateX(-5%);
-                            transform: translateY(-52%) translateX(-5%);
-                    z-index: -1;
+                    bottom: 15%;
+                    left: 34%;
+                    -webkit-transform: translateY(-15%) translateX(-34%);
+                            transform: translateY(-15%) translateX(-34%);
                 }
-                .experiences-shape-4 {
+                .analysis-shape-4 {
                     position: absolute;
                     bottom: 10%;
                     left: 35%;
                     -webkit-transform: translateY(-10%) translateX(-35%);
                             transform: translateY(-10%) translateX(-35%);
-                    z-index: -1;
                 }
-                .experiences-shape-5 {
+                .analysis-shape-5 {
                     position: absolute;
                     bottom: 8%;
-                    left: 36%;
-                    -webkit-transform: translateY(-8%) translateX(-36%);
-                            transform: translateY(-8%) translateX(-36%);
-                    z-index: -1;
-                }
-                .experiences-shape-6 {
-                    position: absolute;
-                    bottom: 10%;
-                    left: 48%;
-                    -webkit-transform: translateY(-10%) translateX(-48%);
-                            transform: translateY(-10%) translateX(-48%);
-                    z-index: 1;
-                }
-                .experiences-shape-7 {
-                    position: absolute;
-                    bottom: 2%;
-                    left: 48%;
-                    -webkit-transform: translateY(-2%) translateX(-48%);
-                            transform: translateY(-2%) translateX(-48%);
-                    z-index: 1;
+                    left: 50%;
+                    -webkit-transform: translateY(-8%) translateX(-50%);
+                            transform: translateY(-8%) translateX(-50%);
                 }
 	
                 // Responsive Style
                 @media only screen and (max-width: 767px) {
-                    .experiences-area {
-                        padding-bottom: 50px;
+                    .analysis-image {
+                        text-align: center;
                     }
-                    .experiences-area::after {
-                        background-color: #F4F8FC;
+                    .analysis-item {
+                        padding-left: 0;
+                        margin-top: 30px;
                     }
-                    .experiences-item {
-                        padding-top: 0px;
-                        padding-bottom: 50px;
-                        padding-right: 0;
-                    }
-                    .experiences-item .experiences-content h3 {
+                    .analysis-item .analysis-content h3 {
                         font-size: 24px;
                     }
-                    .experiences-item .experiences-content p {
+                    .analysis-item .analysis-content p {
                         font-size: 15px;
                     }
-                    .experiences-item .experiences-inner-content {
+                    .analysis-item .analysis-inner-content {
                         padding-left: 0;
                         text-align: center;
                     }
-                    .experiences-item .experiences-inner-content img {
+                    .analysis-item .analysis-inner-content img {
                         position: relative;
                         margin-bottom: 15px;
                     }
-                    .experiences-item .experiences-btn {
-                        padding-left: 0;
-                        text-align: center;
-                    }
-                    .experiences-image {
-                        text-align: center;
-                    }
-                    .experiences-shape-1 {
+                    .analysis-shape-1, .analysis-shape-2, .analysis-shape-3, .analysis-shape-4, .analysis-shape-5 {
                         display: none;
-                    }
-                    .experiences-shape-2 {
-                        display: none;
-                    }
-                    .experiences-shape-3 {
-                        display: none;
-                    }
-                    .experiences-shape-4 {
-                        display: none;
-                    }
-                    .experiences-shape-5 {
-                        display: none;
-                    }
-                    .experiences-shape-6 {
-                        display: none;
-                    }
-                    .experiences-shape-7 {
-                        display: none;
-                    }
+                    } 
                 }
 
                 @media only screen and (min-width : 768px) and (max-width : 991px) {
-                    .experiences-area {
-                        padding-bottom: 50px;
-                    }
-                    .experiences-area::after {
-                        background-color: #F4F8FC;
-                    }
-                    .experiences-item {
-                        padding-top: 50px;
-                        padding-bottom: 50px;
-                        padding-right: 0;
-                    }
-                    .experiences-image {
+                    .analysis-image {
                         text-align: center;
                     }
-                    .experiences-shape-1 {
-                        display: none;
+                    .analysis-item {
+                        padding-left: 0;
+                        margin-top: 30px;
                     }
-                    .experiences-shape-2 {
-                        display: none;
-                    }
-                    .experiences-shape-3 {
-                        display: none;
-                    }
-                    .experiences-shape-4 {
-                        display: none;
-                    }
-                    .experiences-shape-5 {
-                        display: none;
-                    }
-                    .experiences-shape-6 {
-                        display: none;
-                    }
-                    .experiences-shape-7 {
+                    .analysis-shape-1, .analysis-shape-2, .analysis-shape-3, .analysis-shape-4, .analysis-shape-5 {
                         display: none;
                     }
                 }
 
                 @media only screen and (min-width : 992px) and (max-width : 1199px) {
-                    .experiences-item {
-                        padding-top: 50px;
-                        padding-bottom: 50px;
+                    .analysis-item .analysis-content h3 {
+                        font-size: 25px;
                     }
-                    .experiences-item .experiences-content h3 {
-                        font-size: 30px;
-                        margin-top: 20px;
-                        margin-bottom: 15px;
-                    }
-                    .experiences-item .experiences-content p {
+                    .analysis-item .analysis-content p {
                         font-size: 14px;
                     }
-                    .experiences-item .experiences-inner-content p {
+                    .analysis-item .analysis-inner-content p {
                         font-size: 14px;
                     }
                 }
