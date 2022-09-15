@@ -14,35 +14,38 @@ import Script from 'next/script';
 
 const ServicesDetails = ({ service, contactUsInfo }) => {
 
-    // let facebook = service.data.metaSocial.find(o => o.socialNetwork === 'facebook');
-    // let twitter = service.data.metaSocial.find(o => o.socialNetwork === 'twitter');
+
     const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = service.data[0];
-    // const { opengraph_url, title, description, opengraph_type } = facebook;
-    // const { twitter_handle, site, twitter_cardType } = twitter;
+    if (service.data[0].metaSocial != undefined) {
+        let facebook = service.data[0].metaSocial.filter(o => o.socialNetwork === 'facebook');
+        let twitter = service.data[0].metaSocial.filter(o => o.socialNetwork === 'twitter');
+        const { opengraph_url, title, description, opengraph_type } = facebook;
+        const { twitter_handle, site, twitter_cardType } = twitter;
+    }
 
     const SEO = {
         title: metaTitle,
         description: metaDescription,
         canonical: canonicalURL,
-        // openGraph: {
-        //     type: opengraph_type,
-        //     title: title,
-        //     description: description,
-        //     url: opengraph_url,
-        //     images: [
-        //         {
-        //             url: `${assetsURL}${metaImage}`,
-        //             width: 800,
-        //             height: 600,
-        //             alt: 'Og Image Alt',
-        //         }
-        //     ],
-        // },
-        // twitter: {
-        //     handle: twitter_handle,
-        //     site: site,
-        //     cardType: twitter_cardType,
-        // },
+        openGraph: {
+            type: (typeof opengraph_type != "undefined") ? opengraph_type : null,
+            title: (typeof title != "undefined") ? title : null,
+            description: (typeof description != "undefined") ? description : null,
+            url: (typeof opengraph_url != "undefined") ? opengraph_url : null,
+            images: [
+                {
+                    url: `${assetsURL}${metaImage}`,
+                    width: 800,
+                    height: 600,
+                    alt: 'Og Image Alt',
+                }
+            ],
+        },
+        twitter: {
+            handle: (typeof twitter_handle != "undefined") ? twitter_handle : null,
+            site: (typeof site != "undefined") ? site : null,
+            cardType: (typeof twitter_cardType != "undefined") ? twitter_cardType : null,
+        },
     }
     console.log(SEO)
     // return false
