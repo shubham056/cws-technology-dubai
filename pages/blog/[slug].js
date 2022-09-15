@@ -16,17 +16,56 @@ import ErrorPage from 'next/error';
 import Moment from "moment-timezone";
 import Image from 'next/image';
 import assetsURL from '../../utils/assetsURL';
+import { NextSeo } from 'next-seo';
+
 
 
 const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
     // console.log(popularPosts)
     // return false
+    console.log("data-----------------", post.data[0].metaSocial)
+    let facebook = post.data[0].metaSocial.filter(o => o.socialNetwork === 'facebook');
+    let twitter = post.data[0].metaSocial.filter(o => o.socialNetwork === 'twitter');
+    const { metaTitle, metaDescription, image, canonicalURL, structuredData } = post.data[0];
+    const { opengraph_url, title, description, opengraph_type } = facebook;
+    const { twitter_handle, site, twitter_cardType } = twitter;
+
+    console.log("facebook data", facebook)
+    console.log("twitter data", twitter)
+
+    const SEO = {
+        title: metaTitle,
+        description: metaDescription,
+        canonical: canonicalURL,
+        openGraph: {
+            type: opengraph_type,
+            title: title,
+            description: description,
+            url: opengraph_url,
+            images: [
+                {
+                    url: `${assetsURL}${image}`,
+                    width: 800,
+                    height: 600,
+                    alt: 'Og Image Alt',
+                }
+            ],
+        },
+        twitter: {
+            handle: twitter_handle,
+            site: site,
+            cardType: twitter_cardType,
+        },
+    }
+
 
     if (!post) {
         return <ErrorPage statusCode={404} />
     }
     return (
         <>
+            {post && <NextSeo {...SEO} />}
+
             <Navbar />
 
             {post && <PageBanner
