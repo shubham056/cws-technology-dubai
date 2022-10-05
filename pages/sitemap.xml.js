@@ -31,19 +31,21 @@ export const getServerSideProps = async ({ res }) => {
 
   // remove index path
   let staticPathss = staticPaths.filter((item ,index )=> index != 4 )
-  //console.log( staticPathss )
+  staticPathss = staticPathss.map(item => item+"/")
+  //console.log( "staticPathss",staticPathss )
 
    const blogs = await getAllBlogPosts();
    const services = await getAllServicesData();
    const blogCategories = await getBlogCategories();
 
-   const dynamicBlogPaths = blogs.data.map( singleBlog => `${BASE_URL}/blog/${singleBlog.slug}`)
-   const dynamicServicesPaths = services.data.map( singleService => `${BASE_URL}/services/${singleService.slug}`)
+   const dynamicBlogPaths = blogs.data.map( singleBlog => `${BASE_URL}/blog/${singleBlog.slug}/`)
+   const dynamicServicesPaths = services.data.map( singleService => `${BASE_URL}/services/${singleService.slug}/`)
    //const dynamicBlogCategoriesPaths = blogCategories.data.map( singleBlogCategory => `${BASE_URL}/category/${singleBlogCategory.slug}${BASE_URL}/category/${singleBlogCategory.slug}`)
 
    const homePath = 'https://www.cwstechnology.ae/'
 
   const allPaths = [homePath,...staticPathss,...dynamicBlogPaths,...dynamicServicesPaths];
+  //console.log("allPaths",allPaths)
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
