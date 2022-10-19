@@ -8,9 +8,17 @@ import Router, { withRouter, useRouter } from 'next/router'
 import ReactPaginate from 'react-paginate';
 import { getPosts, getContactUsInfo } from '../../utils/strapi';
 import ErrorPage from 'next/error';
+import { NextSeo } from 'next-seo';
+
 
 
 const BlogPost = ({ posts, totalCount, pageCount, currentPage, perPage, contactUsInfo }) => {
+    const SEO = {
+        title: "CWS Technology Official @Blog - Get the Latest Tech News, Ideas, Tips & Articles",
+        description: "Web design development services provider & professional IT service company based in Dubai - Get the Latest News, Articles, Tips, Ideas and more.",
+        canonical: "https://www.cwstechnology.ae/blog/",
+    }
+
     if (!posts) {
         return <ErrorPage statusCode={404} />
     }
@@ -34,6 +42,8 @@ const BlogPost = ({ posts, totalCount, pageCount, currentPage, perPage, contactU
 
     return (
         <>
+            <NextSeo {...SEO} />
+            
             <Navbar />
 
             <PageBanner
