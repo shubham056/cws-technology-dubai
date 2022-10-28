@@ -169,7 +169,7 @@ const Footer = ({ contactUsInfo }) => {
                                 <ul className="footer-links-list">
                                     <li>
                                         <Link href="/services/web-development-services">
-                                            <a href="pricing.html">Web Development</a>
+                                            Web Development
                                         </Link>
                                     </li>
                                     <li>
@@ -179,7 +179,7 @@ const Footer = ({ contactUsInfo }) => {
                                     </li>
                                     <li>
                                         <Link href="/services/e-commerce-development">
-                                            <a href="pricing.html">E-Commerce Development</a>
+                                            E-Commerce Development
                                         </Link>
                                     </li>
                                     <li>
