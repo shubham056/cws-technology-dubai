@@ -26,47 +26,47 @@ import Script from 'next/script';
 
 const OurSatisfiedCustomers = ({ testimonials, contactUsInfo, ourClients, ourClientsMeta }) => {
 
-    let facebook = ourClientsMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
-    let twitter = ourClientsMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
-    const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = ourClientsMeta.data;
-    const { opengraph_url, title, description, opengraph_type } = facebook;
-    const { twitter_handle, site, twitter_cardType } = twitter;
+    // let facebook = ourClientsMeta.data.metaSocial.find(o => o.socialNetwork === 'facebook');
+    // let twitter = ourClientsMeta.data.metaSocial.find(o => o.socialNetwork === 'twitter');
+    // const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = ourClientsMeta.data;
+    // const { opengraph_url, title, description, opengraph_type } = facebook;
+    // const { twitter_handle, site, twitter_cardType } = twitter;
 
-    const SEO = {
-        title: metaTitle,
-        description: metaDescription,
-        canonical: canonicalURL,
-        openGraph: {
-            type: opengraph_type,
-            title: title,
-            description: description,
-            url: opengraph_url,
-            images: [
-                {
-                    url: `${assetsURL}${metaImage}`,
-                    width: 800,
-                    height: 600,
-                    alt: 'Og Image Alt',
-                }
-            ],
-        },
-        twitter: {
-            handle: twitter_handle,
-            site: site,
-            cardType: twitter_cardType,
-        },
-    }
+    // const SEO = {
+    //     title: metaTitle,
+    //     description: metaDescription,
+    //     canonical: canonicalURL,
+    //     openGraph: {
+    //         type: opengraph_type,
+    //         title: title,
+    //         description: description,
+    //         url: opengraph_url,
+    //         images: [
+    //             {
+    //                 url: `${assetsURL}${metaImage}`,
+    //                 width: 800,
+    //                 height: 600,
+    //                 alt: 'Og Image Alt',
+    //             }
+    //         ],
+    //     },
+    //     twitter: {
+    //         handle: twitter_handle,
+    //         site: site,
+    //         cardType: twitter_cardType,
+    //     },
+    // }
 
     return (
         <>
           
-                <Script strategy='lazyOnload'
+                {/* <Script strategy='lazyOnload'
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-                />
+                /> */}
           
 
-            {ourClientsMeta && <NextSeo {...SEO} />}
+            {/* {ourClientsMeta && <NextSeo {...SEO} />} */}
 
             <Navbar />
 
