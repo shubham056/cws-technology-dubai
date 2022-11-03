@@ -73,7 +73,9 @@ const ContactForm = () => {
             <div className="contact-area ptb-100">
                 <div className='container text-center' style={{paddingBottom: 50}}>
                     <div className='row'>
-                    <p style={{fontWeight: 400,color: '#56576B'}}>Are you looking for a Website or Software Development Services? If you are in Dubai please fill in the form and one of our expert will visit you.</p>
+                    <p style={{fontWeight: 400,fontSize: 17,color: '#56576B'}}>Are you looking for a Website or Software Development Services? If you are in Dubai please fill in the form and one of our expert will visit you.</p>
+                    <p style={{fontWeight: 400,fontSize: 17,color: '#56576B'}}>هل تبحث عن موقع أو خدمات تطوير برمجيات؟ إذا كنت في دبي ، يرجى ملء النموذج وسيقوم أحد خبرائنا بزيارتك.
+                        </p>
                     </div>
                 </div>
                 <div className="container">
