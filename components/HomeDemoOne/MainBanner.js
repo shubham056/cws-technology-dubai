@@ -57,7 +57,7 @@ const MainBanner = ({ bannerData }) => {
 
                     </div>
                 </div>
-                <div className="container text-center" style={{ paddingTop: 35 }}>
+                <div className="container" style={{ paddingTop: 45 }}>
                     <div className="row">
                         <div className="col-lg-5 col-md-12">
                             <div className="main-banner-content">
