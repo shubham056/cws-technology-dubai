@@ -70,11 +70,11 @@ const HomeAboutUsContent = ({aboutYourself}) => {
                 </div>
                 <div className="analysis-shape-3">
                     <img src="/images/analysis/shape-3.png" alt="image" />
-                </div> */}
+                </div>
                 <div className="analysis-shape-4">
                     <img src="/images/analysis/shape-4.png" alt="image" />
                 </div>
-                {/* <div className="analysis-shape-5">
+                <div className="analysis-shape-5">
                     <img src="/images/analysis/shape-5.png" alt="image" />
                 </div> */}
             </div>

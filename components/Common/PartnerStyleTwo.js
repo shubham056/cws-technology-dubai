@@ -42,49 +42,44 @@ const PartnerStyleTwo = () => {
         <>
             <div className="partner-area ptb-100">
                 <div className="container">
+                    <div className="section-title">
+                        <h2>As Seen on</h2>
+                    </div>
                     {display ? <OwlCarousel 
                         className="partner-slides owl-carousel owl-theme"
                         {...options}
                     > 
                         <div className="single-partner">
-                            <img src="/images/partner/partner-1.png" alt="image" />
+                            <a target="_blank" href='https://theprint.in/ani-press-releases/india-based-cws-technology-celebrates-its-12-years-of-excellence-launches-it-staff-augmentation-portal/1145142/'>
+                            <img src="/images/partner/theprint.png" alt="theprint" />
+                            </a>
+                            
                         </div>
     
                         <div className="single-partner">
-                            <img src="/images/partner/partner-2.png" alt="image" />
+                        <a target="_blank" href='https://m.dailyhunt.in/news/india/english/ani67917250816496966-epaper-anieng/india+based+cws+technology+celebrates+its+12+years+of+excellence+launches+it+staff+augmentation+portal-newsid-n426627282?listname=newspaperLanding&topic=business&index=10&topicIndex=4&mode=pwa&action=click'>
+                            <img src="/images/partner/dailyhunt.png" alt="dailyhunt" />
+                            </a>
                         </div>
     
                         <div className="single-partner">
-                            <img src="/images/partner/partner-3.png" alt="image" />
+                        <a target="_blank" href='https://www.zee5.com/articles/india-based-cws-technology-celebrates-its-12-years-of-excellence-launches-it-staff-augmentation-portal'>
+                            <img src="/images/partner/zee5.png" alt="zee5" />
+                            </a>
                         </div>
     
                         <div className="single-partner">
-                            <img src="/images/partner/partner-4.png" alt="image" />
+                        <a target="_blank" href='https://www.business-standard.com/content/press-releases-ani/india-based-cws-technology-celebrates-its-12-years-of-excellence-launches-it-staff-augmentation-portal-122092701241_1.html'>
+                            <img src="/images/partner/bstandard.png" alt="bstandard" />
+                            </a>
                         </div>
     
                         <div className="single-partner">
-                            <img src="/images/partner/partner-5.png" alt="image" />
+                        <a target="_blank" href='https://www.aninews.in/news/business/business/india-based-cws-technology-celebrates-its-12-years-of-excellence-launches-it-staff-augmentation-portal20220927175446/'>
+                            <img src="/images/partner/ani.png" alt="ani" />
+                            </a>
                         </div>
 
-                        <div className="single-partner">
-                            <img src="/images/partner/partner-1.png" alt="image" />
-                        </div>
-    
-                        <div className="single-partner">
-                            <img src="/images/partner/partner-2.png" alt="image" />
-                        </div>
-    
-                        <div className="single-partner">
-                            <img src="/images/partner/partner-3.png" alt="image" />
-                        </div>
-    
-                        <div className="single-partner">
-                            <img src="/images/partner/partner-4.png" alt="image" />
-                        </div>
-    
-                        <div className="single-partner">
-                            <img src="/images/partner/partner-5.png" alt="image" />
-                        </div>
                     </OwlCarousel> : ''}
                 </div>
             </div>
@@ -99,7 +94,10 @@ const PartnerStyleTwo = () => {
                     text-align: center;
                 }
                 .single-partner img {
-                    width: auto !important;
+                    
+                    width: 170px !important;
+                    height: 110px !important;
+                    object-fit: contain !important;
                     display: inline-block !important;
                 }
                 .partner-shape-1 {

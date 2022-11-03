@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from '../components/_App/Navbar';
 import MainBanner from '../components/HomeDemoOne/MainBanner';
 import PartnerStyleOne from '../components/Common/PartnerStyleOne';
+import PartnerStyleThree from '../components/Common/PartnerStyleThree';
+import PartnerStyleTwo from '../components/Common/PartnerStyleTwo';
 import HomeAboutUsContent from '../components/HomeDemoOne/HomeAboutUsContent';
 import Industries from '../components/HomeDemoOne/Industries';
 import Services from '../components/HomeDemoOne/Services';
@@ -92,6 +94,10 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
             <Navbar />
 
             {banner && <MainBanner bannerData={banner} />}
+
+            {/* <PartnerStyleThree/> */}
+
+            <PartnerStyleTwo />
 
             {aboutYourself && <HomeAboutUsContent aboutYourself={aboutYourself} />}
 
