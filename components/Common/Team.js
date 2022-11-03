@@ -19,8 +19,8 @@ const Team = ({ teamMembers, allTeamMembers }) => {
 
                     <div className="row">
 
-                        {/* {jsxTeamMembers} */}
-                        <h3 style={{textAlign:'center'}}>Coming soon...</h3>
+                        {jsxTeamMembers}
+                        {/* <h3 style={{textAlign:'center'}}>Coming soon...</h3> */}
 
                     </div>
                     {allTeamMembers

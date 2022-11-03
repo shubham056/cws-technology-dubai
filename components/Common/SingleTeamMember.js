@@ -12,7 +12,7 @@ const SingleTeamMember = ({ teamMembers }) => {
                     <div className="image">
                         <img src={`${assetsURL}${teamMembers.image}`} alt={teamMembers.name} />
 
-                        <ul className="social">
+                        {/* <ul className="social">
                             <li>
                                 <a href="https://www.facebook.com/" target="_blank">
                                     <i className="ri-facebook-fill"></i>
@@ -33,7 +33,7 @@ const SingleTeamMember = ({ teamMembers }) => {
                                     <i className="ri-messenger-fill"></i>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
 
                     <div className="content">

@@ -111,7 +111,7 @@ const Footer = ({ contactUsInfo }) => {
                                 <ul className="widget-info white-color-text">
                                     <li>
                                         <i className="ri-phone-line"></i>
-                                        <a style={{color: '#ffff'}} href={`tel:${contactUsInfo.data.phone_number}`}>{contactUsInfo.data.phone_number}</a>
+                                        <a style={{ color: '#ffff' }} href={`tel:${contactUsInfo.data.phone_number}`}>{contactUsInfo.data.phone_number}</a>
                                     </li>
 
                                     <li>
@@ -132,7 +132,7 @@ const Footer = ({ contactUsInfo }) => {
                                 <h3>Sitemap</h3>
 
                                 <ul className="footer-links-list">
-                            
+
                                     <li>
                                         <Link href="/about-us">
                                             <a>About</a>
@@ -169,7 +169,7 @@ const Footer = ({ contactUsInfo }) => {
                                 <ul className="footer-links-list">
                                     <li>
                                         <Link href="/services/web-development-services">
-                                            Web Development
+                                            <a>Web Development</a>
                                         </Link>
                                     </li>
                                     <li>
@@ -179,7 +179,7 @@ const Footer = ({ contactUsInfo }) => {
                                     </li>
                                     <li>
                                         <Link href="/services/e-commerce-development">
-                                            E-Commerce Development
+                                            <a>E-Commerce Development</a>
                                         </Link>
                                     </li>
                                     <li>

@@ -89,7 +89,7 @@ const AboutUs = ({ features, introVideo, testimonials, privileges, teamMembers, 
                 {privileges && <FunFactStyleTwo ourPrivileges={privileges} />}
             </div>
 
-            {/* {teamMembers && <Team teamMembers={teamMembers} />} */}
+            {teamMembers && <Team teamMembers={teamMembers} />}
 
             {/* {introVideo && <IntroVideo video={introVideo} />} */}
 
