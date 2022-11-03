@@ -38,7 +38,7 @@ const SingleTeamMember = ({ teamMembers }) => {
 
                     <div className="content">
                         <h3>{teamMembers.name}</h3>
-                       <div>{teamMembers.designation}</div>
+                       {/* <div>{teamMembers.designation}</div> */}
                     </div>
                 </div>
             </div>
