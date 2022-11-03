@@ -62,7 +62,7 @@ const ContactPage = ({ contactUsInfo, contactUsMeta }) => {
                 pageTitle="Contact"
                 homePageUrl="/"
                 homePageText="Home"
-                activePageText="Contact"
+                activePageText="Let's Meet"
             />
 
             <ContactForm />

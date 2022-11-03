@@ -34,7 +34,7 @@ const MainBanner = ({ bannerData }) => {
 
                                 <h1 style={{ color: '#fff' }}>{bannerData.data.heading}</h1>
 
-                                 <Typed strings={[ `${bannerData.data.description}`]} typeSpeed={145}  className="type"/>
+                                <Typed strings={[`${bannerData.data.description}`]} typeSpeed={145} className="type" />
 
                                 {/* <ScrollAnimation animateIn="fadeInLeft" delay={150} animateOnce={true}>
                                     <p style={{ color: '#fff' }}>{bannerData.data.description}</p>
@@ -49,9 +49,29 @@ const MainBanner = ({ bannerData }) => {
                                         </Link>
                                     </ScrollAnimation>
                                 </div> */}
+
                             </div>
+
                         </div>
 
+
+                    </div>
+                </div>
+                <div className="container text-center" style={{ paddingTop: 35 }}>
+                    <div className="row">
+                        <div className="col-lg-5 col-md-12">
+                            <div className="main-banner-content">
+                                <div className="option-item">
+                                <Link href="/contact">
+                                        <a className="default-btn">
+                                            Let's Meet 
+                                            <i className="ri-user-voice-line"></i>
+                                            <span></span>
+                                        </a>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
