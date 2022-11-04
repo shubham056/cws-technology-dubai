@@ -276,12 +276,12 @@ const Footer = ({ contactUsInfo }) => {
                         cookieName="myAwesomeCookieName2"
                         cookieValue="accept"
                         style={{ background: "rgb(9, 54, 83)" }}
-                        buttonStyle={{ color: "#fff",backgroundColor: "rgb(0, 100, 251)",borderRadius: 3, fontSize: "14px",marginRight: 110}}
+                        buttonStyle={{ color: "#fff",backgroundColor: "rgb(0, 100, 251)",borderRadius: 3, fontSize: "14px",marginRight: 80}}
                         expires={150}
                         enableDeclineButton
                         declineButtonText="Decline"
                         declineCookieValue="DeclineCookie"
-                        declineButtonStyle={{borderRadius: 3, fontSize: "14px"}}
+                        declineButtonStyle={{borderRadius: 3, fontSize: "14px", margin: 0}}
                         onAccept={(acceptedByScrolling) => {
                             if (acceptedByScrolling) {
                               // triggered if user scrolls past threshold
