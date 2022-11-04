@@ -270,7 +270,7 @@ const Footer = ({ contactUsInfo }) => {
                         </div>
                     </div>
                     <CookieConsent
-                        //debug={true}
+                        debug={true}
                         location="bottom"
                         buttonText="Accept"
                         cookieName="myAwesomeCookieName2"
@@ -278,6 +278,7 @@ const Footer = ({ contactUsInfo }) => {
                         style={{ background: "rgb(9, 54, 83)" }}
                         buttonStyle={{ color: "#fff",backgroundColor: "rgb(0, 100, 251)",borderRadius: 3, fontSize: "14px",marginRight: 80}}
                         expires={150}
+                        buttonWrapperClasses="main-btn-cookie"
                         enableDeclineButton
                         declineButtonText="Decline"
                         declineCookieValue="DeclineCookie"
@@ -569,6 +570,9 @@ const Footer = ({ contactUsInfo }) => {
 
                 // Responsive Style
                 @media only screen and (max-width: 767px) {
+                    .main-btn-cookie{
+                        margin-left: 115px !important;
+                    }
                     .single-footer-widget h3 {
                         margin-bottom: 15px;
                     }
@@ -593,6 +597,9 @@ const Footer = ({ contactUsInfo }) => {
                 }
 
                 @media only screen and (min-width : 768px) and (max-width : 991px) {
+                    .main-btn-cookie{
+                        margin-left: 115px !important;
+                    }
                     .footer-shape-1 {
                         display: none;
                     }
@@ -611,6 +618,9 @@ const Footer = ({ contactUsInfo }) => {
                 }
 
                 @media only screen and (min-width : 992px) and (max-width : 1199px) {
+                    .main-btn-cookie{
+                        margin-left: 115px !important;
+                    }
                     .single-footer-widget p {
                         margin-bottom: 0;
                         font-size: 15px;
