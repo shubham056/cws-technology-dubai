@@ -4,6 +4,7 @@ import baseUrl from '../../utils/baseUrl'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import CookieConsent from "react-cookie-consent";
 const MySwal = withReactContent(Swal)
 
 const alertContent = () => {
@@ -268,6 +269,36 @@ const Footer = ({ contactUsInfo }) => {
                             </p>
                         </div>
                     </div>
+                    <CookieConsent
+                        // debug={true}
+                        location="bottom"
+                        buttonText="Accept"
+                        cookieName="myAwesomeCookieName2"
+                        cookieValue="accept"
+                        style={{ background: "rgb(9, 54, 83)" }}
+                        buttonStyle={{ color: "#fff",backgroundColor: "rgb(0, 100, 251)",borderRadius: 3, fontSize: "14px"}}
+                        expires={150}
+                        enableDeclineButton
+                        declineButtonText="Decline"
+                        declineCookieValue="DeclineCookie"
+                        declineButtonStyle={{borderRadius: 3, fontSize: "14px"}}
+                        onAccept={(acceptedByScrolling) => {
+                            if (acceptedByScrolling) {
+                              // triggered if user scrolls past threshold
+                              //alert("Accept was triggered by user scrolling");
+                            } else {
+                              //alert("Accept was triggered by clicking the Accept button");
+                            }
+                          }}
+                          onDecline={() => {
+                            //alert("nay!");
+                            setDeclineCookie(true)
+                          }}                   
+                        
+                    >
+                        This website uses cookies to enhance the user experience.
+                        
+                    </CookieConsent>
                 </div>
 
                 {/* Shape Images */}
