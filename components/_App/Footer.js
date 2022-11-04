@@ -270,7 +270,7 @@ const Footer = ({ contactUsInfo }) => {
                         </div>
                     </div>
                     <CookieConsent
-                        debug={true}
+                        //debug={true}
                         location="bottom"
                         buttonText="Accept"
                         cookieName="myAwesomeCookieName2"
