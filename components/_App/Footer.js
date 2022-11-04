@@ -270,13 +270,13 @@ const Footer = ({ contactUsInfo }) => {
                         </div>
                     </div>
                     <CookieConsent
-                        // debug={true}
+                        //debug={true}
                         location="bottom"
                         buttonText="Accept"
                         cookieName="myAwesomeCookieName2"
                         cookieValue="accept"
                         style={{ background: "rgb(9, 54, 83)" }}
-                        buttonStyle={{ color: "#fff",backgroundColor: "rgb(0, 100, 251)",borderRadius: 3, fontSize: "14px"}}
+                        buttonStyle={{ color: "#fff",backgroundColor: "rgb(0, 100, 251)",borderRadius: 3, fontSize: "14px",marginRight: 110}}
                         expires={150}
                         enableDeclineButton
                         declineButtonText="Decline"
@@ -292,7 +292,7 @@ const Footer = ({ contactUsInfo }) => {
                           }}
                           onDecline={() => {
                             //alert("nay!");
-                            setDeclineCookie(true)
+                            //setDeclineCookie(true)
                           }}                   
                         
                     >
