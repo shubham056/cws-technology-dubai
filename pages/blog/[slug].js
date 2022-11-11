@@ -28,8 +28,8 @@ import {
     TelegramIcon,
     TwitterShareButton,
     TwitterIcon,
-    EmailShareButton,
-    EmailIcon,
+    PinterestShareButton,
+    PinterestIcon,
 } from 'next-share';
 import { useRouter } from 'next/router';
 import baseUrl from '../../utils/baseUrl'
@@ -40,7 +40,7 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
     const { asPath } = useRouter();
     // console.log(popularPosts)
     // return false
-    const fullUrl = baseUrl+asPath
+    const fullUrl = baseUrl + asPath
 
     const { metaTitle, metaDescription, image, canonicalURL, structuredData } = post.data[0];
     if (post.data[0].metaSocial != undefined) {
@@ -135,8 +135,9 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
 
                                                 <FacebookShareButton
                                                     url={fullUrl}
+                                                    children={post.data[0].title}
                                                     quote={post.data[0].title}
-                                                    hashtag={'#nextshare'}
+                                                    hashtag={'#cws,#cwstechnology'}
                                                 >
                                                     <FacebookIcon size={32} round />
                                                 </FacebookShareButton>
@@ -172,13 +173,12 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
                                                 </TelegramShareButton>
                                             </li>
                                             <li>
-                                                <EmailShareButton
+                                                <PinterestShareButton
                                                     url={fullUrl}
-                                                    subject={'Next Share'}
-                                                    body="body"
+                                                    media={post.data[0].title}
                                                 >
-                                                    <EmailIcon size={32} round />
-                                                </EmailShareButton>
+                                                    <PinterestIcon size={32} round />
+                                                </PinterestShareButton>
                                             </li>
                                         </ul>
                                     </div>
