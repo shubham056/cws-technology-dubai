@@ -137,7 +137,7 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
                                                     url={fullUrl}
                                                     children={post.data[0].title}
                                                     quote={post.data[0].title}
-                                                    hashtag={'#cws,#cwstechnology'}
+                                                    hashtag={'#cwstechnology'}
                                                 >
                                                     <FacebookIcon size={32} round />
                                                 </FacebookShareButton>
