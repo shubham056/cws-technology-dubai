@@ -17,12 +17,30 @@ import Moment from "moment-timezone";
 import Image from 'next/image';
 import assetsURL from '../../utils/assetsURL';
 import { NextSeo } from 'next-seo';
+import {
+    FacebookShareButton,
+    FacebookIcon,
+    WhatsappShareButton,
+    WhatsappIcon,
+    LinkedinShareButton,
+    LinkedinIcon,
+    TelegramShareButton,
+    TelegramIcon,
+    TwitterShareButton,
+    TwitterIcon,
+    EmailShareButton,
+    EmailIcon,
+} from 'next-share';
+import { useRouter } from 'next/router';
+import baseUrl from '../../utils/baseUrl'
 
 
 
 const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
+    const { asPath } = useRouter();
     // console.log(popularPosts)
     // return false
+    const fullUrl = baseUrl+asPath
 
     const { metaTitle, metaDescription, image, canonicalURL, structuredData } = post.data[0];
     if (post.data[0].metaSocial != undefined) {
@@ -107,6 +125,65 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
 
 
                                 </div>
+                                <div className="article-footer">
+
+
+                                    <div className="article-share">
+                                        <ul className="social" style={{ float: "left" }}>
+                                            <li><span>Share On:</span></li>
+                                            <li>
+
+                                                <FacebookShareButton
+                                                    url={fullUrl}
+                                                    quote={post.data[0].title}
+                                                    hashtag={'#nextshare'}
+                                                >
+                                                    <FacebookIcon size={32} round />
+                                                </FacebookShareButton>
+                                            </li>
+                                            <li>
+                                                <TwitterShareButton
+                                                    url={fullUrl}
+                                                    title={post.data[0].title}
+                                                >
+                                                    <TwitterIcon size={32} round />
+                                                </TwitterShareButton>
+                                            </li>
+                                            <li>
+                                                <WhatsappShareButton
+                                                    url={fullUrl}
+                                                    title={post.data[0].title}
+                                                    separator=":: "
+                                                >
+                                                    <WhatsappIcon size={32} round />
+                                                </WhatsappShareButton>
+                                            </li>
+                                            <li>
+                                                <LinkedinShareButton url={fullUrl}>
+                                                    <LinkedinIcon size={32} round />
+                                                </LinkedinShareButton>
+                                            </li>
+                                            <li>
+                                                <TelegramShareButton
+                                                    url={fullUrl}
+                                                    title={post.data[0].title}
+                                                >
+                                                    <TelegramIcon size={32} round />
+                                                </TelegramShareButton>
+                                            </li>
+                                            <li>
+                                                <EmailShareButton
+                                                    url={fullUrl}
+                                                    subject={'Next Share'}
+                                                    body="body"
+                                                >
+                                                    <EmailIcon size={32} round />
+                                                </EmailShareButton>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
