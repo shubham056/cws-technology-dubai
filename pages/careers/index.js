@@ -171,48 +171,55 @@ const Careers = ({ contactUsInfo, careers, vacancy, careerMeta }) => {
                                 {
                                     (typeof careers != "undefined" && careers !== null && careers.data.length > 0)
                                         ?
+                                        <>
+                                            <p style={{ fontWeight: 'bolder', fontSize: 20 }}>
+                                                Unfortunately, at this time, we don't have any job vacancies. We are overwhelmed with the applications right now and evaluating them. We will enable this tab once we have the openings again or post it on leading job portals.
+                                            </p>
+                                            <p style={{ fontWeight: 'bolder', fontSize: 20 }}>
+                                                We appreciate your interest in working with CWS.
+                                            </p>
+                                        </>
+                                        // careers.data.map(item => {
+                                        //     return (
+                                        //         <blockquote className="blockquote" key={item.id}>
 
-                                        careers.data.map(item => {
-                                            return (
-                                                <blockquote className="blockquote" key={item.id}>
+                                        //             <h5>{item.applying_for}</h5>
 
-                                                    <h5>{item.applying_for}</h5>
+                                        //             <p>{item.experience}</p>
+                                        //             <br />
 
-                                                    <p>{item.experience}</p>
-                                                    <br />
+                                        //             <h5>Description:</h5>
 
-                                                    <h5>Description:</h5>
+                                        //             <p>{item.description}</p>
 
-                                                    <p>{item.description}</p>
+                                        //             <h5>Role & Responsibilities:</h5>
 
-                                                    <h5>Role & Responsibilities:</h5>
+                                        //             <p dangerouslySetInnerHTML={{ __html: item.role_and_responsibilities }}></p>
 
-                                                    <p dangerouslySetInnerHTML={{ __html: item.role_and_responsibilities }}></p>
+                                        //             <h5>Skills & Expertise:</h5>
 
-                                                    <h5>Skills & Expertise:</h5>
+                                        //             <p dangerouslySetInnerHTML={{ __html: item.skills_and_expertise }}></p>
+                                        //             {
+                                        //                 (item.qualifications != null)
+                                        //                     ?
+                                        //                     <>
+                                        //                         <h5>Preferred Skills & Qualifications:</h5>
 
-                                                    <p dangerouslySetInnerHTML={{ __html: item.skills_and_expertise }}></p>
-                                                    {
-                                                        (item.qualifications != null)
-                                                            ?
-                                                            <>
-                                                                <h5>Preferred Skills & Qualifications:</h5>
+                                        //                         <p dangerouslySetInnerHTML={{ __html: item.qualifications }}></p>
+                                        //                     </>
+                                        //                     :
+                                        //                     null
+                                        //             }
+                                        //             <Link href="#">
+                                        //                 <a onClick={handleToggleSidebarModal} className="blog-btn">
+                                        //                     <i className="ri-arrow-right-line"></i> APPLY
+                                        //                 </a>
+                                        //             </Link>
 
-                                                                <p dangerouslySetInnerHTML={{ __html: item.qualifications }}></p>
-                                                            </>
-                                                            :
-                                                            null
-                                                    }
-                                                    <Link href="#">
-                                                        <a onClick={handleToggleSidebarModal} className="blog-btn">
-                                                            <i className="ri-arrow-right-line"></i> APPLY
-                                                        </a>
-                                                    </Link>
+                                        //         </blockquote>
+                                        //     )
 
-                                                </blockquote>
-                                            )
-
-                                        })
+                                        // })
                                         :
                                         <></>
                                 }
