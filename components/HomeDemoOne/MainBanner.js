@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import Link from 'next/link';
 import Typed from 'react-typed';
 import assetsURL from '../../utils/assetsURL';
+import HubspotForm from 'react-hubspot-form'
+
 
 const MainBanner = ({ bannerData }) => {
 
@@ -12,11 +14,11 @@ const MainBanner = ({ bannerData }) => {
                 backgroundImage: `url("${assetsURL}${bannerData.data.banner}")`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                height: 600
+                height: 638
             }}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 col-md-12">
+                        <div className="col-lg-6 col-md-6">
                             <div className="main-banner-content">
                                 {/* <ScrollAnimation animateIn="fadeInLeft" delay={50} animateOnce={true}>
                                     <div className="tag">
@@ -35,6 +37,17 @@ const MainBanner = ({ bannerData }) => {
                                 <h1 style={{ color: '#fff' }}>{bannerData.data.heading}</h1>
 
                                 <Typed strings={[`${bannerData.data.description}`]} typeSpeed={145} className="type" />
+                                <div className="main-banner-content" style={{ paddingTop: 45 }}>
+                                <div className="option-item">
+                                <Link href="/contact">
+                                        <a className="default-btn">
+                                            Let's Meet 
+                                            <i className="ri-user-voice-line"></i>
+                                            <span></span>
+                                        </a>
+                                    </Link>
+                                </div>
+                            </div>
 
                                 {/* <ScrollAnimation animateIn="fadeInLeft" delay={150} animateOnce={true}>
                                     <p style={{ color: '#fff' }}>{bannerData.data.description}</p>
@@ -53,11 +66,19 @@ const MainBanner = ({ bannerData }) => {
                             </div>
 
                         </div>
+                        <div className="col-lg-6 col-md-6 form-margin">
+                            <h2 style={{color: "white"}}>Fill the form below and talk to an Expert</h2>
+                        <HubspotForm
+                            portalId='22579069'
+                            formId='4b4d5861-9bb0-4294-a80b-238d1169ed8e'
+                            loading={<div>Loading...</div>}
+                        />
+                        </div>
 
 
                     </div>
                 </div>
-                <div className="container" style={{ paddingTop: 45 }}>
+                {/* <div className="container" style={{ paddingTop: 45 }}>
                     <div className="row">
                         <div className="col-lg-5 col-md-12">
                             <div className="main-banner-content">
@@ -74,7 +95,7 @@ const MainBanner = ({ bannerData }) => {
                         </div>
 
                     </div>
-                </div>
+                </div> */}
 
                 {/* Shape Images */}
                 {/* <div className="main-banner-shape-1">
@@ -93,7 +114,12 @@ const MainBanner = ({ bannerData }) => {
 
             {/* Main Banner Style */}
             <style jsx>{`
-            
+                .hs-fieldtype-text field hs-form-field span{
+                    color: #fff !important;
+            }
+                .form-margin{
+                    margin-top: -85px;
+                }
                 .main-banner-area {
                     padding-top: 100px !important;
                     padding-bottom: 175px;
@@ -273,6 +299,9 @@ const MainBanner = ({ bannerData }) => {
  
                 // Responsive Style
                 @media only screen and (max-width: 767px) {
+                    .form-margin{
+                        margin-top: 50px
+                    }
                     .type {
                         font-size: 22px !important;
 	                    margin-top: 0 !important;
@@ -387,6 +416,9 @@ const MainBanner = ({ bannerData }) => {
                 }
 
                 @media only screen and (min-width : 768px) and (max-width : 991px) {
+                    .form-margin{
+                        margin-top: 50px
+                    }
                     .main-banner-area {
                         padding-top: 20px !important;
                         padding-bottom: 0;
@@ -486,6 +518,9 @@ const MainBanner = ({ bannerData }) => {
                 }
 
                 @media only screen and (min-width : 992px) and (max-width : 1199px) {
+                    .form-margin{
+                        margin-top: 50px
+                    }
                     .main-banner-area {
                         padding-top: 100px;
                         padding-bottom: 100px;
@@ -553,6 +588,9 @@ const MainBanner = ({ bannerData }) => {
                 }
 
                 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+                    .form-margin{
+                        margin-top: 50px
+                    }
                     .main-banner-area {
                         padding-top: 260px;
                         padding-bottom: 260px;
@@ -596,6 +634,9 @@ const MainBanner = ({ bannerData }) => {
                 }
 
                 @media only screen and (min-width: 1600px) {
+                    .form-margin{
+                        margin-top: 50px
+                    }
                     .main-banner-area {
                         padding-top: 220px;
                         padding-bottom: 220px;
