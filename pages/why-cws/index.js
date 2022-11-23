@@ -71,10 +71,10 @@ const WhyCws = ({ features, introVideo, testimonials, privileges, teamMembers, a
             <Navbar />
 
             <PageBanner
-                pageTitle="Why Cws?"
+                pageTitle="Why CWS?"
                 homePageUrl="/"
                 homePageText="Home"
-                activePageText="Why Cws?"
+                activePageText="Why CWS?"
             />
 
             {features && <FeaturesCard features={features} />}

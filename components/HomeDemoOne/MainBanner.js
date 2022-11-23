@@ -17,7 +17,7 @@ const MainBanner = ({ bannerData }) => {
                 height: 680
             }}>
                 <div className="container">
-                    <div className="row">
+                    <div className="row form-margin">
                         <div className="col-lg-6 col-md-6">
                             <div className="main-banner-content">
                                 {/* <ScrollAnimation animateIn="fadeInLeft" delay={50} animateOnce={true}>
@@ -38,16 +38,16 @@ const MainBanner = ({ bannerData }) => {
 
                                 <Typed strings={[`${bannerData.data.description}`]} typeSpeed={145} className="type" />
                                 <div className="main-banner-content" style={{ paddingTop: 45 }}>
-                                <div className="option-item">
-                                <Link href="/contact">
-                                        <a className="default-btn">
-                                            Let's Meet 
-                                            <i className="ri-user-voice-line"></i>
-                                            <span></span>
-                                        </a>
-                                    </Link>
+                                    <div className="option-item">
+                                        <Link href="/contact">
+                                            <a className="default-btn">
+                                                Let's Meet
+                                                <i className="ri-user-voice-line"></i>
+                                                <span></span>
+                                            </a>
+                                        </Link>
+                                    </div>
                                 </div>
-                            </div>
 
                                 {/* <ScrollAnimation animateIn="fadeInLeft" delay={150} animateOnce={true}>
                                     <p style={{ color: '#fff' }}>{bannerData.data.description}</p>
@@ -66,13 +66,15 @@ const MainBanner = ({ bannerData }) => {
                             </div>
 
                         </div>
-                        <div className="col-lg-6 col-md-6 form-margin">
-                            {/* <h2 style={{color: "white"}}>Fill the form below and talk to an Expert</h2>
-                        <HubspotForm
-                            portalId='22579069'
-                            formId='4b4d5861-9bb0-4294-a80b-238d1169ed8e'
-                            loading={<div>Loading...</div>}
-                        /> */}
+                        <div className="col-lg-6 col-md-6 form-margin-row">
+                            <div className="main-banner-content-form">
+                            <p style={{ color: '#fff' }}>Let’s get in touch.</p>
+                                <HubspotForm
+                                    portalId='22579069'
+                                    formId='6171fe3b-c1ac-48df-b006-eed0e65f5847'
+                                    loading={<div>Loading...</div>}
+                                />
+                            </div>
                         </div>
 
 
@@ -114,11 +116,16 @@ const MainBanner = ({ bannerData }) => {
 
             {/* Main Banner Style */}
             <style jsx>{`
+            .main-banner-content-form p {
+                margin-bottom: 0;
+                font-size: 35px !important;
+                line-height: 50px;
+            }
                 .hs-fieldtype-text field hs-form-field span{
                     color: #fff !important;
             }
                 .form-margin{
-                    margin-top: -90px;
+                    margin-top: -35px;
                 }
                 .main-banner-area {
                     padding-top: 100px !important;
@@ -299,6 +306,9 @@ const MainBanner = ({ bannerData }) => {
  
                 // Responsive Style
                 @media only screen and (max-width: 767px) {
+                    .form-margin-row{
+                        margin-top: 40px
+                    }
                     .form-margin{
                         margin-top: 50px
                     }
@@ -416,6 +426,9 @@ const MainBanner = ({ bannerData }) => {
                 }
 
                 @media only screen and (min-width : 768px) and (max-width : 991px) {
+                    .form-margin-row{
+                        margin-top: 40px
+                    }
                     .form-margin{
                         margin-top: 50px
                     }
@@ -518,6 +531,9 @@ const MainBanner = ({ bannerData }) => {
                 }
 
                 @media only screen and (min-width : 992px) and (max-width : 1199px) {
+                    .form-margin-row{
+                        margin-top: 40px
+                    }
                     .form-margin{
                         margin-top: 50px
                     }
@@ -588,6 +604,9 @@ const MainBanner = ({ bannerData }) => {
                 }
 
                 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+                    .form-margin-row{
+                        margin-top: 40px
+                    }
                     .form-margin{
                         margin-top: 50px
                     }
@@ -634,6 +653,9 @@ const MainBanner = ({ bannerData }) => {
                 }
 
                 @media only screen and (min-width: 1600px) {
+                    .form-margin-row{
+                        margin-top: 40px
+                    }
                     .form-margin{
                         margin-top: 50px
                     }
