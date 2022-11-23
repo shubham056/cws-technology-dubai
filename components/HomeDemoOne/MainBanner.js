@@ -14,7 +14,7 @@ const MainBanner = ({ bannerData }) => {
                 backgroundImage: `url("${assetsURL}${bannerData.data.banner}")`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                height: 638
+                height: 680
             }}>
                 <div className="container">
                     <div className="row">
@@ -67,12 +67,12 @@ const MainBanner = ({ bannerData }) => {
 
                         </div>
                         <div className="col-lg-6 col-md-6 form-margin">
-                            <h2 style={{color: "white"}}>Fill the form below and talk to an Expert</h2>
+                            {/* <h2 style={{color: "white"}}>Fill the form below and talk to an Expert</h2>
                         <HubspotForm
                             portalId='22579069'
                             formId='4b4d5861-9bb0-4294-a80b-238d1169ed8e'
                             loading={<div>Loading...</div>}
-                        />
+                        /> */}
                         </div>
 
 
@@ -118,7 +118,7 @@ const MainBanner = ({ bannerData }) => {
                     color: #fff !important;
             }
                 .form-margin{
-                    margin-top: -85px;
+                    margin-top: -90px;
                 }
                 .main-banner-area {
                     padding-top: 100px !important;
