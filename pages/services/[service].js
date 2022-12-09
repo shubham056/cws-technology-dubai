@@ -15,6 +15,10 @@ import CommonFaq from '../../components/ServicesDetails/CommonFaq';
 
 const ServicesDetails = ({ service, contactUsInfo }) => {
 
+    if (!service.data || service.data.length == 0) {
+        return <ErrorPage statusCode={404} />
+    }
+
     const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = service.data[0];
     if (service.data[0].metaSocial != undefined) {
         let facebook = service.data[0].metaSocial.filter(o => o.socialNetwork === 'facebook');
@@ -47,11 +51,8 @@ const ServicesDetails = ({ service, contactUsInfo }) => {
             cardType: (typeof twitter_cardType != "undefined") ? twitter_cardType : null,
         },
     }
-    console.log(SEO)
-    // return false
-    if (!service.data) {
-        return <ErrorPage statusCode={404} />
-    }
+    
+    
     return (
         <>
             {

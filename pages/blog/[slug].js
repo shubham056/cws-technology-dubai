@@ -40,6 +40,10 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
     const { asPath } = useRouter();
     // console.log(popularPosts)
     // return false
+    //console.log("post",post, post.length)
+    if (!post.data || post.data.length == 0) {
+        return <ErrorPage statusCode={404} />
+    }
     const fullUrl = baseUrl + asPath
 
     const { metaTitle, metaDescription, image, canonicalURL, structuredData } = post.data[0];
@@ -76,9 +80,7 @@ const BlogDetails = ({ post, contactUsInfo, popularPosts, blogCategories }) => {
     }
 
 
-    if (!post) {
-        return <ErrorPage statusCode={404} />
-    }
+    
     return (
         <>
             {post && <NextSeo {...SEO} />}
@@ -662,12 +664,11 @@ export default BlogDetails;
 
 //access the router, get the id, and get the data for that post
 export async function getServerSideProps({ params, res }) {
-    res.setHeader(
-        'Cache-Control',
-        'public, s-maxage=10, stale-while-revalidate=59'
-    )
+    // res.setHeader(
+    //     'Cache-Control',
+    //     'public, s-maxage=10, stale-while-revalidate=59'
+    // )
     try {
-
         const post = await getPost(params.slug);
         const contactUsInfo = await getContactUsInfo();
         const popularPosts = await getPopularBlogPost(5); // Get Popular Blog Post
@@ -683,6 +684,7 @@ export async function getServerSideProps({ params, res }) {
         };
 
     } catch (error) {
+        console.log('rrrrrrrrrrrrrrrrrrr')
         res.statusCode = 404
         return {
             props: {

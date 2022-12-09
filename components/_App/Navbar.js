@@ -448,14 +448,6 @@ const Navbar = () => {
                                     </li>
 
                                     <li className="nav-item">
-                                        <Link href="/blog" activeClassName="active">
-                                            <a onClick={toggleNavbar} className="nav-link">
-                                                Blog
-                                            </a>
-                                        </Link>
-                                    </li>
-
-                                    <li className="nav-item">
                                         <Link href="/portfolio" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">
                                                 Portfolio
@@ -471,7 +463,15 @@ const Navbar = () => {
 
                                     <li className="nav-item">
                                         <Link href="/contact" activeClassName="active">
-                                            <a onClick={toggleNavbar} className="nav-link">Contact</a>
+                                            <a onClick={toggleNavbar} className="nav-link">
+                                                Contact
+                                            </a>
+                                        </Link>
+                                    </li>
+
+                                    <li className="nav-item">
+                                        <Link href="/blog" activeClassName="active">
+                                            <a onClick={toggleNavbar} className="nav-link">Blog</a>
                                         </Link>
                                     </li>
 
