@@ -79,6 +79,25 @@ const AboutUsContent = ({aboutYourself, isReadmore}) => {
                     <img src="/images/analysis/shape-5.png" alt="image" />
                 </div> */}
             </div>
+
+            <div className="analysis-area text-center">
+            <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-8 col-md-12">
+                            <div className="privacy-policy-content">
+                                <h2 style={{marginBottom: 25}}>Why Choose Us</h2>
+                                <ul style={{textAlign: 'left', lineHeight: 1.8}}>
+                                    <li>CWS is specialized in creating innovative, effective & SEO Friendly websites.</li>
+                                    <li>We are a team of professional developers, and IT professionals combining our expertise and knowledge to develop exceptional website for your business’s needs and requirements.</li>
+                                    <li>We are a team of professional developers, and IT professionals combining our expertise and knowledge to develop exceptional website for your business’s needs and requirements.</li>
+                                    <li>We envisioned to delivering the modern and best web design development solutions to businesses worldwide.</li>
+                                    <li>We are an award-winning Web design & development agency based in UAE.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             {/* About Us Content Style */}
             <style jsx>{`

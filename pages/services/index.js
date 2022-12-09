@@ -187,11 +187,11 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
                                             <a onClick={toggleNavbar} className="nav-link">WooCommerce Development</a>
                                         </Link>
                                     </li>
-                                    <li className="nav-item">
+                                    {/* <li className="nav-item">
                                         <Link href="/services/magento-development-services" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Magento Development Services</a>
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     <li className="nav-item">
                                         <Link href="/services/virtuemart-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">VirtueMart Development</a>
@@ -323,11 +323,11 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
                                             <a onClick={toggleNavbar} className="nav-link">Responsive Website Development</a>
                                         </Link>
                                     </li>
-                                    <li className="nav-item">
+                                    {/* <li className="nav-item">
                                         <Link href="/services/web-2-0-design-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Web 2.0 Design / Development</a>
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     <li className="nav-item">
                                         <Link href="/services/mobile-website-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">Mobile Website Development</a>

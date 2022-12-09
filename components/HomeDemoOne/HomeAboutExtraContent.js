@@ -4,7 +4,7 @@ import Link from 'next/link';
 const HomeAboutExtraContent = ({content}) => {
     return (
         <>
-            <div className="services-area pt-100 pb-70">
+            <div className="services-area pb-70">
                 <div className="container">
                     <div className="section-titles">
                         <h2>{content.data.heading}</h2>
