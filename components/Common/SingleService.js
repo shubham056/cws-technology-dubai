@@ -11,7 +11,7 @@ const SingleService = ({ service }) => {
                         <i className={(service.icon !=null )? `ri-${service.icon}-line` : "ri-quill-pen-line"}></i>
                     </div>
                     <h3>
-                        <Link href="/services">
+                        <Link href={`/services/${service.slug}`}>
                             <a>{service.heading}</a>
                         </Link>
                     </h3>

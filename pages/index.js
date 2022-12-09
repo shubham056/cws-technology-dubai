@@ -69,7 +69,7 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
             site: site,
             cardType: twitter_cardType,
             title: title,
-            description : description,
+            description: description,
             images: [
                 {
                     url: (twitter_image != null) ? `${assetsURL}${twitter_image}` : `${assetsURL}${metaImage}`,
@@ -94,15 +94,13 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
 
             {banner && <MainBanner bannerData={banner} />}
 
-            <PartnerStyleTwo />
-
             {aboutYourself && <HomeAboutUsContent aboutYourself={aboutYourself} />}
 
             {/* {aboutYourself && <AboutUsContent aboutYourself={aboutYourself} isReadmore={true} />} */}
 
             {services && <Services services={services} />}
 
-            {homeAbouthomeServices && <HomeAboutExtraContent content={homeAbouthomeServices}/>}
+            {homeAbouthomeServices && <HomeAboutExtraContent content={homeAbouthomeServices} />}
 
             <div className="pt-100">
                 {privileges && <FunFactStyleTwo ourPrivileges={privileges} />}
@@ -120,8 +118,10 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
 
             {posts && <PopularBlogPost blog={posts} />}
 
+
             <div className="pb-100">
-                <CTA />
+                <PartnerStyleTwo />
+                {/* <CTA /> */}
             </div>
 
             {/* {ourClients && <PartnerStyleOne ourClients={ourClients} />} */}
@@ -133,6 +133,7 @@ const IndexPage = ({ banner, posts, testimonials, privileges, portfolios, servic
 }
 
 export default IndexPage;
+
 
 export async function getStaticProps({ params }) {
     const banner = await getBannerData(); // Get Popular Blog Post

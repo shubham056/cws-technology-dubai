@@ -14,10 +14,10 @@ const MainBanner = ({ bannerData }) => {
                 backgroundImage: `url("${assetsURL}${bannerData.data.banner}")`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                height: 680
+                height: 650
             }}>
                 <div className="container">
-                    <div className="row form-margin">
+                    <div className="row">
                         <div className="col-lg-6 col-md-6">
                             <div className="main-banner-content">
                                 {/* <ScrollAnimation animateIn="fadeInLeft" delay={50} animateOnce={true}>
@@ -66,7 +66,7 @@ const MainBanner = ({ bannerData }) => {
                             </div>
 
                         </div>
-                        <div className="col-lg-6 col-md-6 form-margin-row">
+                        {/* <div className="col-lg-6 col-md-6 form-margin-row">
                             <div className="main-banner-content-form">
                             <p style={{ color: '#fff' }}>Let’s get in touch.</p>
                                 <HubspotForm
@@ -75,7 +75,7 @@ const MainBanner = ({ bannerData }) => {
                                     loading={<div>Loading...</div>}
                                 />
                             </div>
-                        </div>
+                        </div> */}
 
 
                     </div>
