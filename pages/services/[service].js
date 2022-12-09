@@ -11,9 +11,9 @@ import { NextSeo } from 'next-seo';
 
 import { getContactUsInfo, getService } from '../../utils/strapi';
 import Script from 'next/script';
+import CommonFaq from '../../components/ServicesDetails/CommonFaq';
 
 const ServicesDetails = ({ service, contactUsInfo }) => {
-
 
     const { metaTitle, metaDescription, metaImage, keywords, canonicalURL, structuredData } = service.data[0];
     if (service.data[0].metaSocial != undefined) {
@@ -82,9 +82,7 @@ const ServicesDetails = ({ service, contactUsInfo }) => {
 
                         <WorkProcess />
 
-                        <div className="ptb-100">
-                            <CTA />
-                        </div>
+                        {service.data[0].faq.length > 0 && <CommonFaq faq={service.data[0].faq} />}
 
                         {contactUsInfo && <Footer contactUsInfo={contactUsInfo} />}
 
