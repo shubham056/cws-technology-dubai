@@ -80,7 +80,7 @@ const ServicesDetails = ({ service, contactUsInfo }) => {
 
                         <ServicesDetailsContent service={service.data[0]} />
 
-                        <WorkProcess />
+                        {/* <WorkProcess /> */}
 
                         {service.data[0].faq.length > 0 && <CommonFaq faq={service.data[0].faq} />}
 

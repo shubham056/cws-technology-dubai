@@ -11,6 +11,7 @@ const CommonFaq = ({ faq }) => {
     console.log("faq", faq)
     return (
         <div className="faq-area ptb-100">
+        <h2 style={{textAlign: 'center',marginBottom: 45}}>FAQ</h2>
             <div className="container">
                 <div className="faq-accordion accordion-box">
                     {

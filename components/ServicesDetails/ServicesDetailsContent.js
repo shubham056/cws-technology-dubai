@@ -35,7 +35,7 @@ const ServicesDetailsContent = ({ service }) => {
                                 </ul> */}
 
                                 <div className="overview-image">
-                                    <img style={{width:"100%"}} src="/images/services-details/services-details-1.jpg" alt="services-details-1.jpg" />
+                                    {/* <img style={{width:"100%"}} src="/images/services-details/services-details-1.jpg" alt="services-details-1.jpg" /> */}
 
                                     {/* Shape Images */}
                                     <div className="shape-1">
