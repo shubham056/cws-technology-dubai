@@ -111,7 +111,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
 
             <div className="pt-100" >
                 <div className="container">
-                    <div className="row justify-content-center">
+                    <div className="row">
 
                         <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
@@ -255,7 +255,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
                             </div>
                         </div>
 
-                        <div className="col-lg-3 col-sm-6 col-md-3">
+                        {/* <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
                                 <p style={{ fontSize: 20, fontWeight: 450 }}>Mobile Development</p>
 
@@ -282,7 +282,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="col-lg-3 col-sm-6 col-md-3">
                             <div className="single-footer-widget">
@@ -334,7 +334,7 @@ const ServicesIndex = ({ services, parallaxInfo, contactUsInfo, pageCount, curre
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/services/responsive-website-development" activeClassName="active">
+                                        <Link href="/services/ria-development" activeClassName="active">
                                             <a onClick={toggleNavbar} className="nav-link">RIA Development</a>
                                         </Link>
                                     </li>
