@@ -110,10 +110,10 @@ const Footer = ({ contactUsInfo }) => {
                                 <h3>Reach Us </h3>
 
                                 <ul className="widget-info white-color-text">
-                                    <li>
+                                    {/* <li>
                                         <i className="ri-phone-line"></i>
                                         <a style={{ color: '#ffff' }} href={`tel:${contactUsInfo.data.phone_number}`}>{contactUsInfo.data.phone_number}</a>
-                                    </li>
+                                    </li> */}
 
                                     <li>
                                         <i className="ri-mail-send-fill"></i>

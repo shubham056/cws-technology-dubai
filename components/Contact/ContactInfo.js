@@ -13,10 +13,10 @@ const ContactInfo = ({ contactUsInfo }) => {
                                 <p>{contactUsInfo.data.info}</p>
 
                                 <ul className="address-info">
-                                    <li>
+                                    {/* <li>
                                         <i className="ri-phone-line"></i>
                                         <a href={`tel:${contactUsInfo.data.phone_number}`}>{contactUsInfo.data.phone_number}</a>
-                                    </li>
+                                    </li> */}
 
                                     <li>
                                         <i className="ri-mail-send-fill"></i>
