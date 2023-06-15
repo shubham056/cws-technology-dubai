@@ -6,8 +6,6 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2C5VL3W0K"></script>
-                    <script src="/js/googleTag.js"></script>
                     <link href="/manifest.json" rel="manifest" />
                     <link rel="apple-touch-icon" href="/images/logo.png"></link>
                     <meta name="theme-color" content="#093653" />
@@ -24,6 +22,8 @@ class MyDocument extends Document {
                     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/22579069.js"></script>
                     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10973477917"></script>
                     <script src="/js/analytics.js" />
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2C5VL3W0K"></script>
+                    <script src="/js/googleTag.js"></script>
                 </Head>
                 <body>
 
