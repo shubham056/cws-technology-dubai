@@ -83,6 +83,12 @@ const PartnerStyleTwo = () => {
                             </a>
                         </div>
 
+                        <div className="single-partner">
+                        <a target="_blank" href='https://www.dubaisbest.com/best-software-developers-dubai/'>
+                            <img src="/images/partner/Dubai's-Best-Badge-3.png" alt="ani" />
+                            </a>
+                        </div>
+
                     </OwlCarousel> : ''}
                 </div>
             </div>
